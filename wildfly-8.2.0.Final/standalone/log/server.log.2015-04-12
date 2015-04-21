@@ -1,0 +1,649 @@
+2015-04-12 00:00:33,419 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+2015-04-12 00:00:33,815 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+2015-04-12 00:00:33,954 INFO  [org.jboss.as] (MSC service thread 1-1) JBAS015899: WildFly 8.2.0.Final "Tweek" starting
+2015-04-12 00:00:33,962 DEBUG [org.jboss.as.config] (MSC service thread 1-1) Configured system properties:
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/bartek/MERCURY/wildfly-8.2.0.Final/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-8-openjdk-amd64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_40-internal-b09
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_40-internal
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.40-b13
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final
+	jboss.host.name = bartek-n-a
+	jboss.modules.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = bartek-n-a
+	jboss.qualified.host.name = bartek-n-a
+	jboss.server.base.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone
+	jboss.server.config.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration
+	jboss.server.data.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/data
+	jboss.server.deploy.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/data/content
+	jboss.server.log.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log
+	jboss.server.name = bartek-n-a
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration/logging.properties
+	module.path = /home/bartek/MERCURY/wildfly-8.2.0.Final/modules
+	org.jboss.boot.log.file = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log/boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 3.16.0-23-generic
+	path.separator = :
+	program.name = JBossTools: WildFly 8.x
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.desktop = gnome
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp /home/bartek/MERCURY/wildfly-8.2.0.Final/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone.xml -Djboss.server.base.dir=/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = PL
+	user.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/bin
+	user.home = /home/bartek
+	user.language = pl
+	user.name = bartek
+	user.timezone = Europe/Warsaw
+2015-04-12 00:00:33,964 DEBUG [org.jboss.as.config] (MSC service thread 1-1) VM Arguments: -Dprogram.name=JBossTools: WildFly 8.x -Xms64m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log/boot.log -Dlogging.configuration=file:/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration/logging.properties -Djboss.home.dir=/home/bartek/MERCURY/wildfly-8.2.0.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=UTF-8 
+2015-04-12 00:00:36,355 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found EnterpriseApplication.ear in deployment directory. To trigger deployment create a file called EnterpriseApplication.ear.dodeploy
+2015-04-12 00:00:36,397 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+2015-04-12 00:00:36,472 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.3.0.Final
+2015-04-12 00:00:36,523 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.3.0.Final
+2015-04-12 00:00:36,629 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 4 core threads with 32 task threads based on your 2 available processors
+2015-04-12 00:00:36,638 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+2015-04-12 00:00:36,674 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 4.0.6.Final
+2015-04-12 00:00:36,728 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2015-04-12 00:00:36,770 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+2015-04-12 00:00:36,785 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-2) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+2015-04-12 00:00:36,785 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+2015-04-12 00:00:36,808 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+2015-04-12 00:00:36,831 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+2015-04-12 00:00:36,935 INFO  [org.jboss.as.security] (MSC service thread 1-4) JBAS013170: Current PicketBox version=4.0.21.Final
+2015-04-12 00:00:36,936 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-12 00:00:37,046 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+2015-04-12 00:00:37,071 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010417: Started Driver service with driver-name = h2
+2015-04-12 00:00:37,117 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-12 00:00:37,226 INFO  [org.jboss.as.naming] (MSC service thread 1-2) JBAS011802: Starting Naming Service
+2015-04-12 00:00:37,296 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Bound mail session [java:jboss/mail/Default]
+2015-04-12 00:00:37,509 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path /home/bartek/MERCURY/wildfly-8.2.0.Final/welcome-content
+2015-04-12 00:00:37,641 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017525: Started server default-server.
+2015-04-12 00:00:37,949 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017531: Host default-host starting
+2015-04-12 00:00:38,446 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017519: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2015-04-12 00:00:38,697 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/deployments
+2015-04-12 00:00:38,789 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015876: Starting deployment of "EnterpriseApplication.ear" (runtime-name: "EnterpriseApplication.ear")
+2015-04-12 00:00:39,000 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015973: Starting subdeployment (runtime-name: "EnterpriseApplicationEJB.jar")
+2015-04-12 00:00:39,128 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+2015-04-12 00:00:39,665 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016002: Processing weld deployment EnterpriseApplication.ear
+2015-04-12 00:00:39,818 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-3) HV000001: Hibernate Validator 5.1.3.Final
+2015-04-12 00:00:39,987 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+2015-04-12 00:00:40,200 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016002: Processing weld deployment EnterpriseApplicationEJB.jar
+2015-04-12 00:00:40,272 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named SampleService in deployment unit subdeployment "EnterpriseApplicationEJB.jar" of deployment "EnterpriseApplication.ear" are as follows:
+
+	java:global/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:global/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:jboss/exported/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+
+2015-04-12 00:00:40,340 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016005: Starting Services for CDI deployment: EnterpriseApplication.ear
+2015-04-12 00:00:40,451 INFO  [org.jboss.weld.Version] (MSC service thread 1-3) WELD-000900: 2.2.6 (Final)
+2015-04-12 00:00:40,529 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016008: Starting weld service for deployment EnterpriseApplication.ear
+2015-04-12 00:00:42,364 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "EnterpriseApplication.ear" (runtime-name : "EnterpriseApplication.ear")
+2015-04-12 00:00:42,398 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+2015-04-12 00:00:42,399 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+2015-04-12 00:00:42,399 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 9507ms - Started 289 of 349 services (98 services are lazy, passive or on-demand)
+2015-04-12 00:13:34,000 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017532: Host default-host stopping
+2015-04-12 00:13:34,009 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+2015-04-12 00:13:34,027 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010418: Stopped Driver service with driver-name = h2
+2015-04-12 00:13:34,032 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016009: Stopping weld service for deployment EnterpriseApplication.ear
+2015-04-12 00:13:34,078 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017521: Undertow HTTP listener default suspending
+2015-04-12 00:13:34,095 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017520: Undertow HTTP listener default stopped, was bound to localhost/127.0.0.1:8080
+2015-04-12 00:13:34,101 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015974: Stopped subdeployment (runtime-name: EnterpriseApplicationEJB.jar) in 131ms
+2015-04-12 00:13:34,110 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017506: Undertow 1.1.0.Final stopping
+2015-04-12 00:13:34,117 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Stopped deployment EnterpriseApplication.ear (runtime-name: EnterpriseApplication.ear) in 147ms
+2015-04-12 00:13:34,127 INFO  [org.jboss.as] (MSC service thread 1-3) JBAS015950: WildFly 8.2.0.Final "Tweek" stopped in 157ms
+2015-04-12 08:59:04,060 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+2015-04-12 08:59:04,544 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+2015-04-12 08:59:04,679 INFO  [org.jboss.as] (MSC service thread 1-2) JBAS015899: WildFly 8.2.0.Final "Tweek" starting
+2015-04-12 08:59:04,688 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/bartek/MERCURY/wildfly-8.2.0.Final/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-8-openjdk-amd64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_40-internal-b09
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_40-internal
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.40-b13
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final
+	jboss.host.name = bartek-n-a
+	jboss.modules.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = bartek-n-a
+	jboss.qualified.host.name = bartek-n-a
+	jboss.server.base.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone
+	jboss.server.config.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration
+	jboss.server.data.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/data
+	jboss.server.deploy.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/data/content
+	jboss.server.log.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log
+	jboss.server.name = bartek-n-a
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration/logging.properties
+	module.path = /home/bartek/MERCURY/wildfly-8.2.0.Final/modules
+	org.jboss.boot.log.file = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log/boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 3.16.0-23-generic
+	path.separator = :
+	program.name = JBossTools: WildFly 8.x
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.desktop = gnome
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp /home/bartek/MERCURY/wildfly-8.2.0.Final/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone.xml -Djboss.server.base.dir=/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = PL
+	user.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/bin
+	user.home = /home/bartek
+	user.language = pl
+	user.name = bartek
+	user.timezone = Europe/Warsaw
+2015-04-12 08:59:04,689 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -Dprogram.name=JBossTools: WildFly 8.x -Xms64m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log/boot.log -Dlogging.configuration=file:/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration/logging.properties -Djboss.home.dir=/home/bartek/MERCURY/wildfly-8.2.0.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=UTF-8 
+2015-04-12 08:59:07,169 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found EnterpriseApplication.ear in deployment directory. To trigger deployment create a file called EnterpriseApplication.ear.dodeploy
+2015-04-12 08:59:07,202 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+2015-04-12 08:59:07,247 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.3.0.Final
+2015-04-12 08:59:07,281 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.3.0.Final
+2015-04-12 08:59:07,408 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 4 core threads with 32 task threads based on your 2 available processors
+2015-04-12 08:59:07,410 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+2015-04-12 08:59:07,499 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+2015-04-12 08:59:07,510 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+2015-04-12 08:59:07,519 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+2015-04-12 08:59:07,537 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+2015-04-12 08:59:07,550 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+2015-04-12 08:59:07,630 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 4.0.6.Final
+2015-04-12 08:59:07,727 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013170: Current PicketBox version=4.0.21.Final
+2015-04-12 08:59:07,860 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2015-04-12 08:59:07,895 INFO  [org.jboss.as.naming] (MSC service thread 1-4) JBAS011802: Starting Naming Service
+2015-04-12 08:59:07,910 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Bound mail session [java:jboss/mail/Default]
+2015-04-12 08:59:07,992 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-4) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+2015-04-12 08:59:08,020 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-12 08:59:08,027 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-12 08:59:08,156 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010417: Started Driver service with driver-name = h2
+2015-04-12 08:59:08,475 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path /home/bartek/MERCURY/wildfly-8.2.0.Final/welcome-content
+2015-04-12 08:59:08,773 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017525: Started server default-server.
+2015-04-12 08:59:08,829 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017531: Host default-host starting
+2015-04-12 08:59:09,089 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017519: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2015-04-12 08:59:09,342 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) JBAS015012: Started FileSystemDeploymentService for directory /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/deployments
+2015-04-12 08:59:09,380 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015876: Starting deployment of "EnterpriseApplication.ear" (runtime-name: "EnterpriseApplication.ear")
+2015-04-12 08:59:09,671 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015973: Starting subdeployment (runtime-name: "EnterpriseApplicationEJB.jar")
+2015-04-12 08:59:09,761 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+2015-04-12 08:59:10,316 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016002: Processing weld deployment EnterpriseApplication.ear
+2015-04-12 08:59:10,524 INFO  [org.jboss.ws.common.management] (MSC service thread 1-2) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+2015-04-12 08:59:10,573 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-4) HV000001: Hibernate Validator 5.1.3.Final
+2015-04-12 08:59:11,083 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016002: Processing weld deployment EnterpriseApplicationEJB.jar
+2015-04-12 08:59:11,178 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-4) JNDI bindings for session bean named SampleService in deployment unit subdeployment "EnterpriseApplicationEJB.jar" of deployment "EnterpriseApplication.ear" are as follows:
+
+	java:global/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:jboss/exported/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:global/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+
+2015-04-12 08:59:11,251 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016005: Starting Services for CDI deployment: EnterpriseApplication.ear
+2015-04-12 08:59:11,439 INFO  [org.jboss.weld.Version] (MSC service thread 1-3) WELD-000900: 2.2.6 (Final)
+2015-04-12 08:59:11,560 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016008: Starting weld service for deployment EnterpriseApplication.ear
+2015-04-12 08:59:13,395 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "EnterpriseApplication.ear" (runtime-name : "EnterpriseApplication.ear")
+2015-04-12 08:59:13,427 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+2015-04-12 08:59:13,428 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+2015-04-12 08:59:13,428 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 10363ms - Started 289 of 349 services (98 services are lazy, passive or on-demand)
+2015-04-12 10:27:15,456 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017532: Host default-host stopping
+2015-04-12 10:27:15,482 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+2015-04-12 10:27:15,488 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016009: Stopping weld service for deployment EnterpriseApplication.ear
+2015-04-12 10:27:15,497 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010418: Stopped Driver service with driver-name = h2
+2015-04-12 10:27:15,560 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017521: Undertow HTTP listener default suspending
+2015-04-12 10:27:15,570 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017520: Undertow HTTP listener default stopped, was bound to localhost/127.0.0.1:8080
+2015-04-12 10:27:15,576 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015974: Stopped subdeployment (runtime-name: EnterpriseApplicationEJB.jar) in 144ms
+2015-04-12 10:27:15,596 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017506: Undertow 1.1.0.Final stopping
+2015-04-12 10:27:15,613 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Stopped deployment EnterpriseApplication.ear (runtime-name: EnterpriseApplication.ear) in 181ms
+2015-04-12 10:27:15,632 INFO  [org.jboss.as] (MSC service thread 1-2) JBAS015950: WildFly 8.2.0.Final "Tweek" stopped in 181ms
+2015-04-12 22:27:39,326 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+2015-04-12 22:27:40,104 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+2015-04-12 22:27:40,324 INFO  [org.jboss.as] (MSC service thread 1-3) JBAS015899: WildFly 8.2.0.Final "Tweek" starting
+2015-04-12 22:27:40,339 DEBUG [org.jboss.as.config] (MSC service thread 1-3) Configured system properties:
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/bartek/MERCURY/wildfly-8.2.0.Final/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-8-openjdk-amd64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_40-internal-b09
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_40-internal
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.40-b13
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final
+	jboss.host.name = bartek-n-a
+	jboss.modules.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = bartek-n-a
+	jboss.qualified.host.name = bartek-n-a
+	jboss.server.base.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone
+	jboss.server.config.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration
+	jboss.server.data.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/data
+	jboss.server.deploy.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/data/content
+	jboss.server.log.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log
+	jboss.server.name = bartek-n-a
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration/logging.properties
+	module.path = /home/bartek/MERCURY/wildfly-8.2.0.Final/modules
+	org.jboss.boot.log.file = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log/boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 3.16.0-23-generic
+	path.separator = :
+	program.name = JBossTools: WildFly 8.x
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.desktop = gnome
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp /home/bartek/MERCURY/wildfly-8.2.0.Final/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone.xml -Djboss.server.base.dir=/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = PL
+	user.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/bin
+	user.home = /home/bartek
+	user.language = pl
+	user.name = bartek
+	user.timezone = Europe/Warsaw
+2015-04-12 22:27:40,347 DEBUG [org.jboss.as.config] (MSC service thread 1-3) VM Arguments: -Dprogram.name=JBossTools: WildFly 8.x -Xms64m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log/boot.log -Dlogging.configuration=file:/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration/logging.properties -Djboss.home.dir=/home/bartek/MERCURY/wildfly-8.2.0.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=UTF-8 
+2015-04-12 22:27:43,192 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found EnterpriseApplicationEJB.jar in deployment directory. To trigger deployment create a file called EnterpriseApplicationEJB.jar.dodeploy
+2015-04-12 22:27:43,227 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+2015-04-12 22:27:43,269 INFO  [org.xnio] (MSC service thread 1-3) XNIO version 3.3.0.Final
+2015-04-12 22:27:43,289 INFO  [org.xnio.nio] (MSC service thread 1-3) XNIO NIO Implementation Version 3.3.0.Final
+2015-04-12 22:27:43,415 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 4 core threads with 32 task threads based on your 2 available processors
+2015-04-12 22:27:43,418 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+2015-04-12 22:27:43,494 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+2015-04-12 22:27:43,449 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+2015-04-12 22:27:43,551 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+2015-04-12 22:27:43,520 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+2015-04-12 22:27:43,522 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+2015-04-12 22:27:43,621 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 4.0.6.Final
+2015-04-12 22:27:43,693 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-12 22:27:43,754 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-1) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+2015-04-12 22:27:43,750 INFO  [org.jboss.as.naming] (MSC service thread 1-3) JBAS011802: Starting Naming Service
+2015-04-12 22:27:43,751 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-12 22:27:43,822 INFO  [org.jboss.as.security] (MSC service thread 1-3) JBAS013170: Current PicketBox version=4.0.21.Final
+2015-04-12 22:27:43,923 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2015-04-12 22:27:44,120 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010417: Started Driver service with driver-name = h2
+2015-04-12 22:27:44,122 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) JBAS015400: Bound mail session [java:jboss/mail/Default]
+2015-04-12 22:27:44,408 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path /home/bartek/MERCURY/wildfly-8.2.0.Final/welcome-content
+2015-04-12 22:27:44,527 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017525: Started server default-server.
+2015-04-12 22:27:44,564 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017531: Host default-host starting
+2015-04-12 22:27:45,120 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017519: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2015-04-12 22:27:45,538 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/deployments
+2015-04-12 22:27:45,554 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "EnterpriseApplicationEJB.jar" (runtime-name: "EnterpriseApplicationEJB.jar")
+2015-04-12 22:27:45,943 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+2015-04-12 22:27:46,488 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016002: Processing weld deployment EnterpriseApplicationEJB.jar
+2015-04-12 22:27:46,618 INFO  [org.jboss.ws.common.management] (MSC service thread 1-4) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+2015-04-12 22:27:46,820 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-1) HV000001: Hibernate Validator 5.1.3.Final
+2015-04-12 22:27:47,157 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named SampleService in deployment unit deployment "EnterpriseApplicationEJB.jar" are as follows:
+
+	java:global/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:jboss/exported/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:global/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+
+2015-04-12 22:27:47,769 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016005: Starting Services for CDI deployment: EnterpriseApplicationEJB.jar
+2015-04-12 22:27:47,947 INFO  [org.jboss.weld.Version] (MSC service thread 1-3) WELD-000900: 2.2.6 (Final)
+2015-04-12 22:27:48,027 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016008: Starting weld service for deployment EnterpriseApplicationEJB.jar
+2015-04-12 22:27:49,311 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "EnterpriseApplicationEJB.jar" (runtime-name : "EnterpriseApplicationEJB.jar")
+2015-04-12 22:27:49,331 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+2015-04-12 22:27:49,332 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+2015-04-12 22:27:49,332 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 10854ms - Started 259 of 313 services (90 services are lazy, passive or on-demand)
+2015-04-12 22:33:14,928 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found EnterpriseApplication.ear in deployment directory. To trigger deployment create a file called EnterpriseApplication.ear.dodeploy
+2015-04-12 22:33:14,962 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "EnterpriseApplication.ear" (runtime-name: "EnterpriseApplication.ear")
+2015-04-12 22:33:15,020 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015973: Starting subdeployment (runtime-name: "EnterpriseApplicationEJB.jar")
+2015-04-12 22:33:15,062 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016009: Stopping weld service for deployment EnterpriseApplicationEJB.jar
+2015-04-12 22:33:15,089 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016002: Processing weld deployment EnterpriseApplication.ear
+2015-04-12 22:33:15,124 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Stopped deployment EnterpriseApplicationEJB.jar (runtime-name: EnterpriseApplicationEJB.jar) in 128ms
+2015-04-12 22:33:15,191 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016002: Processing weld deployment EnterpriseApplicationEJB.jar
+2015-04-12 22:33:15,195 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-2) JNDI bindings for session bean named SampleService in deployment unit subdeployment "EnterpriseApplicationEJB.jar" of deployment "EnterpriseApplication.ear" are as follows:
+
+	java:global/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:jboss/exported/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:global/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+
+2015-04-12 22:33:15,211 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016005: Starting Services for CDI deployment: EnterpriseApplication.ear
+2015-04-12 22:33:15,220 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016008: Starting weld service for deployment EnterpriseApplication.ear
+2015-04-12 22:33:16,591 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018558: Undeployed "EnterpriseApplicationEJB.jar" (runtime-name: "EnterpriseApplicationEJB.jar")
+2015-04-12 22:33:16,591 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018559: Deployed "EnterpriseApplication.ear" (runtime-name : "EnterpriseApplication.ear")
+2015-04-12 22:58:28,650 INFO  [org.jboss.as.naming] (default task-23) JBAS011806: Channel end notification received, closing channel Channel ID 7ad096cc (inbound) of Remoting connection 56b5d4b5 to /127.0.0.1:41166
+2015-04-12 22:59:13,853 INFO  [org.jboss.as.naming] (default task-30) JBAS011806: Channel end notification received, closing channel Channel ID 1e32edc4 (inbound) of Remoting connection 279c55bf to /127.0.0.1:42829
+2015-04-12 22:59:38,827 INFO  [org.jboss.as.naming] (default task-5) JBAS011806: Channel end notification received, closing channel Channel ID 3fb0776d (inbound) of Remoting connection 4f5cad8f to /127.0.0.1:38345
+2015-04-12 22:59:47,085 INFO  [org.jboss.as.naming] (default task-12) JBAS011806: Channel end notification received, closing channel Channel ID 3f56fd11 (inbound) of Remoting connection 2de83290 to /127.0.0.1:57844
+2015-04-12 23:00:40,907 INFO  [org.jboss.as.naming] (default task-19) JBAS011806: Channel end notification received, closing channel Channel ID 08b4eda6 (inbound) of Remoting connection 08bd3d77 to /127.0.0.1:37420
+2015-04-12 23:00:54,227 INFO  [org.jboss.as.naming] (default task-26) JBAS011806: Channel end notification received, closing channel Channel ID 031e0f22 (inbound) of Remoting connection 4d94fad3 to /127.0.0.1:48481
+2015-04-12 23:01:57,185 INFO  [org.jboss.as.naming] (default task-1) JBAS011806: Channel end notification received, closing channel Channel ID 3391d441 (inbound) of Remoting connection 73dd2ad3 to /127.0.0.1:38753
+2015-04-12 23:04:52,013 INFO  [org.jboss.as.naming] (default task-15) JBAS011806: Channel end notification received, closing channel Channel ID 2c04de7f (inbound) of Remoting connection 1ab87757 to /127.0.0.1:37102
+2015-04-12 23:11:57,278 INFO  [org.jboss.as.naming] (default task-22) JBAS011806: Channel end notification received, closing channel Channel ID 7090a0e3 (inbound) of Remoting connection 65d5a60b to /127.0.0.1:54057
+2015-04-12 23:12:30,964 INFO  [org.jboss.as.naming] (default task-29) JBAS011806: Channel end notification received, closing channel Channel ID 3f9c3c53 (inbound) of Remoting connection 07cc117e to /127.0.0.1:40945
+2015-04-12 23:21:09,222 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017532: Host default-host stopping
+2015-04-12 23:21:09,222 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+2015-04-12 23:21:09,243 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016009: Stopping weld service for deployment EnterpriseApplication.ear
+2015-04-12 23:21:09,245 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) JBAS010418: Stopped Driver service with driver-name = h2
+2015-04-12 23:21:09,283 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015974: Stopped subdeployment (runtime-name: EnterpriseApplicationEJB.jar) in 105ms
+2015-04-12 23:21:09,284 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Stopped deployment EnterpriseApplication.ear (runtime-name: EnterpriseApplication.ear) in 108ms
+2015-04-12 23:21:09,293 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017521: Undertow HTTP listener default suspending
+2015-04-12 23:21:09,301 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017520: Undertow HTTP listener default stopped, was bound to localhost/127.0.0.1:8080
+2015-04-12 23:21:09,303 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017506: Undertow 1.1.0.Final stopping
+2015-04-12 23:21:09,324 INFO  [org.jboss.as] (MSC service thread 1-4) JBAS015950: WildFly 8.2.0.Final "Tweek" stopped in 117ms
+2015-04-12 23:22:22,419 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+2015-04-12 23:22:22,838 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+2015-04-12 23:22:22,950 INFO  [org.jboss.as] (MSC service thread 1-3) JBAS015899: WildFly 8.2.0.Final "Tweek" starting
+2015-04-12 23:22:22,960 DEBUG [org.jboss.as.config] (MSC service thread 1-3) Configured system properties:
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/bartek/MERCURY/wildfly-8.2.0.Final/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-8-openjdk-amd64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_40-internal-b09
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_40-internal
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.40-b13
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final
+	jboss.host.name = bartek-n-a
+	jboss.modules.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = bartek-n-a
+	jboss.qualified.host.name = bartek-n-a
+	jboss.server.base.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone
+	jboss.server.config.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration
+	jboss.server.data.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/data
+	jboss.server.deploy.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/data/content
+	jboss.server.log.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log
+	jboss.server.name = bartek-n-a
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration/logging.properties
+	module.path = /home/bartek/MERCURY/wildfly-8.2.0.Final/modules
+	org.jboss.boot.log.file = /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log/boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 3.16.0-23-generic
+	path.separator = :
+	program.name = JBossTools: WildFly 8.x
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.desktop = gnome
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp /home/bartek/MERCURY/wildfly-8.2.0.Final/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone.xml -Djboss.server.base.dir=/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = PL
+	user.dir = /home/bartek/MERCURY/wildfly-8.2.0.Final/bin
+	user.home = /home/bartek
+	user.language = pl
+	user.name = bartek
+	user.timezone = Europe/Warsaw
+2015-04-12 23:22:22,962 DEBUG [org.jboss.as.config] (MSC service thread 1-3) VM Arguments: -Dprogram.name=JBossTools: WildFly 8.x -Xms64m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/log/boot.log -Dlogging.configuration=file:/home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/configuration/logging.properties -Djboss.home.dir=/home/bartek/MERCURY/wildfly-8.2.0.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=UTF-8 
+2015-04-12 23:22:25,162 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found EnterpriseApplication.ear in deployment directory. To trigger deployment create a file called EnterpriseApplication.ear.dodeploy
+2015-04-12 23:22:25,192 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+2015-04-12 23:22:25,247 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.3.0.Final
+2015-04-12 23:22:25,286 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.3.0.Final
+2015-04-12 23:22:25,399 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 4 core threads with 32 task threads based on your 2 available processors
+2015-04-12 23:22:25,442 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+2015-04-12 23:22:25,570 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-3) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+2015-04-12 23:22:25,606 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+2015-04-12 23:22:25,618 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+2015-04-12 23:22:25,734 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+2015-04-12 23:22:25,736 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+2015-04-12 23:22:25,762 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+2015-04-12 23:22:25,886 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2015-04-12 23:22:25,898 INFO  [org.jboss.as.security] (MSC service thread 1-2) JBAS013170: Current PicketBox version=4.0.21.Final
+2015-04-12 23:22:25,921 INFO  [org.jboss.remoting] (MSC service thread 1-1) JBoss Remoting version 4.0.6.Final
+2015-04-12 23:22:25,950 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-12 23:22:26,006 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010417: Started Driver service with driver-name = h2
+2015-04-12 23:22:26,007 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-12 23:22:26,082 INFO  [org.jboss.as.naming] (MSC service thread 1-2) JBAS011802: Starting Naming Service
+2015-04-12 23:22:26,114 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) JBAS015400: Bound mail session [java:jboss/mail/Default]
+2015-04-12 23:22:26,503 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017525: Started server default-server.
+2015-04-12 23:22:26,519 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path /home/bartek/MERCURY/wildfly-8.2.0.Final/welcome-content
+2015-04-12 23:22:26,900 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017531: Host default-host starting
+2015-04-12 23:22:27,050 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017519: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2015-04-12 23:22:27,559 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) JBAS015012: Started FileSystemDeploymentService for directory /home/bartek/MERCURY/wildfly-8.2.0.Final/standalone/deployments
+2015-04-12 23:22:27,665 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015876: Starting deployment of "EnterpriseApplication.ear" (runtime-name: "EnterpriseApplication.ear")
+2015-04-12 23:22:28,940 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015973: Starting subdeployment (runtime-name: "EnterpriseApplicationEJB.jar")
+2015-04-12 23:22:29,135 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+2015-04-12 23:22:30,869 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016002: Processing weld deployment EnterpriseApplication.ear
+2015-04-12 23:22:31,389 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+2015-04-12 23:22:31,764 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-4) HV000001: Hibernate Validator 5.1.3.Final
+2015-04-12 23:22:33,088 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016002: Processing weld deployment EnterpriseApplicationEJB.jar
+2015-04-12 23:22:33,239 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-3) JNDI bindings for session bean named SampleService in deployment unit subdeployment "EnterpriseApplicationEJB.jar" of deployment "EnterpriseApplication.ear" are as follows:
+
+	java:global/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:jboss/exported/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceRemote
+	java:global/EnterpriseApplication/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:app/EnterpriseApplicationEJB/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+	java:module/SampleService!pl.bnsit.ejb3.SampleServiceLocal
+
+2015-04-12 23:22:33,519 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016005: Starting Services for CDI deployment: EnterpriseApplication.ear
+2015-04-12 23:22:33,842 INFO  [org.jboss.weld.Version] (MSC service thread 1-1) WELD-000900: 2.2.6 (Final)
+2015-04-12 23:22:34,088 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016008: Starting weld service for deployment EnterpriseApplication.ear
+2015-04-12 23:22:39,608 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "EnterpriseApplication.ear" (runtime-name : "EnterpriseApplication.ear")
+2015-04-12 23:22:39,700 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+2015-04-12 23:22:39,708 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+2015-04-12 23:22:39,718 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 18194ms - Started 289 of 349 services (98 services are lazy, passive or on-demand)
+2015-04-12 23:23:07,196 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017532: Host default-host stopping
+2015-04-12 23:23:07,237 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+2015-04-12 23:23:07,247 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016009: Stopping weld service for deployment EnterpriseApplication.ear
+2015-04-12 23:23:07,251 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010418: Stopped Driver service with driver-name = h2
+2015-04-12 23:23:07,302 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017521: Undertow HTTP listener default suspending
+2015-04-12 23:23:07,316 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017520: Undertow HTTP listener default stopped, was bound to localhost/127.0.0.1:8080
+2015-04-12 23:23:07,321 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017506: Undertow 1.1.0.Final stopping
+2015-04-12 23:23:07,328 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015974: Stopped subdeployment (runtime-name: EnterpriseApplicationEJB.jar) in 185ms
+2015-04-12 23:23:07,329 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Stopped deployment EnterpriseApplication.ear (runtime-name: EnterpriseApplication.ear) in 188ms
+2015-04-12 23:23:07,348 INFO  [org.jboss.as] (MSC service thread 1-1) JBAS015950: WildFly 8.2.0.Final "Tweek" stopped in 205ms
