@@ -995,3 +995,67 @@
 2015-04-21 21:48:59,571 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
 2015-04-21 21:48:59,572 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
 2015-04-21 21:48:59,574 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 9032ms - Started 402 of 480 services (122 services are lazy, passive or on-demand)
+2015-04-21 22:25:13,279 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016009: Stopping weld service for deployment mercury.ear
+2015-04-21 22:25:13,308 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015974: Stopped subdeployment (runtime-name: mercury-server.jar) in 58ms
+2015-04-21 22:25:13,311 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Stopped deployment mercury.ear (runtime-name: mercury.ear) in 64ms
+2015-04-21 22:25:13,313 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "mercury.ear" (runtime-name: "mercury.ear")
+2015-04-21 22:25:13,319 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015973: Starting subdeployment (runtime-name: "mercury-server.jar")
+2015-04-21 22:25:13,332 INFO  [org.jboss.as.jpa] (MSC service thread 1-3) JBAS011401: Read persistence.xml for persister
+2015-04-21 22:25:13,381 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016002: Processing weld deployment mercury.ear
+2015-04-21 22:25:13,388 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 52) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'mercury.ear/mercury-server.jar#persister'
+2015-04-21 22:25:13,407 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 52) HHH000204: Processing PersistenceUnitInfo [
+	name: persister
+	...]
+2015-04-21 22:25:13,498 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 52) HHH000412: Hibernate Core {4.3.7.Final}
+2015-04-21 22:25:13,500 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 52) HHH000206: hibernate.properties not found
+2015-04-21 22:25:13,502 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 52) HHH000021: Bytecode provider name : javassist
+2015-04-21 22:25:13,559 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016002: Processing weld deployment mercury-server.jar
+2015-04-21 22:25:13,562 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-2) JNDI bindings for session bean named MerchandiseServiceImpl in deployment unit subdeployment "mercury-server.jar" of deployment "mercury.ear" are as follows:
+
+	java:global/mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceImplRemote
+	java:app/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceImplRemote
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceImplRemote
+	java:jboss/exported/mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceImplRemote
+	java:global/mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.service.local.MerchandiseServiceLocal
+	java:app/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.service.local.MerchandiseServiceLocal
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.service.local.MerchandiseServiceLocal
+
+2015-04-21 22:25:13,571 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016005: Starting Services for CDI deployment: mercury.ear
+2015-04-21 22:25:13,582 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016008: Starting weld service for deployment mercury.ear
+2015-04-21 22:25:13,671 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 52) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'mercury.ear/mercury-server.jar#persister'
+2015-04-21 22:25:13,813 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 52) HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2015-04-21 22:25:14,412 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 52) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2015-04-21 22:25:14,448 INFO  [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] (ServerService Thread Pool -- 52) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2015-04-21 22:25:14,527 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 52) HHH000397: Using ASTQueryTranslatorFactory
+2015-04-21 22:25:15,236 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Replaced deployment "mercury.ear" with deployment "mercury.ear"
+2015-04-21 22:27:10,426 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 53) JBAS011410: Stopping Persistence Unit (phase 2 of 2) Service 'mercury.ear/mercury-server.jar#persister'
+2015-04-21 22:27:10,430 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016009: Stopping weld service for deployment mercury.ear
+2015-04-21 22:27:10,449 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 53) JBAS011410: Stopping Persistence Unit (phase 1 of 2) Service 'mercury.ear/mercury-server.jar#persister'
+2015-04-21 22:27:10,464 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015974: Stopped subdeployment (runtime-name: mercury-server.jar) in 56ms
+2015-04-21 22:27:10,466 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Stopped deployment mercury.ear (runtime-name: mercury.ear) in 58ms
+2015-04-21 22:27:10,467 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "mercury.ear" (runtime-name: "mercury.ear")
+2015-04-21 22:27:10,474 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015973: Starting subdeployment (runtime-name: "mercury-server.jar")
+2015-04-21 22:27:10,481 INFO  [org.jboss.as.jpa] (MSC service thread 1-4) JBAS011401: Read persistence.xml for persister
+2015-04-21 22:27:10,505 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016002: Processing weld deployment mercury.ear
+2015-04-21 22:27:10,506 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 53) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'mercury.ear/mercury-server.jar#persister'
+2015-04-21 22:27:10,507 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 53) HHH000204: Processing PersistenceUnitInfo [
+	name: persister
+	...]
+2015-04-21 22:27:10,522 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016002: Processing weld deployment mercury-server.jar
+2015-04-21 22:27:10,525 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-2) JNDI bindings for session bean named MerchandiseServiceImpl in deployment unit subdeployment "mercury-server.jar" of deployment "mercury.ear" are as follows:
+
+	java:global/mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote
+	java:app/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote
+	java:jboss/exported/mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote
+	java:global/mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.service.local.MerchandiseServiceLocal
+	java:app/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.service.local.MerchandiseServiceLocal
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.service.local.MerchandiseServiceLocal
+
+2015-04-21 22:27:10,531 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016005: Starting Services for CDI deployment: mercury.ear
+2015-04-21 22:27:10,538 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016008: Starting weld service for deployment mercury.ear
+2015-04-21 22:27:10,561 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 53) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'mercury.ear/mercury-server.jar#persister'
+2015-04-21 22:27:10,573 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 53) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2015-04-21 22:27:10,574 INFO  [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] (ServerService Thread Pool -- 53) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2015-04-21 22:27:10,576 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 53) HHH000397: Using ASTQueryTranslatorFactory
+2015-04-21 22:27:10,858 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Replaced deployment "mercury.ear" with deployment "mercury.ear"
