@@ -1,7 +1,7 @@
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import pl.uz.mercury.serviceremoteinterface.MerchandiseServiceImplRemote;
+import pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote;
 
 public class Main
 {
@@ -13,7 +13,7 @@ public class Main
 
 	private static void lookup() throws NamingException
 	{
-		MerchandiseServiceImplRemote service = InitialContext
+		MerchandiseServiceRemote service = InitialContext
 				.doLookup("ejb:mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceImplRemote");
 		System.out.println(service.getResource());
 	}
