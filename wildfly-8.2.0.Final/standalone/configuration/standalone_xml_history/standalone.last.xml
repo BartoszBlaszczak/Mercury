@@ -349,15 +349,6 @@
                         </login-module>
                     </authentication>
                 </security-domain>
-                <security-domain name="application-security-domain" cache-type="default">
-                    <authentication>
-                        <login-module code="org.jboss.security.auth.spi.UsersRolesLoginModule" flag="required">
-                            <module-option name="unauthenticatedIdentity" value="guest"/>
-                            <module-option name="usersProperties" value="a"/>
-                            <module-option name="rolesProperties" value="a"/>
-                        </login-module>
-                    </authentication>
-                </security-domain>
             </security-domains>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:transactions:2.0">
