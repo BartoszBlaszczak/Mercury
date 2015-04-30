@@ -344,17 +344,11 @@
                 <security-domain name="mercury-domain" cache-type="default">
                     <authentication>
                         <login-module code="Database" flag="required">
+                            <module-option name="realm" value="ApplicationRealm"/>
                             <module-option name="dsJndiName" value="java:jboss/mercuryDataSource"/>
-                            <module-option name="principalsQuery" value="SELECT password FROM users WHERE login=?"/>
-                        </login-module>
-                    </authentication>
-                </security-domain>
-                <security-domain name="application-security-domain" cache-type="default">
-                    <authentication>
-                        <login-module code="org.jboss.security.auth.spi.UsersRolesLoginModule" flag="required">
-                            <module-option name="unauthenticatedIdentity" value="guest"/>
-                            <module-option name="usersProperties" value="a"/>
-                            <module-option name="rolesProperties" value="a"/>
+                            <module-option name="principalsQuery" value="select password from operator where login=?"/>
+                            <module-option name="rolesQuery" value="select role, 'Roles' from application_security_role where operator_login=?"/>
+                            <module-option name="password-stacking" value="useFirstPass"/>
                         </login-module>
                     </authentication>
                 </security-domain>
