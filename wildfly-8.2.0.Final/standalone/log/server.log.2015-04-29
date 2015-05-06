@@ -1,0 +1,199 @@
+2015-04-29 15:54:41,700 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+2015-04-29 15:54:44,726 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+2015-04-29 15:54:45,454 INFO  [org.jboss.as] (MSC service thread 1-1) JBAS015899: WildFly 8.2.0.Final "Tweek" starting
+2015-04-29 15:54:45,497 DEBUG [org.jboss.as.config] (MSC service thread 1-1) Configured system properties:
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /home/bartek/MERCURY/jdk1.8.0_45/jre/lib/endorsed
+	java.ext.dirs = /home/bartek/MERCURY/jdk1.8.0_45/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /home/bartek/MERCURY/jdk1.8.0_45/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_45-b14
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_45
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.45-b02
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final
+	jboss.host.name = bartek-n-a
+	jboss.modules.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = bartek-n-a
+	jboss.qualified.host.name = bartek-n-a
+	jboss.server.base.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone
+	jboss.server.config.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/configuration
+	jboss.server.data.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/data
+	jboss.server.deploy.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/data/content
+	jboss.server.log.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/log
+	jboss.server.name = bartek-n-a
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/configuration/logging.properties
+	module.path = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/modules
+	org.jboss.boot.log.file = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/log/boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 3.16.0-23-generic
+	path.separator = :
+	program.name = JBossTools: WildFly 8.x
+	sun.arch.data.model = 64
+	sun.boot.class.path = /home/bartek/MERCURY/jdk1.8.0_45/jre/lib/resources.jar:/home/bartek/MERCURY/jdk1.8.0_45/jre/lib/rt.jar:/home/bartek/MERCURY/jdk1.8.0_45/jre/lib/sunrsasign.jar:/home/bartek/MERCURY/jdk1.8.0_45/jre/lib/jsse.jar:/home/bartek/MERCURY/jdk1.8.0_45/jre/lib/jce.jar:/home/bartek/MERCURY/jdk1.8.0_45/jre/lib/charsets.jar:/home/bartek/MERCURY/jdk1.8.0_45/jre/lib/jfr.jar:/home/bartek/MERCURY/jdk1.8.0_45/jre/classes
+	sun.boot.library.path = /home/bartek/MERCURY/jdk1.8.0_45/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.desktop = gnome
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone.xml -Djboss.server.base.dir=/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = PL
+	user.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/bin
+	user.home = /home/bartek
+	user.language = pl
+	user.name = bartek
+	user.timezone = Europe/Warsaw
+2015-04-29 15:54:45,501 DEBUG [org.jboss.as.config] (MSC service thread 1-1) VM Arguments: -Dprogram.name=JBossTools: WildFly 8.x -Xms64m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/log/boot.log -Dlogging.configuration=file:/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/configuration/logging.properties -Djboss.home.dir=/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=UTF-8 
+2015-04-29 15:54:59,186 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found mercury-server.jar in deployment directory. To trigger deployment create a file called mercury-server.jar.dodeploy
+2015-04-29 15:54:59,200 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found mercury.ear in deployment directory. To trigger deployment create a file called mercury.ear.dodeploy
+2015-04-29 15:54:59,227 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found EnterpriseApplication.ear in deployment directory. To trigger deployment create a file called EnterpriseApplication.ear.dodeploy
+2015-04-29 15:54:59,703 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+2015-04-29 15:55:00,311 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.3.0.Final
+2015-04-29 15:55:00,520 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.3.0.Final
+2015-04-29 15:55:00,904 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+2015-04-29 15:55:01,180 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+2015-04-29 15:55:01,182 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 4 core threads with 32 task threads based on your 2 available processors
+2015-04-29 15:55:01,199 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+2015-04-29 15:55:01,100 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+2015-04-29 15:55:01,107 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+2015-04-29 15:55:01,572 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+2015-04-29 15:55:01,697 INFO  [org.jboss.as.security] (MSC service thread 1-4) JBAS013170: Current PicketBox version=4.0.21.Final
+2015-04-29 15:55:01,825 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-29 15:55:02,102 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2015-04-29 15:55:02,208 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017502: Undertow 1.1.0.Final starting
+2015-04-29 15:55:02,227 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-1) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+2015-04-29 15:55:02,497 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 4.0.6.Final
+2015-04-29 15:55:02,514 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 27) JBAS014613: Operation ("add") failed - address: ([
+    ("subsystem" => "datasources"),
+    ("jdbc-driver" => "EnterpriseApplication.ear_org.postgresql.Driver_9_4")
+]) - failure description: "JBAS010441: Failed to load module for driver [org.postgresql]"
+2015-04-29 15:55:02,591 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) JBAS010417: Started Driver service with driver-name = h2
+2015-04-29 15:55:02,608 INFO  [org.jboss.as.naming] (MSC service thread 1-3) JBAS011802: Starting Naming Service
+2015-04-29 15:55:02,668 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-3) JBAS015400: Bound mail session [java:jboss/mail/Default]
+2015-04-29 15:55:04,029 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/welcome-content
+2015-04-29 15:55:04,152 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017525: Started server default-server.
+2015-04-29 15:55:04,460 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017531: Host default-host starting
+2015-04-29 15:55:06,638 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017519: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2015-04-29 15:55:08,714 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "mercury.ear" (runtime-name: "mercury.ear")
+2015-04-29 15:55:08,869 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "postgresql-9.4-1201.jdbc4.jar" (runtime-name: "postgresql-9.4-1201.jdbc4.jar")
+2015-04-29 15:55:08,885 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "mercury-pub.jar" (runtime-name: "mercury-pub.jar")
+2015-04-29 15:55:08,937 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "mercury-server.jar" (runtime-name: "mercury-server.jar")
+2015-04-29 15:55:09,224 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/deployments
+2015-04-29 15:55:10,602 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015973: Starting subdeployment (runtime-name: "mercury-server.jar")
+2015-04-29 15:55:12,070 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+2015-04-29 15:55:13,619 INFO  [org.jboss.as.jpa] (MSC service thread 1-1) JBAS011401: Read persistence.xml for mercuryPersister
+2015-04-29 15:55:14,379 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016002: Processing weld deployment mercury.ear
+2015-04-29 15:55:15,582 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-4) HV000001: Hibernate Validator 5.1.3.Final
+2015-04-29 15:55:15,651 INFO  [org.jboss.ws.common.management] (MSC service thread 1-3) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+2015-04-29 15:55:15,965 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010404: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.4)
+2015-04-29 15:55:16,123 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) JBAS010417: Started Driver service with driver-name = postgresql-9.4-1201.jdbc4.jar
+2015-04-29 15:55:16,809 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/mercuryDataSource]
+2015-04-29 15:55:16,830 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 50) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'mercury.ear/mercury-server.jar#mercuryPersister'
+2015-04-29 15:55:17,095 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 50) HHH000204: Processing PersistenceUnitInfo [
+	name: mercuryPersister
+	...]
+2015-04-29 15:55:18,507 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 50) HHH000412: Hibernate Core {4.3.7.Final}
+2015-04-29 15:55:18,560 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 50) HHH000206: hibernate.properties not found
+2015-04-29 15:55:18,601 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 50) HHH000021: Bytecode provider name : javassist
+2015-04-29 15:55:20,429 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016002: Processing weld deployment mercury-server.jar
+2015-04-29 15:55:20,461 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-2) JNDI bindings for session bean named MerchandiseDao in deployment unit subdeployment "mercury-server.jar" of deployment "mercury.ear" are as follows:
+
+	java:global/mercury/mercury-server/MerchandiseDao!pl.uz.mercury.local.MerchandiseDaoLocal
+	java:app/mercury-server/MerchandiseDao!pl.uz.mercury.local.MerchandiseDaoLocal
+	java:module/MerchandiseDao!pl.uz.mercury.local.MerchandiseDaoLocal
+	java:global/mercury/mercury-server/MerchandiseDao
+	java:app/mercury-server/MerchandiseDao
+	java:module/MerchandiseDao
+
+2015-04-29 15:55:20,478 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-2) JNDI bindings for session bean named MerchandiseServiceImpl in deployment unit subdeployment "mercury-server.jar" of deployment "mercury.ear" are as follows:
+
+	java:global/mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote
+	java:app/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote
+	java:jboss/exported/mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote
+	java:global/mercury/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.local.MerchandiseServiceLocal
+	java:app/mercury-server/MerchandiseServiceImpl!pl.uz.mercury.local.MerchandiseServiceLocal
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.local.MerchandiseServiceLocal
+
+2015-04-29 15:55:20,544 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016005: Starting Services for CDI deployment: mercury.ear
+2015-04-29 15:55:21,230 INFO  [org.jboss.weld.Version] (MSC service thread 1-3) WELD-000900: 2.2.6 (Final)
+2015-04-29 15:55:21,316 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016008: Starting weld service for deployment mercury.ear
+2015-04-29 15:55:23,927 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 50) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'mercury.ear/mercury-server.jar#mercuryPersister'
+2015-04-29 15:55:25,218 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 50) HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2015-04-29 15:55:33,050 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 50) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2015-04-29 15:55:33,184 INFO  [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] (ServerService Thread Pool -- 50) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2015-04-29 15:55:34,611 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 50) HHH000397: Using ASTQueryTranslatorFactory
+2015-04-29 15:55:46,547 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS018559: Deployed "postgresql-9.4-1201.jdbc4.jar" (runtime-name : "postgresql-9.4-1201.jdbc4.jar")
+2015-04-29 15:55:46,564 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "mercury-pub.jar" (runtime-name : "mercury-pub.jar")
+2015-04-29 15:55:46,565 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "mercury.ear" (runtime-name : "mercury.ear")
+2015-04-29 15:55:46,566 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "mercury-server.jar" (runtime-name : "mercury-server.jar")
+2015-04-29 15:55:46,718 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+2015-04-29 15:55:46,756 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+2015-04-29 15:55:46,767 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 71116ms - Started 436 of 514 services (122 services are lazy, passive or on-demand)
+2015-04-29 16:21:26,222 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017532: Host default-host stopping
+2015-04-29 16:21:26,236 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+2015-04-29 16:21:26,244 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 52) JBAS011410: Stopping Persistence Unit (phase 2 of 2) Service 'mercury.ear/mercury-server.jar#mercuryPersister'
+2015-04-29 16:21:26,248 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010418: Stopped Driver service with driver-name = h2
+2015-04-29 16:21:26,281 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016009: Stopping weld service for deployment mercury.ear
+2015-04-29 16:21:26,281 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Stopped deployment mercury-server.jar (runtime-name: mercury-server.jar) in 128ms
+2015-04-29 16:21:26,298 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Stopped deployment mercury-pub.jar (runtime-name: mercury-pub.jar) in 146ms
+2015-04-29 16:21:26,328 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 52) JBAS011410: Stopping Persistence Unit (phase 1 of 2) Service 'mercury.ear/mercury-server.jar#mercuryPersister'
+2015-04-29 16:21:26,329 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010409: Unbound data source [java:jboss/mercuryDataSource]
+2015-04-29 16:21:26,338 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015974: Stopped subdeployment (runtime-name: mercury-server.jar) in 185ms
+2015-04-29 16:21:26,340 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Stopped deployment mercury.ear (runtime-name: mercury.ear) in 185ms
+2015-04-29 16:21:26,344 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010418: Stopped Driver service with driver-name = postgresql-9.4-1201.jdbc4.jar
+2015-04-29 16:21:26,368 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Stopped deployment postgresql-9.4-1201.jdbc4.jar (runtime-name: postgresql-9.4-1201.jdbc4.jar) in 216ms
+2015-04-29 16:21:26,373 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017521: Undertow HTTP listener default suspending
+2015-04-29 16:21:26,387 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017520: Undertow HTTP listener default stopped, was bound to localhost/127.0.0.1:8080
+2015-04-29 16:21:26,390 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017506: Undertow 1.1.0.Final stopping
+2015-04-29 16:21:26,415 INFO  [org.jboss.as] (MSC service thread 1-3) JBAS015950: WildFly 8.2.0.Final "Tweek" stopped in 226ms

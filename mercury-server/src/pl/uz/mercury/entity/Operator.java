@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Version;
 
 @Entity
-public class Operator
+public class Operator implements MercuryOptionEntity
 {
 	@Id
 	private String	login;
@@ -43,6 +43,12 @@ public class Operator
 	public void setVersion(Long version)
 	{
 		this.version = version;
+	}
+
+	@Override
+	public Long getId ()
+	{
+		return 100L;
 	}
 
 }

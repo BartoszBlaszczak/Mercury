@@ -4,7 +4,10 @@ import pl.uz.mercury.annotation.TransientMercuryDtoField;
 
 public class MerchandiseDto implements MercuryOptionDto
 {
-	public Long merchandiseId;
+	public static final String MERCHANDISE_ID = "Idmerchandise";
+	public static final String NAME = "name";
+	
+	public Long Idmerchandise;
 	public String name; 
 	
 	@TransientMercuryDtoField
