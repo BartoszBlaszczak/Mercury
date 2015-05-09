@@ -10,7 +10,7 @@ import javax.persistence.Transient;
 import javax.persistence.Version;
 
 import pl.uz.mercury.annotation.TransientMercuryDtoField;
-import pl.uz.mercury.dto.MercuryOptionDto;
+import pl.uz.mercury.dto.common.MercuryOptionDto;
 import pl.uz.mercury.entity.common.MercuryOptionEntity;
 import pl.uz.mercury.exception.EntityDtoAssignException;
 

@@ -1,6 +1,6 @@
 package pl.uz.mercury.serviceremoteinterface.common;
 
-public interface MercuryServiceRemote
+public interface MercuryService
 {
 
 }

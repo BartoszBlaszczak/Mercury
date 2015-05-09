@@ -2,7 +2,7 @@ package pl.uz.mercury.dao.common;
 
 import java.lang.reflect.ParameterizedType;
 
-import pl.uz.mercury.dto.MercuryOptionDto;
+import pl.uz.mercury.dto.common.MercuryOptionDto;
 import pl.uz.mercury.entity.common.MercuryOptionEntity;
 
 public abstract class MercuryOptionDao <Entity extends MercuryOptionEntity, Dto extends MercuryOptionDto>

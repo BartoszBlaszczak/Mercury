@@ -1,21 +1,23 @@
 package pl.uz.mercury.service.common;
 
 import java.lang.reflect.ParameterizedType;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.ejb.EJBTransactionRolledbackException;
 
 import pl.uz.mercury.dao.common.MercuryDao;
-import pl.uz.mercury.dto.MercuryOptionDto;
+import pl.uz.mercury.dto.common.MercuryOptionDto;
 import pl.uz.mercury.entity.common.MercuryOptionEntity;
-import pl.uz.mercury.exception.EntityDtoAssignException;
-import pl.uz.mercury.filtercriteria.FilterCriteria;
+import pl.uz.mercury.exception.DeletingException;
+import pl.uz.mercury.exception.RetrievingException;
+import pl.uz.mercury.exception.SavingException;
+import pl.uz.mercury.exception.UpdatingException;
 import pl.uz.mercury.serviceremoteinterface.common.MercuryCrudOptionServiceInterface;
 import pl.uz.mercury.util.EntityDtoAssigner;
 
 public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEntity, Dto extends MercuryOptionDto>
-	implements MercuryCrudOptionServiceInterface
+	implements MercuryCrudOptionServiceInterface <Dto>
 {
 	private EntityDtoAssigner <Entity, Dto>	entityDtoAssigner			= new EntityDtoAssigner <>();
 	private static final int				ENTITY_GENERIC_TYPE_ORDER	= 0;
@@ -33,8 +35,9 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 		return (Class <GenericType>) ((ParameterizedType) getClass().getGenericSuperclass())
 				.getActualTypeArguments()[genericTypeorder];
 	}
-
-	public Long save (Dto dto) throws Exception
+	
+	@Override
+	public Long save (Dto dto) throws SavingException
 	{
 		try
 		{
@@ -44,13 +47,13 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 		}
 		catch (InstantiationException | IllegalAccessException e)
 		{
-			e.printStackTrace();
-			throw new Exception();
+			throw new SavingException();
 		}
 
 	}
 
-	public Dto retrieve (Long id) throws Exception
+	@Override
+	public Dto retrieve (Long id) throws RetrievingException
 	{
 		try
 		{
@@ -60,12 +63,12 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 		}
 		catch (InstantiationException | IllegalAccessException e)
 		{
-			e.printStackTrace();
-			throw new Exception();
+			throw new RetrievingException();
 		}
 	}
-
-	public void update (Dto dto) throws Exception
+	
+	@Override
+	public void update (Dto dto) throws UpdatingException
 	{
 		try
 		{
@@ -75,17 +78,25 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 		}
 		catch (IllegalArgumentException | IllegalAccessException e)
 		{
-			e.printStackTrace();
-			throw new Exception();
+			throw new UpdatingException();
 		}
 	}
-
-	public void delete (Long id)
+	
+	@Override
+	public void delete (Long id) throws DeletingException
 	{
-		dao.delete(entityClass, id);
+		try
+		{
+			dao.delete(entityClass, id);
+		}
+		catch (EJBTransactionRolledbackException e)
+		{
+			throw new DeletingException();
+		}
 	}
-
-	public List <Dto> getList () throws Exception
+	
+	@Override
+	public List <Dto> getList () throws RetrievingException
 	{
 		try
 		{
@@ -95,9 +106,7 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 		}
 		catch (InstantiationException | IllegalAccessException e)
 		{
-			e.printStackTrace();
-			throw new Exception();
+			throw new RetrievingException();
 		}
 	}
-
 }

@@ -29,20 +29,22 @@ public class MerchandiseServiceImpl
 //		return dao.saveUniversally(dto).toString();
 //		zobaczmy.em();
 		
-		try
-		{
-			for (MerchandiseDto dto : getList())
-			{
-				System.out.println(dto.name);
-			}
-			
-		}
-		catch (Exception e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try
+//		{
+//			for (MerchandiseDto dto : getList())
+//			{
+//				System.out.println(dto.name);
+//			}
+//			
+//		}
+//		catch (Exception e)
+//		{
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+//		delete(8l);
+		
 		return "OK";
 	}
-
 }

@@ -1,6 +1,7 @@
 package pl.uz.mercury.dto;
 
 import pl.uz.mercury.annotation.TransientMercuryDtoField;
+import pl.uz.mercury.dto.common.MercuryOptionDto;
 
 public class MerchandiseDto implements MercuryOptionDto
 {

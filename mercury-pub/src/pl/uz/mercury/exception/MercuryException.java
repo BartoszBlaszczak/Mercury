@@ -13,9 +13,4 @@ public class MercuryException extends Exception
 	{
 		super(message);
 	}
-	
-	public MercuryException(String message, Throwable cause)
-	{
-		super(message, cause);
-	}
 }
