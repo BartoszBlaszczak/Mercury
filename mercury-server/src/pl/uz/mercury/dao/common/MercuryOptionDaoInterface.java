@@ -1,6 +1,6 @@
 package pl.uz.mercury.dao.common;
 
-import pl.uz.mercury.entity.MercuryOptionEntity;
+import pl.uz.mercury.entity.common.MercuryOptionEntity;
 
 public interface MercuryOptionDaoInterface
 {

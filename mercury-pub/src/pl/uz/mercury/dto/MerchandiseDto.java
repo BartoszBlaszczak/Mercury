@@ -12,4 +12,10 @@ public class MerchandiseDto implements MercuryOptionDto
 	
 	@TransientMercuryDtoField
 	public String transientField;
+
+	@Override
+	public Long getId ()
+	{
+		return Idmerchandise;
+	}
 }

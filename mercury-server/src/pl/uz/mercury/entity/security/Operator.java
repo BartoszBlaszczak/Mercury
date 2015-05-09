@@ -1,4 +1,4 @@
-package pl.uz.mercury.entity;
+package pl.uz.mercury.entity.security;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,8 +6,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Version;
 
+import pl.uz.mercury.entity.common.MercuryOptionEntity;
+
 @Entity
-public class Operator implements MercuryOptionEntity
+public class Operator
 {
 	@Id
 	private String	login;
@@ -43,12 +45,6 @@ public class Operator implements MercuryOptionEntity
 	public void setVersion(Long version)
 	{
 		this.version = version;
-	}
-
-	@Override
-	public Long getId ()
-	{
-		return 100L;
 	}
 
 }

@@ -1,4 +1,4 @@
-package pl.uz.mercury.entity;
+package pl.uz.mercury.entity.common;
 
 public interface MercuryOptionEntity
 {

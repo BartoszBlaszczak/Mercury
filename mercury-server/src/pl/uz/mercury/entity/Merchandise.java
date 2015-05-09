@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 import javax.persistence.Version;
 
+import pl.uz.mercury.entity.common.MercuryOptionEntity;
+
 @Entity
 public class Merchandise implements MercuryOptionEntity
 {
