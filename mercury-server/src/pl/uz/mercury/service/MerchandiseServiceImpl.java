@@ -54,10 +54,4 @@ public class MerchandiseServiceImpl
 		
 		return property;
 	}
-	
-	@Override
-	public Long save (MerchandiseDto dto) throws SavingException
-	{
-		return null;
-	}
 }
