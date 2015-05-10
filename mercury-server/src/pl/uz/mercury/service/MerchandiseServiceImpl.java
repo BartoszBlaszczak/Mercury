@@ -52,9 +52,6 @@ public class MerchandiseServiceImpl
 
 		
 		
-		// test 5
-		
-		
 		String property = propertiesReader.getProperty(PropertyName.PERSISTER_NAME);
 		
 		return property;
