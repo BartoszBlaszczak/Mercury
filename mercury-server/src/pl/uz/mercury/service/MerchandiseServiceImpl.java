@@ -1,12 +1,16 @@
 package pl.uz.mercury.service;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.entity.Merchandise;
+import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.local.MerchandiseServiceLocal;
 import pl.uz.mercury.service.common.MercuryCrudOptionService;
 import pl.uz.mercury.serviceremoteinterface.MerchandiseServiceRemote;
+import pl.uz.mercury.util.PropertiesReader;
+import pl.uz.mercury.util.PropertiesReader.PropertyName;
 
 /**
  * Session Bean implementation class MerchandiseServiceImpl
@@ -18,6 +22,9 @@ public class MerchandiseServiceImpl
 	extends MercuryCrudOptionService <Merchandise, MerchandiseDto>
 	implements MerchandiseServiceRemote, MerchandiseServiceLocal
 {
+	@EJB
+	PropertiesReader propertiesReader;
+	
 	@Override
 	public String getResource ()
 	{
@@ -43,8 +50,14 @@ public class MerchandiseServiceImpl
 //			e.printStackTrace();
 //		}
 		
-//		delete(8l);
+		String property = propertiesReader.getProperty(PropertyName.PERSISTER_NAME);
 		
-		return "OK";
+		return property;
+	}
+	
+	@Override
+	public Long save (MerchandiseDto dto) throws SavingException
+	{
+		return null;
 	}
 }
