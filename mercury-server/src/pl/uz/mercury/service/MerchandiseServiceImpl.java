@@ -49,6 +49,10 @@ public class MerchandiseServiceImpl
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
+
+		
+		
+		
 		
 		String property = propertiesReader.getProperty(PropertyName.PERSISTER_NAME);
 		
