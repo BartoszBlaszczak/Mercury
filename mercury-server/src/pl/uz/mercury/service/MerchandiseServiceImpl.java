@@ -51,6 +51,7 @@ public class MerchandiseServiceImpl
 //		}
 		
 		
+		
 		String property = propertiesReader.getProperty(PropertyName.PERSISTER_NAME);
 		
 		return property;
