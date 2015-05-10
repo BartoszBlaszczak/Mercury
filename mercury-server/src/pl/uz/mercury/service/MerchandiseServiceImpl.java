@@ -50,7 +50,6 @@ public class MerchandiseServiceImpl
 //			e.printStackTrace();
 //		}
 		
-		
 		String property = propertiesReader.getProperty(PropertyName.PERSISTER_NAME);
 		
 		return property;
