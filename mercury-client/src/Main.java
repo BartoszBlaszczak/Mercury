@@ -20,8 +20,8 @@ public class Main
 		// secClient.setSimple("bartek", "haslo");
 		// secClient.login();
 
-		lookup();
-//		 save();
+//		lookup();
+		 save();
 //		 getList();
 		// em();
 

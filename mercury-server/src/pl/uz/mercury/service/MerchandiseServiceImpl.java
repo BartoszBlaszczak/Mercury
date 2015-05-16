@@ -50,13 +50,7 @@ public class MerchandiseServiceImpl
 	@Override
 	public Long save (MerchandiseDto dto) throws SavingException
 	{
-//		return 6l;
-		return super.save(dto);
-	}
-	
-	@Override
-	public List <MerchandiseDto> getList () throws RetrievingException
-	{
-		return null;
+		return 6l;
+//		return super.save(dto);
 	}
 }

@@ -21,4 +21,10 @@ public class MerchandiseDto implements MercuryOptionDto
 	{
 		return Idmerchandise;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return new StringBuilder().append(getId()).append(" ").append(name).toString();
+	}
 }
