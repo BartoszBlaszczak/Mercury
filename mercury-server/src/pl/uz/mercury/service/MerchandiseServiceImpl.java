@@ -1,10 +1,17 @@
 package pl.uz.mercury.service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.annotation.Resource;
 import javax.ejb.EJB;
+import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.entity.Merchandise;
+import pl.uz.mercury.exception.RetrievingException;
 import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.local.MerchandiseServiceLocal;
 import pl.uz.mercury.service.common.MercuryCrudOptionService;
@@ -18,42 +25,38 @@ import pl.uz.mercury.util.PropertiesReader.PropertyName;
 @Stateless
 //@SecurityDomain("mercury-domain")
 //@RolesAllowed(value = "rola")
+
 public class MerchandiseServiceImpl 
 	extends MercuryCrudOptionService <Merchandise, MerchandiseDto>
 	implements MerchandiseServiceRemote, MerchandiseServiceLocal
 {
+	
+	public MerchandiseServiceImpl()
+	{
+		super(Merchandise.class, MerchandiseDto.class);
+	}
+
 	@EJB
 	PropertiesReader propertiesReader;
 	
-	@Override
 	public String getResource ()
 	{
-//		MerchandiseDto dto = new MerchandiseDto();
-//		dto.name = "name";
-//		dto.transientField = "transient - do not save it";
-
-//		return dao.save(dto).toString();
-//		return dao.saveUniversally(dto).toString();
-//		zobaczmy.em();
-		
-//		try
-//		{
-//			for (MerchandiseDto dto : getList())
-//			{
-//				System.out.println(dto.name);
-//			}
-//			
-//		}
-//		catch (Exception e)
-//		{
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-
-		
-		
 		String property = propertiesReader.getProperty(PropertyName.PERSISTER_NAME);
 		
+		
 		return property;
+	}
+	
+	@Override
+	public Long save (MerchandiseDto dto) throws SavingException
+	{
+//		return 6l;
+		return super.save(dto);
+	}
+	
+	@Override
+	public List <MerchandiseDto> getList () throws RetrievingException
+	{
+		return null;
 	}
 }

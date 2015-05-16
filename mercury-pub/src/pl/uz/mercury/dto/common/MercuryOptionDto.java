@@ -1,6 +1,8 @@
 package pl.uz.mercury.dto.common;
 
-public interface MercuryOptionDto
+import java.io.Serializable;
+
+public interface MercuryOptionDto extends Serializable
 {
 	Long getId();
 }

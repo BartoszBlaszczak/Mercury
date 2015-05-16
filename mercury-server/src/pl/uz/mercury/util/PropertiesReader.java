@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
 @Stateless
 public class PropertiesReader
 {
-	private static final String	PROPERTIES_FILENAME	= "applicationServer.properties";
+	private static final String	PROPERTIES_FILENAME	= "MercuryServer.properties";
 	private Properties			properties			= new Properties();
 	private InputStream			input;
 

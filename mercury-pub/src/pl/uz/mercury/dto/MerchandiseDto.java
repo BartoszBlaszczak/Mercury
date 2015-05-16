@@ -5,6 +5,8 @@ import pl.uz.mercury.dto.common.MercuryOptionDto;
 
 public class MerchandiseDto implements MercuryOptionDto
 {
+	private static final long	serialVersionUID	= 1L;
+	
 	public static final String MERCHANDISE_ID = "Idmerchandise";
 	public static final String NAME = "name";
 	

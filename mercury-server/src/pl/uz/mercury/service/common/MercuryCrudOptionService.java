@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.ejb.EJB;
 import javax.ejb.EJBTransactionRolledbackException;
+import javax.interceptor.Interceptors;
 
 import pl.uz.mercury.dao.common.MercuryDao;
 import pl.uz.mercury.dto.common.MercuryOptionDto;
@@ -15,39 +16,26 @@ import pl.uz.mercury.exception.DeletingException;
 import pl.uz.mercury.exception.RetrievingException;
 import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.exception.UpdatingException;
+import pl.uz.mercury.interceptor.LoggingInterceptor;
 import pl.uz.mercury.serviceremoteinterface.common.MercuryCrudOptionServiceInterface;
 import pl.uz.mercury.util.EntityDtoAssigner;
 
+@Interceptors(LoggingInterceptor.class)
 public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEntity, Dto extends MercuryOptionDto>
 	implements MercuryCrudOptionServiceInterface <Dto>
 {
-	private static final int				ENTITY_GENERIC_TYPE_ORDER	= 0;
-	private static final int				DTO_GENERIC_TYPE_ORDER		= 1;
-
-	private Class <Entity>					entityClass					= retriveGenericClass(ENTITY_GENERIC_TYPE_ORDER);
-	private Class <Dto>						dtoClass					= retriveGenericClass(DTO_GENERIC_TYPE_ORDER);
-	private EntityDtoAssigner <Entity, Dto>	entityDtoAssigner			= new EntityDtoAssigner <>(entityClass);
+	private final Class <Entity>			entityClass;
+	private final Class <Dto>				dtoClass;
+	private EntityDtoAssigner <Entity, Dto>	entityDtoAssigner;
 
 	@EJB
 	protected MercuryDao					dao;
 
-	@SuppressWarnings({ "unchecked" })
-	private <GenericType> Class <GenericType> retriveGenericClass (int genericTypeOrder)
+	public MercuryCrudOptionService(Class <Entity> entityClass, Class <Dto> dtoClass)
 	{
-		Class <?> genericSource = findGenericSourceClass(getClass());
-		Class <GenericType> classObject = (Class <GenericType>) ((ParameterizedType) genericSource
-				.getGenericSuperclass()).getActualTypeArguments()[genericTypeOrder];
-
-		return classObject;
-	}
-
-	@SuppressWarnings({ "rawtypes" })
-	static private Class findGenericSourceClass (final Class clazz)
-	{
-		Class superclass = (Class) clazz.getSuperclass();
-		if (superclass.equals(MercuryCrudOptionService.class)) { return (Class) clazz; }
-		return findGenericSourceClass(superclass);
-
+		this.entityClass = entityClass;
+		this.dtoClass = dtoClass;
+		entityDtoAssigner = new EntityDtoAssigner <>(entityClass);
 	}
 
 	@Override
@@ -59,7 +47,8 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 			entityDtoAssigner.assignEntityByDto(entity, dto);
 			return dao.save(entity);
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException |
+				InvocationTargetException | NoSuchMethodException e)
 		{
 			throw new SavingException();
 		}
@@ -75,10 +64,11 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 			entityDtoAssigner.assignDtoByEntity(dto, dao.retrive(entityClass, id));
 			return dto;
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException |
+				InvocationTargetException | NoSuchMethodException e)
 		{
 			e.printStackTrace();
-			
+
 			throw new RetrievingException();
 		}
 	}
@@ -92,7 +82,8 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 			entityDtoAssigner.assignEntityByDto(entity, dto);
 
 		}
-		catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e)
+		catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException |
+				NoSuchMethodException e)
 		{
 			throw new UpdatingException();
 		}
@@ -120,7 +111,8 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 			List <Dto> dtoList = entityDtoAssigner.getDtosForEntities(entityList, dtoClass);
 			return dtoList;
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException |
+				InvocationTargetException | NoSuchMethodException e)
 		{
 			throw new RetrievingException();
 		}
