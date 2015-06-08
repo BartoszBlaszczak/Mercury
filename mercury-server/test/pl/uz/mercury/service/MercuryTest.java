@@ -12,8 +12,8 @@ import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import pl.uz.mercury.Properties;
 import pl.uz.mercury.util.PropertiesReader;
-import pl.uz.mercury.util.PropertiesReader.PropertyName;
 
 @RunWith(Arquillian.class)
 public class MercuryTest
@@ -31,7 +31,7 @@ public class MercuryTest
 	@Test
 	public void Test ()
 	{
-		String property = propertiesReader.getProperty(PropertyName.PERSISTER_NAME);
+		String property = propertiesReader.getProperty(Properties.persister_name);
 		assertEquals("mercuryPersister", property);
 	}
 }

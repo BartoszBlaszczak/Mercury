@@ -1,8 +1,6 @@
 package pl.uz.mercury.service.common;
 
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -16,6 +14,7 @@ import pl.uz.mercury.exception.DeletingException;
 import pl.uz.mercury.exception.RetrievingException;
 import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.exception.UpdatingException;
+import pl.uz.mercury.exception.ValidationException;
 import pl.uz.mercury.interceptor.LoggingInterceptor;
 import pl.uz.mercury.serviceremoteinterface.common.MercuryCrudOptionServiceInterface;
 import pl.uz.mercury.util.EntityDtoAssigner;
@@ -24,12 +23,12 @@ import pl.uz.mercury.util.EntityDtoAssigner;
 public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEntity, Dto extends MercuryOptionDto>
 	implements MercuryCrudOptionServiceInterface <Dto>
 {
-	private final Class <Entity>			entityClass;
-	private final Class <Dto>				dtoClass;
-	private EntityDtoAssigner <Entity, Dto>	entityDtoAssigner;
-
 	@EJB
-	protected MercuryDao					dao;
+	protected MercuryDao							dao;
+
+	private final Class <Entity>					entityClass;
+	private final Class <Dto>						dtoClass;
+	private final EntityDtoAssigner <Entity, Dto>	entityDtoAssigner;
 
 	public MercuryCrudOptionService(Class <Entity> entityClass, Class <Dto> dtoClass)
 	{
@@ -39,7 +38,13 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 	}
 
 	@Override
-	public Long save (Dto dto) throws SavingException
+	public final Long save (Dto dto) throws SavingException, ValidationException
+	{
+		validate(dto);
+		return saveImpl(dto);
+	}
+
+	protected Long saveImpl (Dto dto) throws SavingException
 	{
 		try
 		{
@@ -47,12 +52,10 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 			entityDtoAssigner.assignEntityByDto(entity, dto);
 			return dao.save(entity);
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException |
-				InvocationTargetException | NoSuchMethodException e)
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
 		{
 			throw new SavingException();
 		}
-
 	}
 
 	@Override
@@ -64,17 +67,21 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 			entityDtoAssigner.assignDtoByEntity(dto, dao.retrive(entityClass, id));
 			return dto;
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException |
-				InvocationTargetException | NoSuchMethodException e)
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
 		{
 			e.printStackTrace();
-
 			throw new RetrievingException();
 		}
 	}
 
 	@Override
-	public void update (Dto dto) throws UpdatingException
+	public final void update (Dto dto) throws UpdatingException, ValidationException
+	{
+		validate(dto);
+		updateImpl(dto);
+	}
+
+	public void updateImpl (Dto dto) throws UpdatingException
 	{
 		try
 		{
@@ -82,8 +89,7 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 			entityDtoAssigner.assignEntityByDto(entity, dto);
 
 		}
-		catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException |
-				NoSuchMethodException e)
+		catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e)
 		{
 			throw new UpdatingException();
 		}
@@ -111,10 +117,12 @@ public abstract class MercuryCrudOptionService <Entity extends MercuryOptionEnti
 			List <Dto> dtoList = entityDtoAssigner.getDtosForEntities(entityList, dtoClass);
 			return dtoList;
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException |
-				InvocationTargetException | NoSuchMethodException e)
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
 		{
 			throw new RetrievingException();
 		}
 	}
+
+	protected void validate (Dto dto) throws ValidationException
+	{}
 }

@@ -1,5 +1,7 @@
 package pl.uz.mercury.interceptor;
 
+import java.util.StringJoiner;
+
 import javax.annotation.Resource;
 import javax.ejb.SessionContext;
 import javax.interceptor.AroundInvoke;
@@ -9,7 +11,6 @@ import org.pmw.tinylog.Logger;
 
 public class LoggingInterceptor
 {
-
 	@Resource
 	SessionContext	sessionContext;
 
@@ -20,21 +21,17 @@ public class LoggingInterceptor
 		String className = context.getMethod().getDeclaringClass().getSimpleName();
 		String methodName = context.getMethod().getName();
 
-		String space = " ";
+		StringJoiner parametersNames = new StringJoiner(", ");
 
-		Object[] parameters = context.getParameters();
-		StringBuilder parametersNames = new StringBuilder();
-
-		for (Object parameter : parameters)
+		for (Object parameter : context.getParameters())
 		{
-			parametersNames.append(space).append(parameter.toString());
+			parametersNames.add(parameter.toString());
 		}
 
-		StringBuilder info = new StringBuilder().append(operatorName).append(space).append(methodName).append(parametersNames).append(space)
-				.append("by ").append(className);
+		StringBuilder info = new StringBuilder().append(operatorName).append(" invoked ").append(className).append(".").append(methodName)
+				.append("(").append(parametersNames).append(")");
 
 		Logger.info(info);
-
 		return context.proceed();
 	}
 }

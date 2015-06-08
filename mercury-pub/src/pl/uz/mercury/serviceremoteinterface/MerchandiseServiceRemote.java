@@ -8,4 +8,7 @@ import pl.uz.mercury.serviceremoteinterface.common.MercuryCrudOptionServiceInter
 @Remote
 public interface MerchandiseServiceRemote
 	extends MercuryCrudOptionServiceInterface <MerchandiseDto>
-{}
+{
+
+	String getResource ();
+}
