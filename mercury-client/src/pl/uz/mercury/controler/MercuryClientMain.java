@@ -47,6 +47,7 @@ public class MercuryClientMain
 			loadMessageReader();
 			loadLocalization();
 			loadOptions();
+			localize();
 			mainWindow.setVisible(true);
 		}
 		catch (MercuryException e)
@@ -82,10 +83,11 @@ public class MercuryClientMain
 		{
 			localizationPropertiesReader = new PropertiesReader(Properties.LOCALE_FILENAME);
 
-			localization = new MercuryCrudOptionLocalization(localizationPropertiesReader.getProperty(Locale.add),
-					localizationPropertiesReader.getProperty(Locale.show), localizationPropertiesReader.getProperty(Locale.update),
-					localizationPropertiesReader.getProperty(Locale.delete), localizationPropertiesReader.getProperty(Locale.refresh),
-					localizationPropertiesReader.getProperty(Locale.filtr), localizationPropertiesReader.getProperty(Locale.find));
+			localization = new MercuryCrudOptionLocalization(localizationPropertiesReader.getProperty(Locale.options),
+					localizationPropertiesReader.getProperty(Locale.add), localizationPropertiesReader.getProperty(Locale.show),
+					localizationPropertiesReader.getProperty(Locale.update), localizationPropertiesReader.getProperty(Locale.delete),
+					localizationPropertiesReader.getProperty(Locale.refresh), localizationPropertiesReader.getProperty(Locale.filtr),
+					localizationPropertiesReader.getProperty(Locale.find));
 		}
 		catch (IOException e)
 		{
@@ -123,7 +125,13 @@ public class MercuryClientMain
 					mainWindow.addOptionButton(optionButton);
 				else mainWindow.removeOptionButton(optionButton);
 			});
+			mainWindow.addMenuItem(option.getMenuItem());
 		}
+	}
+
+	private void localize ()
+	{
+		mainWindow.localize(localization);
 	}
 
 	@SuppressWarnings("rawtypes")

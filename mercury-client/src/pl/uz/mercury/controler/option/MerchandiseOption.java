@@ -3,6 +3,7 @@ package pl.uz.mercury.controler.option;
 import java.io.IOException;
 
 import javax.naming.NamingException;
+
 import pl.uz.mercury.Properties;
 import pl.uz.mercury.constants.MercuryServiceJndiNames;
 import pl.uz.mercury.controler.option.common.MercuryClientCrudOption;
@@ -23,9 +24,13 @@ public class MerchandiseOption
 	}
 
 	@Override
-	protected MerchandiseDto prepareDto ()
+	protected Object[] getData (MerchandiseDto dto)
 	{
-		// TODO Auto-generated method stub
-		return null;
+		Object[] dataSet = new Object[2];
+
+		dataSet[0] = dto.name;
+		dataSet[1] = dto.transientField;
+
+		return dataSet;
 	}
 }

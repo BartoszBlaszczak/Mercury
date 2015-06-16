@@ -1,15 +1,16 @@
 package pl.uz.mercury.controler.option.common;
 
 import javax.naming.NamingException;
+
+import pl.uz.mercury.controler.listener.MercuryCrudOptionListener;
 import pl.uz.mercury.dto.common.MercuryOptionDto;
-import pl.uz.mercury.listener.MercuryCrudOptionListener;
 import pl.uz.mercury.serviceremoteinterface.common.MercuryCrudOptionServiceInterface;
 import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.view.optioninternalframe.common.MercuryClientCrudOptionInternalFrame;
 
 public abstract class MercuryClientCrudOption <Dto extends MercuryOptionDto, Service extends MercuryCrudOptionServiceInterface <Dto>, InternalFrame extends MercuryClientCrudOptionInternalFrame>
 	extends MercuryClientOption <Dto, Service, InternalFrame>
-{	
+{
 	public MercuryClientCrudOption(String jndiName, InternalFrame optionInternalFrame, PropertiesReader optionPropertiesReader,
 			PropertiesReader messageReader)
 			throws NamingException
@@ -18,36 +19,33 @@ public abstract class MercuryClientCrudOption <Dto extends MercuryOptionDto, Ser
 		optionInternalFrame.setUpListener(new MercuryCrudActionPerformer());
 	}
 
-	protected abstract Dto prepareDto ();
-	
-	
+	protected abstract Object[] getData (Dto dto);
 
 	class MercuryCrudActionPerformer
 		implements MercuryCrudOptionListener
 	{
-
 		@Override
 		public void doAdd ()
 		{
-//			try
-//			{
-//				service.save(prepareDto());
-//			}
-//			catch (SavingException e)
-//			{
-//				showMessage(messageReader, e.getMessage());
-//			}
-//			catch (ValidationException e)
-//			{
-//				showMessage(messageReader, e.getMessage());
-//			}
+			// try
+			// {
+			// service.save(prepareDto());
+			// }
+			// catch (SavingException e)
+			// {
+			// showMessage(messageReader, e.getMessage());
+			// }
+			// catch (ValidationException e)
+			// {
+			// showMessage(messageReader, e.getMessage());
+			// }
 		}
 
 		@Override
 		public void doShow ()
 		{
-//			optionInternalFrame.
-//			service.retrieve(id);
+			// optionInternalFrame.
+			// service.retrieve(id);
 		}
 
 		@Override
@@ -84,6 +82,5 @@ public abstract class MercuryClientCrudOption <Dto extends MercuryOptionDto, Ser
 			// TODO Auto-generated method stub
 
 		}
-
 	}
 }

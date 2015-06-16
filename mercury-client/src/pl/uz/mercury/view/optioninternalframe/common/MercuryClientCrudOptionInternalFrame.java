@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.io.IOException;
 import java.util.List;
+
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -12,7 +13,7 @@ import javax.swing.JToolBar;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
-import pl.uz.mercury.listener.MercuryCrudOptionListener;
+import pl.uz.mercury.controler.listener.MercuryCrudOptionListener;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.ImageIcon;
@@ -23,6 +24,7 @@ public abstract class MercuryClientCrudOptionInternalFrame
 {
 	private final JToolBar				toolBar					= new JToolBar();
 
+	// TODO ikony
 	private final JButton				addButton				= new JButton(new ImageIcon("/home/bartek/MERCURY/merchandise_icon.png"));
 	private final JButton				showButton				= new JButton(new ImageIcon("/home/bartek/MERCURY/merchandise_icon.png"));
 	private final JButton				updateButton			= new JButton(new ImageIcon("/home/bartek/MERCURY/merchandise_icon.png"));
@@ -33,8 +35,7 @@ public abstract class MercuryClientCrudOptionInternalFrame
 	private final JScrollPane			scrollPane				= new JScrollPane();
 	private final JTable				table					= new JTable();
 	private final ListSelectionModel	selectionModel			= table.getSelectionModel();
-	private final DefaultTableModel		dataModel				= new DefaultTableModel(new Object[][] { { "OOO" }, { null }, { null }, },
-																		new String[] { "New column" });
+	private final DefaultTableModel		dataModel				= new DefaultTableModel();
 	private final JPanel				searchPanel				= new JPanel();
 
 	private JButton						filtrButton				= new JButton();

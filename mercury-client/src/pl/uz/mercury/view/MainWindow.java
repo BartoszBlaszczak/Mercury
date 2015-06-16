@@ -6,9 +6,11 @@ import java.io.IOException;
 import javax.swing.JFrame;
 
 import pl.uz.mercury.view.optioninternalframe.common.MercuryClientOptionInternalFrame;
+import pl.uz.mercury.view.optioninternalframe.common.MercuryOptionLocalization;
 
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 import javax.swing.JToolBar;
 import javax.swing.JButton;
 
@@ -50,6 +52,16 @@ public class MainWindow
 		menuBar.add(menu);
 	}
 	
+	public void localize (MercuryOptionLocalization localization)
+	{
+		menu.setText(localization.options);
+	}
+	
+	public void addMenuItem(JMenuItem menuItem)
+	{
+		menu.add(menuItem);
+	}
+	
 	public void addInternalFrame(MercuryClientOptionInternalFrame internalFrame)
 	{
 		getContentPane().add(internalFrame, BorderLayout.CENTER);
@@ -63,5 +75,6 @@ public class MainWindow
 	public void removeOptionButton (JButton button)
 	{
 		buttonsBar.remove(button);
+		buttonsBar.repaint();
 	}
 }

@@ -28,6 +28,7 @@ public class Properties
 		public static final String refresh = "refresh";
 		public static final String filtr = "filtr";
 		public static final String find = "find";
+		public static final String options = "options";
 		
 	}
 	

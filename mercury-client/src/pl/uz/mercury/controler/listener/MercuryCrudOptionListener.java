@@ -1,4 +1,4 @@
-package pl.uz.mercury.listener;
+package pl.uz.mercury.controler.listener;
 
 public interface MercuryCrudOptionListener
 {
