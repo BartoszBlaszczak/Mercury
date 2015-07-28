@@ -1,8 +1,12 @@
 package pl.uz.mercury.entity.security;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Version;
+
+import pl.uz.mercury.entity.common.MercuryOptionEntity;
 
 @Entity
 public class Operator
