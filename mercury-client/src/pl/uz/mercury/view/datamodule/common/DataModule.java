@@ -1,16 +1,11 @@
 package pl.uz.mercury.view.datamodule.common;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JSplitPane;
 import javax.swing.JButton;
-import javax.swing.BoxLayout;
-import javax.swing.SwingConstants;
-import javax.swing.JScrollPane;
 import net.miginfocom.swing.MigLayout;
 
 @SuppressWarnings("serial")

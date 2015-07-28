@@ -1,11 +1,6 @@
 package pl.uz.mercury.controler;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.naming.NamingException;
 import javax.swing.JButton;
 import javax.swing.JCheckBoxMenuItem;
@@ -18,7 +13,6 @@ import pl.uz.mercury.controler.option.common.MercuryClientOption;
 import pl.uz.mercury.exception.MercuryException;
 import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.view.MainWindow;
-import pl.uz.mercury.view.optioninternalframe.common.MercuryClientOptionInternalFrame;
 import pl.uz.mercury.view.optioninternalframe.common.MercuryCrudOptionLocalization;
 
 public class MercuryClientMain

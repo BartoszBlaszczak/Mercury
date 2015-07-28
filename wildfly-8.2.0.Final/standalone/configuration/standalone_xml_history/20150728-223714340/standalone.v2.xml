@@ -422,9 +422,4 @@
         </outbound-socket-binding>
     </socket-binding-group>
 
-    <deployments>
-        <deployment name="postgresql-9.4-1201.jdbc4.jar" runtime-name="postgresql-9.4-1201.jdbc4.jar" enabled="true">
-            <content sha1="b46544ef0eaf0405504089dcc71f36e3f190ef09"/>
-        </deployment>
-    </deployments>
 </server>

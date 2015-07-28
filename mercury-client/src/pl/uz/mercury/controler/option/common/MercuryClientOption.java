@@ -1,12 +1,9 @@
 package pl.uz.mercury.controler.option.common;
 
-import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JOptionPane;
-
 import pl.uz.mercury.Properties;
 import pl.uz.mercury.dto.common.MercuryOptionDto;
 import pl.uz.mercury.serviceremoteinterface.common.MercuryService;

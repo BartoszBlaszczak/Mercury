@@ -2,7 +2,6 @@ package pl.uz.mercury.view.optioninternalframe.common;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
-import java.io.IOException;
 import java.util.List;
 
 import javax.swing.JButton;

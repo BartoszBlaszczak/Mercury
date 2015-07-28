@@ -5,16 +5,16 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>ear</packaging>
   <dependencies>
+   <dependency>
+      <groupId>mercury-pub</groupId>
+      <artifactId>mercury-pub</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
     <dependency>
       <groupId>mercury-server</groupId>
       <artifactId>mercury-server</artifactId>
       <version>0.0.1-SNAPSHOT</version>
       <type>ejb</type>
-    </dependency>
-    <dependency>
-      <groupId>mercury-pub</groupId>
-      <artifactId>mercury-pub</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <build>
