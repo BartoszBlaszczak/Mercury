@@ -1,39 +1,62 @@
 package pl.uz.mercury;
 
-public class Properties
+public interface Properties
 {
-	public static final String PROPERTIES_FILENAME = "MercuryClientProperties.properties";
-	public static final String LOCALE_FILENAME = "locale.properties";
-	public static final String OPTIONS_FILENAME = "options.properties";
-	public static final String MESSAGES_FILENAME = "messages.properties";
+	String LOCALE_FILENAME = "locale.properties";
+	String MESSAGES_FILENAME = "messages.properties";
 	
-	public static class Option
+	public interface Option
 	{
-		public static final String merchandise = "merchandise";
+		String MERCHANDISE = "merchandise";
+		String SALE = "sale";
+		String PURCHASE = "purchase";
 		
-		public static class Element
+		public interface Element
 		{
-			public static final String singularname = "singularname";
-			public static final String pluralname = "pluralname";
-			public static final String icon = "icon";
+			String SINGULAR_NAME = "singularname";
+			String PLURAL_NAME = "pluralname";
+			String ICON = "icon";
 		}
 	}
 	
-	public static class Locale
+	public interface IconPath
 	{
-		public static final String add = "add";
-		public static final String show = "show";
-		public static final String update = "update";
-		public static final String delete = "delete";
-		public static final String refresh = "refresh";
-		public static final String filtr = "filtr";
-		public static final String find = "find";
-		public static final String options = "options";
+		String ADD = "iconAdd";
+		String UPDATE = "iconUpdate";
+		String DELETE = "iconDelete";
+		String REFRESH = "iconRefresh";
+	}
+	
+	public interface Locale
+	{
+		String ADD = "add";
+		String UPDATE = "update";
+		String DELETE = "delete";
+		String REFRESH = "refresh";
+		String OPTIONS = "options";
+		String SEARCH_CRITERIA = "SEARCH_CRITERIA";
+		
+		String NAME = "name";
+		String USER = "user";
+		String DATE = "date";
+		String PRICE = "price";
+		String QUANTITY = "quantity";
+		String COST = "cost";
+		
+		String MERCHANDISE = "merchandise";
 		
 	}
 	
-	public static class Message
+	public interface Message
 	{
-		public static final String COULD_NOT_READ_LOCALE_FILE = "Couldn't read " + Properties.LOCALE_FILENAME;
+		String COULD_NOT_READ_LOCALE_FILE = "COULD_NOT_READ_LOCALE_FILE";
+		String COULD_NOT_READ_OPTIONS_LOCALE_FILE = "COULD_NOT_READ_OPTIONS_LOCALE_FILE";
+		String SERVER_PROBLEM = "SERVER_PROBLEM";
+		String WRONG_JNDI_NAME = "WRONG_JNDI_NAME";
+		String COULD_NOT_DELETE = "COULD_NOT_DELETE";
+		String COULD_NOT_SAVE = "COULD_NOT_SAVE";
+		String BAD_CRITERIA = "BAD_CRITERIA";
+		String VALIDATION_ERROR = "VALIDATION_ERROR";
+		String COULD_NOT_RETRIEVE = "COULD_NOT_RETRIEVE";
 	}
 }

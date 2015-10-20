@@ -18,7 +18,7 @@ public class LoggingInterceptor
 	public Object log (InvocationContext context) throws Exception
 	{
 		String operatorName = sessionContext.getCallerPrincipal().getName();
-		String className = context.getMethod().getDeclaringClass().getSimpleName();
+		String className = context.getTarget().getClass().getSimpleName();
 		String methodName = context.getMethod().getName();
 
 		StringJoiner parametersNames = new StringJoiner(", ");
@@ -27,9 +27,8 @@ public class LoggingInterceptor
 		{
 			parametersNames.add(parameter.toString());
 		}
-
-		StringBuilder info = new StringBuilder().append(operatorName).append(" invoked ").append(className).append(".").append(methodName)
-				.append("(").append(parametersNames).append(")");
+		
+		String info = String.format("%s invoed %s.%s(%s)", operatorName, className, methodName, parametersNames);
 
 		Logger.info(info);
 		return context.proceed();

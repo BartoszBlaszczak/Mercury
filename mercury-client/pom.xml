@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mercury-client</groupId>
 	<artifactId>mercury-client</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>app-client</packaging>
 	<dependencies>
 		<dependency>
@@ -231,14 +231,19 @@
 		<dependency>
 			<groupId>mercury-pub</groupId>
 			<artifactId>mercury-pub</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.wildfly</groupId>
 			<artifactId>wildfly-cli</artifactId>
 			<version>8.2.0.Final</version>
 			<classifier>client</classifier>
-		</dependency>
+		</dependency><dependency>
+	<groupId>com.miglayout</groupId>
+	<artifactId>miglayout-swing</artifactId>
+	<version>5.0</version>
+</dependency>
+		
 
 
 
@@ -260,8 +265,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>

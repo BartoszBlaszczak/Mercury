@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="mercury-0.0.1-SNAPSHOT">
+    <wb-module deploy-name="mercury-1.0.0-SNAPSHOT">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
-        <dependent-module archiveName="mercury-pub-0.0.1-SNAPSHOT.jar" deploy-path="/lib" handle="module:/resource/mercury-pub/mercury-pub">
+        <dependent-module archiveName="mercury-server-1.0.0-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/mercury-server/mercury-server">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="activation-1.1.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/javax/activation/activation/1.1.1/activation-1.1.1.jar">
@@ -128,18 +128,6 @@
         <dependent-module archiveName="wildfly-protocol-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-protocol/8.2.0.Final/wildfly-protocol-8.2.0.Final.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jboss-remoting-4.0.6.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/remoting/jboss-remoting/4.0.6.Final/jboss-remoting-4.0.6.Final.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="jboss-sasl-1.0.4.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/sasl/jboss-sasl/1.0.4.Final/jboss-sasl-1.0.4.Final.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="xnio-api-3.3.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/xnio/xnio-api/3.3.0.Final/xnio-api-3.3.0.Final.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="xnio-nio-3.3.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/xnio/xnio-nio/3.3.0.Final/xnio-nio-3.3.0.Final.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <dependent-module archiveName="jboss-threads-2.1.1.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/threads/jboss-threads/2.1.1.Final/jboss-threads-2.1.1.Final.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
@@ -227,10 +215,196 @@
         <dependent-module archiveName="javax.json-1.0.3.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/glassfish/javax.json/1.0.3/javax.json-1.0.3.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="mercury-server-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/mercury-server/mercury-server">
+        <dependent-module archiveName="wildfly-arquillian-container-managed-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-arquillian-container-managed/8.2.0.Final/wildfly-arquillian-container-managed-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-arquillian-common-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-arquillian-common/8.2.0.Final/wildfly-arquillian-common-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-testenricher-cdi-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/testenricher/arquillian-testenricher-cdi/1.1.2.Final-wildfly-1/arquillian-testenricher-cdi-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-test-spi-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/test/arquillian-test-spi/1.1.2.Final-wildfly-1/arquillian-test-spi-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-container-test-spi-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/container/arquillian-container-test-spi/1.1.2.Final-wildfly-1/arquillian-container-test-spi-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-testenricher-ejb-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/testenricher/arquillian-testenricher-ejb/1.1.2.Final-wildfly-1/arquillian-testenricher-ejb-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-testenricher-initialcontext-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/testenricher/arquillian-testenricher-initialcontext/1.1.2.Final-wildfly-1/arquillian-testenricher-initialcontext-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-testenricher-osgi-2.1.0.CR2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/testenricher/arquillian-testenricher-osgi/2.1.0.CR2/arquillian-testenricher-osgi-2.1.0.CR2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-container-test-api-1.1.1.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/container/arquillian-container-test-api/1.1.1.Final/arquillian-container-test-api-1.1.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-testenricher-resource-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/testenricher/arquillian-testenricher-resource/1.1.2.Final-wildfly-1/arquillian-testenricher-resource-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-container-test-impl-base-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/container/arquillian-container-test-impl-base/1.1.2.Final-wildfly-1/arquillian-container-test-impl-base-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-container-spi-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/container/arquillian-container-spi/1.1.2.Final-wildfly-1/arquillian-container-spi-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-config-api-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/config/arquillian-config-api/1.1.2.Final-wildfly-1/arquillian-config-api-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-config-impl-base-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/config/arquillian-config-impl-base/1.1.2.Final-wildfly-1/arquillian-config-impl-base-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="shrinkwrap-descriptors-api-base-2.0.0-alpha-3.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-api-base/2.0.0-alpha-3/shrinkwrap-descriptors-api-base-2.0.0-alpha-3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-test-api-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/test/arquillian-test-api/1.1.2.Final-wildfly-1/arquillian-test-api-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-protocol-servlet-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/protocol/arquillian-protocol-servlet/1.1.2.Final-wildfly-1/arquillian-protocol-servlet-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="shrinkwrap-descriptors-spi-2.0.0-alpha-3.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-spi/2.0.0-alpha-3/shrinkwrap-descriptors-spi-2.0.0-alpha-3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-arquillian-testenricher-msc-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-arquillian-testenricher-msc/8.2.0.Final/wildfly-arquillian-testenricher-msc-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-server-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-server/8.2.0.Final/wildfly-server-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-controller-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-controller/8.2.0.Final/wildfly-controller-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-core-security-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-core-security/8.2.0.Final/wildfly-core-security-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-core-security-api-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-core-security-api/8.2.0.Final/wildfly-core-security-api-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="staxmapper-1.1.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/staxmapper/1.1.0.Final/staxmapper-1.1.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-domain-http-interface-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-domain-http-interface/8.2.0.Final/wildfly-domain-http-interface-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-domain-management-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-domain-management/8.2.0.Final/wildfly-domain-management-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-deployment-repository-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-deployment-repository/8.2.0.Final/wildfly-deployment-repository-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-patching-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-patching/8.2.0.Final/wildfly-patching-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-cli-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-cli/8.2.0.Final/wildfly-cli-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="aesh-0.33.11.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/aesh/aesh/0.33.11/aesh-0.33.11.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jansi-1.9.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/fusesource/jansi/jansi/1.9/jansi-1.9.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-platform-mbean-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-platform-mbean/8.2.0.Final/wildfly-platform-mbean-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-process-controller-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-process-controller/8.2.0.Final/wildfly-process-controller-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-remoting-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-remoting/8.2.0.Final/wildfly-remoting-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-io-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-io/8.2.0.Final/wildfly-io-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-network-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-network/8.2.0.Final/wildfly-network-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-version-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-version/8.2.0.Final/wildfly-version-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jandex-1.2.1.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/jandex/1.2.1.Final/jandex-1.2.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-invocation-1.2.1.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/invocation/jboss-invocation/1.2.1.Final/jboss-invocation-1.2.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-logmanager-1.5.2.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/logmanager/jboss-logmanager/1.5.2.Final/jboss-logmanager-1.5.2.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-modules-1.3.3.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/modules/jboss-modules/1.3.3.Final/jboss-modules-1.3.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-stdio-1.0.2.GA.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/stdio/jboss-stdio/1.0.2.GA/jboss-stdio-1.0.2.GA.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-vfs-3.2.5.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/jboss-vfs/3.2.5.Final/jboss-vfs-3.2.5.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="undertow-core-1.1.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/io/undertow/undertow-core/1.1.0.Final/undertow-core-1.1.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-msc-1.2.2.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/msc/jboss-msc/1.2.2.Final/jboss-msc-1.2.2.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-jmx-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-jmx/8.2.0.Final/wildfly-jmx-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-common-core-2.2.22.GA.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/jboss-common-core/2.2.22.GA/jboss-common-core-2.2.22.GA.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="shrinkwrap-api-1.1.2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/shrinkwrap/shrinkwrap-api/1.1.2/shrinkwrap-api-1.1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.osgi.core-5.0.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/osgi/org.osgi.core/5.0.0/org.osgi.core-5.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-arquillian-protocol-jmx-8.2.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/wildfly-arquillian-protocol-jmx/8.2.0.Final/wildfly-arquillian-protocol-jmx-8.2.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wildfly-security-manager-1.0.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/wildfly/security/wildfly-security-manager/1.0.0.Final/wildfly-security-manager-1.0.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-core-spi-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/core/arquillian-core-spi/1.1.2.Final-wildfly-1/arquillian-core-spi-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-protocol-jmx-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/protocol/arquillian-protocol-jmx/1.1.2.Final-wildfly-1/arquillian-protocol-jmx-1.1.2.Final-wildfly-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jbosgi-metadata-3.0.1.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/osgi/metadata/jbosgi-metadata/3.0.1.Final/jbosgi-metadata-3.0.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xnio-api-3.3.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/xnio/xnio-api/3.3.0.Final/xnio-api-3.3.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xnio-nio-3.3.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/xnio/xnio-nio/3.3.0.Final/xnio-nio-3.3.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-marshalling-1.4.9.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/marshalling/jboss-marshalling/1.4.9.Final/jboss-marshalling-1.4.9.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-marshalling-river-1.4.9.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/marshalling/jboss-marshalling-river/1.4.9.Final/jboss-marshalling-river-1.4.9.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-remoting-4.0.6.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/remoting/jboss-remoting/4.0.6.Final/jboss-remoting-4.0.6.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="remoting-jmx-2.0.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/remotingjmx/remoting-jmx/2.0.0.Final/remoting-jmx-2.0.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-sasl-1.0.4.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/sasl/jboss-sasl/1.0.4.Final/jboss-sasl-1.0.4.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="arquillian-core-api-1.1.2.Final-wildfly-1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/arquillian/core/arquillian-core-api/1.1.2.Final-wildfly-1/arquillian-core-api-1.1.2.Final-wildfly-1.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="tinylog-1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/tinylog/tinylog/1.0/tinylog-1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mercury-pub-1.0.0-SNAPSHOT.jar" deploy-path="/lib" handle="module:/resource/mercury-pub/mercury-pub">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>

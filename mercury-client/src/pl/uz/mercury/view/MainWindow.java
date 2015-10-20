@@ -1,18 +1,16 @@
 package pl.uz.mercury.view;
 
-import java.awt.BorderLayout;
-import java.io.IOException;
-
 import javax.swing.JFrame;
 
-import pl.uz.mercury.view.optioninternalframe.common.MercuryClientOptionInternalFrame;
-import pl.uz.mercury.view.optioninternalframe.common.MercuryOptionLocalization;
+import pl.uz.mercury.view.optioninternalframe.common.InternalFrame;
 
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JToolBar;
 import javax.swing.JButton;
+
+import javax.swing.BoxLayout;
 
 @SuppressWarnings("serial")
 public class MainWindow
@@ -22,39 +20,28 @@ public class MainWindow
 	private final JMenuBar			menuBar					= new JMenuBar();
 	private final JMenu				menu					= new JMenu("menu");
 
-	/**
-	 * Create the application.
-	 * 
-	 * @throws IOException
-	 */
 	public MainWindow()
 	{
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 * 
-	 * @throws IOException
-	 */
 	private void initialize ()
 	{
 		setTitle("Mercury");
 		setSize(800, 600);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		getContentPane().setLayout(new BorderLayout(0, 0));
-
+		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 		buttonsBar.setFloatable(false);
-		getContentPane().add(buttonsBar, BorderLayout.NORTH);
+		getContentPane().add(buttonsBar);
 
 		setJMenuBar(menuBar);
 		menuBar.add(menu);
 	}
 	
-	public void localize (MercuryOptionLocalization localization)
+	public void localize (String optionsName)
 	{
-		menu.setText(localization.options);
+		menu.setText(optionsName);
 	}
 	
 	public void addMenuItem(JMenuItem menuItem)
@@ -62,9 +49,9 @@ public class MainWindow
 		menu.add(menuItem);
 	}
 	
-	public void addInternalFrame(MercuryClientOptionInternalFrame internalFrame)
+	public void addInternalFrame(InternalFrame internalFrame)
 	{
-		getContentPane().add(internalFrame, BorderLayout.CENTER);
+		getContentPane().add(internalFrame);
 	}
 	
 	public void addOptionButton (JButton button)
