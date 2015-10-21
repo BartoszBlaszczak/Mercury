@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 
 <server xmlns="urn:jboss:domain:2.2">
 
@@ -147,12 +147,37 @@
                     </security>
                 </datasource>
                 <datasource jta="true" jndi-name="java:jboss/mercuryDataSource" pool-name="mercuryDataSource" enabled="true" use-ccm="true">
-                    <connection-url>jdbc:postgresql://localhost:5432/MyDB</connection-url>
+                    <connection-url>jdbc:postgresql://localhost:5432/MercuryDB</connection-url>
                     <driver-class>org.postgresql.Driver</driver-class>
                     <driver>postgresql-9.4-1201.jdbc4.jar</driver>
                     <security>
-                        <user-name>postgres</user-name>
-                        <password>postgres</password>
+                        <user-name>Mercury</user-name>
+                        <password>Mercury</password>
+                    </security>
+                    <validation>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>false</background-validation>
+                    </validation>
+                    <timeout>
+                        <set-tx-query-timeout>false</set-tx-query-timeout>
+                        <blocking-timeout-millis>0</blocking-timeout-millis>
+                        <idle-timeout-minutes>0</idle-timeout-minutes>
+                        <query-timeout>0</query-timeout>
+                        <use-try-lock>0</use-try-lock>
+                        <allocation-retry>0</allocation-retry>
+                        <allocation-retry-wait-millis>0</allocation-retry-wait-millis>
+                    </timeout>
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="true" jndi-name="java:jboss/mercuryTestDataSource" pool-name="mercuryTestDataSource" enabled="true" use-ccm="true">
+                    <connection-url>jdbc:postgresql://localhost:5432/MercuryTestDB</connection-url>
+                    <driver-class>org.postgresql.Driver</driver-class>
+                    <driver>postgresql-9.4-1201.jdbc4.jar</driver>
+                    <security>
+                        <user-name>Mercury</user-name>
+                        <password>Mercury</password>
                     </security>
                     <validation>
                         <validate-on-match>false</validate-on-match>

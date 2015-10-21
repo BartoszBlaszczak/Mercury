@@ -6,7 +6,6 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.EJBTransactionRolledbackException;
 import javax.interceptor.Interceptors;
-
 import pl.uz.mercury.dao.common.MercuryDao;
 import pl.uz.mercury.dto.common.MercuryOptionDto;
 import pl.uz.mercury.entity.common.MercuryOptionEntity;
@@ -38,20 +37,32 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 	}
 
 	@Override
-	public final Long save (Dto dto) throws SavingException, ValidationException
+	public final Long save (Dto dto)
+			throws SavingException, ValidationException
 	{
-		validate(dto);
-		return dao.save(getEntity(dto));
+		try
+		{
+			validate(dto);
+			Entity entity = getEntity(dto);
+			if (entity.getId() == null) dao.save(entity); 
+			return entity.getId();
+		}
+		catch (EJBTransactionRolledbackException e)
+		{
+			throw new SavingException();
+		}
 	}
-	
-	protected Entity getEntity (Dto dto) throws SavingException
+
+	protected Entity getEntity (Dto dto)
+			throws SavingException
 	{
 		try
 		{
 			Entity entity;
-			if (dto.getId() == null) entity = entityClass.newInstance();
+			if (dto.getId() == null)
+				entity = entityClass.newInstance();
 			else entity = dao.retrive(entityClass, dto.getId());
-			
+
 			entityDtoAssigner.assignEntityByDto(entity, dto);
 			return entity;
 		}
@@ -62,11 +73,14 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 	}
 
 	@Override
-	public Dto retrieve (Long id) throws RetrievingException
+	public Dto retrieve (Long id)
+			throws RetrievingException
 	{
 		try
 		{
-			return entityDtoAssigner.getDtoForEntity(dao.retrive(entityClass, id), dtoClass);
+			Entity retrived = dao.retrive(entityClass, id);
+			if (retrived == null) throw new RetrievingException();
+			return entityDtoAssigner.getDtoForEntity(retrived, dtoClass);
 		}
 		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
 		{
@@ -76,7 +90,8 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 	}
 
 	@Override
-	public void delete (Long id) throws DeletingException
+	public void delete (Long id)
+			throws DeletingException
 	{
 		try
 		{
@@ -89,7 +104,8 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 	}
 
 	@Override
-	public List <Dto> getList (List <SearchCriteria> criteria) throws RetrievingException, ValidationException
+	public List <Dto> getList (List <SearchCriteria> criteria)
+			throws RetrievingException, ValidationException
 	{
 		try
 		{
@@ -101,12 +117,14 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 			throw new RetrievingException();
 		}
 	}
-	
-	protected List <Dto> assignDtosByEntities(List <Entity> entityList) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException
+
+	protected List <Dto> assignDtosByEntities (List <Entity> entityList)
+			throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException
 	{
 		return entityDtoAssigner.getDtosForEntities(entityList, dtoClass);
 	}
 
-	protected void validate (Dto dto) throws ValidationException
+	protected void validate (Dto dto)
+			throws ValidationException
 	{}
 }

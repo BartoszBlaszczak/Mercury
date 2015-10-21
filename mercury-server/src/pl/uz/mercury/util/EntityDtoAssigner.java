@@ -131,19 +131,18 @@ public class EntityDtoAssigner <Entity extends MercuryOptionEntity, Dto extends 
 			throw new NoSuchMethodException();
 		}
 	}
+}
 
-	enum AccessorPrefix
+enum AccessorPrefix
+{
+	getter("get"), setter("set");
+
+	AccessorPrefix(String prefix)
 	{
-		getter("get"), setter("set");
-
-		AccessorPrefix(String prefix)
-		{
-			this.prefix = prefix;
-		}
-
-		public String	prefix;
+		this.prefix = prefix;
 	}
 
+	public String	prefix;
 }
 
 @FunctionalInterface

@@ -21,17 +21,16 @@ import pl.uz.mercury.util.MercuryDateFormat;
 @Stateless
 public class MercuryDao
 {
-	protected static final String	PERSISTER_NAME	= "mercuryPersister";
+	private static final String	PERSISTER_NAME	= "mercuryPersister";
 
 	@PersistenceContext(name = PERSISTER_NAME)
 	protected EntityManager			entityManager;
 	MercuryDateFormat				dateFormat		= new MercuryDateFormat();
 
-	public Long save (MercuryOptionEntity entity)
+	public void save (MercuryOptionEntity entity)
 	{
-		entityManager.merge(entity);
+		entityManager.persist(entity);
 		entityManager.flush();
-		return entity.getId();
 	}
 
 	public <Entity extends MercuryOptionEntity> Entity retrive (Class <Entity> clazz, Long id)
@@ -41,12 +40,7 @@ public class MercuryDao
 
 	public void delete (Class <? extends MercuryOptionEntity> clazz, Long id)
 	{
-		delete(retrive(clazz, id));
-	}
-
-	public void delete (MercuryOptionEntity entity)
-	{
-		entityManager.remove(entity);
+		entityManager.remove(retrive(clazz, id));
 	}
 
 	public <Entity extends MercuryOptionEntity> List <Entity> getList (Class <Entity> entityClass, List <SearchCriteria> criteria)
@@ -55,7 +49,7 @@ public class MercuryDao
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
 		CriteriaQuery <Entity> criteriaQuery = criteriaBuilder.createQuery(entityClass);
 		Root <Entity> root = criteriaQuery.from(entityClass);
-		List<Predicate> restrictions = new ArrayList <>();
+		List <Predicate> restrictions = new ArrayList <>();
 		for (SearchCriteria criterium : criteria)
 		{
 			try
