@@ -1,8 +1,6 @@
 package pl.uz.mercury.service;
 
-import javax.annotation.Resource;
 import javax.ejb.Remote;
-import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.entity.Merchandise;
@@ -15,10 +13,7 @@ import pl.uz.mercury.service.common.MercuryServiceImpl;
 public class MerchandiseServiceImpl
 	extends MercuryServiceImpl <Merchandise, MerchandiseDto>
 	implements MerchandiseService
-{
-	@Resource 
-	private SessionContext context;
-	
+{	
 	public MerchandiseServiceImpl()
 	{
 		super(Merchandise.class, MerchandiseDto.class);

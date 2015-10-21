@@ -133,24 +133,28 @@ public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service
 		{
 			tryConnect( () ->
 			{
+				Set<Long> deleted = new HashSet<>();
 				idsToDelete.forEach(id ->
 				{
 					try
 					{
 						service.delete(id);
-						idsToDelete.remove(id);
+						deleted.add(id);
 					}
 					catch (DeletingException e1)
 					{
 						showMessageFromProperity(Properties.Message.COULD_NOT_DELETE);
 					}
 				});
+				idsToDelete.removeAll(deleted);
+				
+				Set<Integer> saved = new HashSet<>();
 				changedRows.forEach(row ->
 				{
 					try
 					{
 						service.save(getDto(optionInternalFrame.getRowData(row)));
-						changedRows.remove(row);
+						saved.add(row);
 					}
 					catch (SavingException e)
 					{
@@ -161,6 +165,8 @@ public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service
 						showMessageFromProperity(Properties.Message.VALIDATION_ERROR, getNameForRow(row), e.getMessage());
 					}
 				});
+				changedRows.removeAll(saved);
+				
 				onRefresh();
 			});
 		}
