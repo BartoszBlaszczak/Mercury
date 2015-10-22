@@ -1,4 +1,4 @@
-package pl.uz.mercury.controler.option.common;
+package pl.uz.mercury.option.common;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -12,6 +12,7 @@ import pl.uz.mercury.exception.RetrievingException;
 import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.exception.ValidationException;
 import pl.uz.mercury.service.common.MercuryService;
+import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.view.optioninternalframe.common.InternalFrame;
 
 import javax.ejb.EJBAccessException;

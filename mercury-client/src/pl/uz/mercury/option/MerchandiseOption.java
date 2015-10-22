@@ -1,4 +1,4 @@
-package pl.uz.mercury.controler.option;
+package pl.uz.mercury.option;
 
 import java.io.IOException;
 
@@ -7,8 +7,8 @@ import javax.naming.NamingException;
 import pl.uz.mercury.Properties;
 import pl.uz.mercury.Properties.Locale;
 import pl.uz.mercury.constants.MercuryServiceJndiNames;
-import pl.uz.mercury.controler.option.common.MercuryClientOption;
-import pl.uz.mercury.controler.option.common.PropertiesReader;
+import pl.uz.mercury.option.common.MercuryClientOption;
+import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.exception.ValidationException;
 import pl.uz.mercury.service.MerchandiseService;

@@ -1,4 +1,4 @@
-package pl.uz.mercury.controler.option.common;
+package pl.uz.mercury.option.common;
 
 import javax.swing.event.TableModelEvent;
 

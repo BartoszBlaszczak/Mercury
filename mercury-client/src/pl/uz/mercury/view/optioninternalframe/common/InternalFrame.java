@@ -22,8 +22,8 @@ import javax.swing.table.TableColumnModel;
 import net.miginfocom.swing.MigLayout;
 import pl.uz.mercury.Properties.Locale;
 import pl.uz.mercury.Properties.IconPath;
-import pl.uz.mercury.controler.option.common.OptionListener;
-import pl.uz.mercury.controler.option.common.PropertiesReader;
+import pl.uz.mercury.option.common.OptionListener;
+import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.filtercriteria.SearchCriteria;
 
 public abstract class InternalFrame

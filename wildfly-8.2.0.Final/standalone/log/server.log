@@ -17450,3 +17450,485 @@ List of constraint violations:[
 2015-10-22 19:45:20,944 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017506: Undertow 1.1.0.Final stopping
 2015-10-22 19:45:20,984 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Stopped deployment mercury.ear (runtime-name: mercury.ear) in 212ms
 2015-10-22 19:45:20,989 INFO  [org.jboss.as] (MSC service thread 1-2) JBAS015950: WildFly 8.2.0.Final "Tweek" stopped in 220ms
+2015-10-22 20:10:46,679 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+2015-10-22 20:10:47,004 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+2015-10-22 20:10:47,128 INFO  [org.jboss.as] (MSC service thread 1-1) JBAS015899: WildFly 8.2.0.Final "Tweek" starting
+2015-10-22 20:10:47,138 DEBUG [org.jboss.as.config] (MSC service thread 1-1) Configured system properties:
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-8-oracle/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-8-oracle/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_60-b27
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_60
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.60-b23
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bundles.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/bundles
+	jboss.home.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final
+	jboss.host.name = bartek-n-a
+	jboss.modules.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/modules
+	jboss.node.name = bartek-n-a
+	jboss.qualified.host.name = bartek-n-a
+	jboss.server.base.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone
+	jboss.server.config.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/configuration
+	jboss.server.data.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/data
+	jboss.server.deploy.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/data/content
+	jboss.server.log.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/log
+	jboss.server.name = bartek-n-a
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/configuration/logging.properties
+	module.path = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/modules
+	org.jboss.boot.log.file = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 3.19.0-25-generic
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-8-oracle/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.desktop = gnome
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/jboss-modules.jar -mp /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/modules org.jboss.as.standalone -server-config standalone.xml
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = PL
+	user.dir = /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/mercury-server
+	user.home = /home/bartek
+	user.language = pl
+	user.name = bartek
+	user.timezone = Europe/Warsaw
+2015-10-22 20:10:47,140 DEBUG [org.jboss.as.config] (MSC service thread 1-1) VM Arguments: -Xmx512m -XX:MaxPermSize=256m -ea -Djboss.home.dir=/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final -Dorg.jboss.boot.log.file=/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/log/server.log -Dlogging.configuration=file:/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/configuration/logging.properties -Djboss.bundles.dir=/home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/bundles 
+2015-10-22 20:10:49,284 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found mercury.ear in deployment directory. To trigger deployment create a file called mercury.ear.dodeploy
+2015-10-22 20:10:49,343 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+2015-10-22 20:10:49,390 INFO  [org.xnio] (MSC service thread 1-3) XNIO version 3.3.0.Final
+2015-10-22 20:10:49,436 INFO  [org.xnio.nio] (MSC service thread 1-3) XNIO NIO Implementation Version 3.3.0.Final
+2015-10-22 20:10:49,568 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 4 core threads with 32 task threads based on your 2 available processors
+2015-10-22 20:10:49,586 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+2015-10-22 20:10:49,672 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 4.0.6.Final
+2015-10-22 20:10:49,699 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+2015-10-22 20:10:49,742 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2015-10-22 20:10:49,852 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+2015-10-22 20:10:49,852 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+2015-10-22 20:10:49,858 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+2015-10-22 20:10:49,899 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+2015-10-22 20:10:49,953 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-2) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+2015-10-22 20:10:49,982 INFO  [org.jboss.as.security] (MSC service thread 1-3) JBAS013170: Current PicketBox version=4.0.21.Final
+2015-10-22 20:10:50,051 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.1.0.Final starting
+2015-10-22 20:10:50,062 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017502: Undertow 1.1.0.Final starting
+2015-10-22 20:10:50,104 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010417: Started Driver service with driver-name = h2
+2015-10-22 20:10:50,199 INFO  [org.jboss.as.naming] (MSC service thread 1-3) JBAS011802: Starting Naming Service
+2015-10-22 20:10:50,201 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Bound mail session [java:jboss/mail/Default]
+2015-10-22 20:10:50,836 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/welcome-content
+2015-10-22 20:10:50,975 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017525: Started server default-server.
+2015-10-22 20:10:51,026 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017531: Host default-host starting
+2015-10-22 20:10:51,304 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017519: Undertow HTTP listener default listening on /127.0.0.1:8080
+2015-10-22 20:10:51,593 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) JBAS015012: Started FileSystemDeploymentService for directory /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/deployments
+2015-10-22 20:10:51,605 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Starting deployment of "mercury.ear" (runtime-name: "mercury.ear")
+2015-10-22 20:10:51,613 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "postgresql-9.4-1201.jdbc4.jar" (runtime-name: "postgresql-9.4-1201.jdbc4.jar")
+2015-10-22 20:10:52,014 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+2015-10-22 20:10:52,879 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+2015-10-22 20:10:52,989 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010404: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.4)
+2015-10-22 20:10:53,046 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010417: Started Driver service with driver-name = postgresql-9.4-1201.jdbc4.jar
+2015-10-22 20:10:53,082 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/mercuryTestDataSource]
+2015-10-22 20:10:53,093 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/mercuryDataSource]
+2015-10-22 20:10:55,051 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015960: Class Path entry jaxb-api.jar in /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/deployments/mercury.ear/lib/jaxb-impl-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2015-10-22 20:10:55,053 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015960: Class Path entry jaxb-core.jar in /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/deployments/mercury.ear/lib/jaxb-impl-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2015-10-22 20:10:55,062 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015960: Class Path entry xml-apis.jar in /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/deployments/mercury.ear/lib/serializer-2.7.1.jar  does not point to a valid jar for a Class-Path reference.
+2015-10-22 20:10:55,074 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015960: Class Path entry xercesImpl.jar in /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/deployments/mercury.ear/lib/xalan-2.7.1.jar  does not point to a valid jar for a Class-Path reference.
+2015-10-22 20:10:55,076 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015960: Class Path entry xml-apis.jar in /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/deployments/mercury.ear/lib/xalan-2.7.1.jar  does not point to a valid jar for a Class-Path reference.
+2015-10-22 20:10:55,097 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015960: Class Path entry serializer.jar in /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/deployments/mercury.ear/lib/xalan-2.7.1.jar  does not point to a valid jar for a Class-Path reference.
+2015-10-22 20:10:55,106 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015960: Class Path entry jaxb-api.jar in /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/deployments/mercury.ear/lib/jaxb-core-2.2.7.jar  does not point to a valid jar for a Class-Path reference.
+2015-10-22 20:10:55,153 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015973: Starting subdeployment (runtime-name: "mercury-server-1.0.0-SNAPSHOT.jar")
+2015-10-22 20:10:55,264 INFO  [org.jboss.as.jpa] (MSC service thread 1-4) JBAS011401: Read persistence.xml for mercuryPersister
+2015-10-22 20:10:55,488 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016002: Processing weld deployment mercury.ear
+2015-10-22 20:10:55,509 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 50) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'mercury.ear/mercury-server-1.0.0-SNAPSHOT.jar#mercuryPersister'
+2015-10-22 20:10:55,556 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 50) HHH000204: Processing PersistenceUnitInfo [
+	name: mercuryPersister
+	...]
+2015-10-22 20:10:55,739 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-1) HV000001: Hibernate Validator 5.1.3.Final
+2015-10-22 20:10:55,806 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 50) HHH000412: Hibernate Core {4.3.7.Final}
+2015-10-22 20:10:55,810 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 50) HHH000206: hibernate.properties not found
+2015-10-22 20:10:55,830 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 50) HHH000021: Bytecode provider name : javassist
+2015-10-22 20:10:56,212 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016002: Processing weld deployment mercury-server-1.0.0-SNAPSHOT.jar
+2015-10-22 20:10:56,235 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-3) JNDI bindings for session bean named SaleServiceImpl in deployment unit subdeployment "mercury-server-1.0.0-SNAPSHOT.jar" of deployment "mercury.ear" are as follows:
+
+	java:global/mercury/mercury-server-1.0.0-SNAPSHOT/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:app/mercury-server-1.0.0-SNAPSHOT/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:module/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:jboss/exported/mercury/mercury-server-1.0.0-SNAPSHOT/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:global/mercury/mercury-server-1.0.0-SNAPSHOT/SaleServiceImpl
+	java:app/mercury-server-1.0.0-SNAPSHOT/SaleServiceImpl
+	java:module/SaleServiceImpl
+
+2015-10-22 20:10:56,239 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-3) JNDI bindings for session bean named MercuryDao in deployment unit subdeployment "mercury-server-1.0.0-SNAPSHOT.jar" of deployment "mercury.ear" are as follows:
+
+	java:global/mercury/mercury-server-1.0.0-SNAPSHOT/MercuryDao!pl.uz.mercury.dao.common.MercuryDao
+	java:app/mercury-server-1.0.0-SNAPSHOT/MercuryDao!pl.uz.mercury.dao.common.MercuryDao
+	java:module/MercuryDao!pl.uz.mercury.dao.common.MercuryDao
+	java:global/mercury/mercury-server-1.0.0-SNAPSHOT/MercuryDao
+	java:app/mercury-server-1.0.0-SNAPSHOT/MercuryDao
+	java:module/MercuryDao
+
+2015-10-22 20:10:56,254 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-3) JNDI bindings for session bean named MerchandiseServiceImpl in deployment unit subdeployment "mercury-server-1.0.0-SNAPSHOT.jar" of deployment "mercury.ear" are as follows:
+
+	java:global/mercury/mercury-server-1.0.0-SNAPSHOT/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:app/mercury-server-1.0.0-SNAPSHOT/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:jboss/exported/mercury/mercury-server-1.0.0-SNAPSHOT/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:global/mercury/mercury-server-1.0.0-SNAPSHOT/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseServiceLocal
+	java:app/mercury-server-1.0.0-SNAPSHOT/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseServiceLocal
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseServiceLocal
+
+2015-10-22 20:10:56,257 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-3) JNDI bindings for session bean named PurchaseServiceImpl in deployment unit subdeployment "mercury-server-1.0.0-SNAPSHOT.jar" of deployment "mercury.ear" are as follows:
+
+	java:global/mercury/mercury-server-1.0.0-SNAPSHOT/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:app/mercury-server-1.0.0-SNAPSHOT/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:module/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:jboss/exported/mercury/mercury-server-1.0.0-SNAPSHOT/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:global/mercury/mercury-server-1.0.0-SNAPSHOT/PurchaseServiceImpl
+	java:app/mercury-server-1.0.0-SNAPSHOT/PurchaseServiceImpl
+	java:module/PurchaseServiceImpl
+
+2015-10-22 20:10:56,304 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016005: Starting Services for CDI deployment: mercury.ear
+2015-10-22 20:10:56,374 INFO  [org.jboss.weld.Version] (MSC service thread 1-3) WELD-000900: 2.2.6 (Final)
+2015-10-22 20:10:56,403 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016008: Starting weld service for deployment mercury.ear
+2015-10-22 20:10:56,922 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 50) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'mercury.ear/mercury-server-1.0.0-SNAPSHOT.jar#mercuryPersister'
+2015-10-22 20:10:57,096 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 50) HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2015-10-22 20:10:57,650 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 50) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2015-10-22 20:10:57,676 INFO  [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] (ServerService Thread Pool -- 50) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2015-10-22 20:10:57,910 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 50) HHH000397: Using ASTQueryTranslatorFactory
+2015-10-22 20:11:00,367 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "mercury.ear" (runtime-name : "mercury.ear")
+2015-10-22 20:11:00,368 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "postgresql-9.4-1201.jdbc4.jar" (runtime-name : "postgresql-9.4-1201.jdbc4.jar")
+2015-10-22 20:11:00,414 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+2015-10-22 20:11:00,418 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+2015-10-22 20:11:00,419 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 14362ms - Started 445 of 511 services (106 services are lazy, passive or on-demand)
+2015-10-22 20:11:01,711 INFO  [org.jboss.as.repository] (management-handler-thread - 2) JBAS014900: Content added at location /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/data/content/1d/a44a01f1fd76018711178f49d222f25e6317f7/content
+2015-10-22 20:11:01,718 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "test.war" (runtime-name: "test.war")
+2015-10-22 20:11:02,006 INFO  [org.jboss.as.jpa] (MSC service thread 1-4) JBAS011401: Read persistence.xml for mercuryPersister
+2015-10-22 20:11:02,033 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 19) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'test.war#mercuryPersister'
+2015-10-22 20:11:02,034 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 19) HHH000204: Processing PersistenceUnitInfo [
+	name: mercuryPersister
+	...]
+2015-10-22 20:11:02,119 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016002: Processing weld deployment test.war
+2015-10-22 20:11:02,128 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named SaleServiceImpl in deployment unit deployment "test.war" are as follows:
+
+	java:global/test/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:app/test/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:module/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:jboss/exported/test/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:global/test/SaleServiceImpl
+	java:app/test/SaleServiceImpl
+	java:module/SaleServiceImpl
+
+2015-10-22 20:11:02,130 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named MercuryDao in deployment unit deployment "test.war" are as follows:
+
+	java:global/test/MercuryDao!pl.uz.mercury.dao.common.MercuryDao
+	java:app/test/MercuryDao!pl.uz.mercury.dao.common.MercuryDao
+	java:module/MercuryDao!pl.uz.mercury.dao.common.MercuryDao
+	java:global/test/MercuryDao
+	java:app/test/MercuryDao
+	java:module/MercuryDao
+
+2015-10-22 20:11:02,131 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named MerchandiseServiceImpl in deployment unit deployment "test.war" are as follows:
+
+	java:global/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:app/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:jboss/exported/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:global/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseServiceLocal
+	java:app/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseServiceLocal
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseServiceLocal
+
+2015-10-22 20:11:02,140 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named PurchaseServiceImpl in deployment unit deployment "test.war" are as follows:
+
+	java:global/test/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:app/test/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:module/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:jboss/exported/test/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:global/test/PurchaseServiceImpl
+	java:app/test/PurchaseServiceImpl
+	java:module/PurchaseServiceImpl
+
+2015-10-22 20:11:02,331 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016005: Starting Services for CDI deployment: test.war
+2015-10-22 20:11:02,376 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016008: Starting weld service for deployment test.war
+2015-10-22 20:11:02,393 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 19) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'test.war#mercuryPersister'
+2015-10-22 20:11:02,584 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 19) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2015-10-22 20:11:02,589 INFO  [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] (ServerService Thread Pool -- 19) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2015-10-22 20:11:02,613 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 19) HHH000397: Using ASTQueryTranslatorFactory
+2015-10-22 20:11:02,741 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 19) HHH000227: Running hbm2ddl schema export
+2015-10-22 20:11:02,750 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: alter table Purchase drop constraint FK_i4gb5qxr5doncyqlbg4j5quc3
+2015-10-22 20:11:02,756 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: alter table Sale drop constraint FK_lk5x6g8odaarcwmryvchvt375
+2015-10-22 20:11:02,758 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: drop table if exists Merchandise cascade
+2015-10-22 20:11:02,761 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: drop table if exists Purchase cascade
+2015-10-22 20:11:02,764 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: drop table if exists Sale cascade
+2015-10-22 20:11:02,766 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: drop sequence hibernate_sequence
+2015-10-22 20:11:02,773 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: create table Merchandise (id int8 not null, name varchar(255) not null, quantity int4 not null, version int8, primary key (id))
+2015-10-22 20:11:02,780 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: create table Purchase (id int8 not null, cost numeric(19, 2) not null, date timestamp not null, price numeric(19, 2) not null, quantity int4 not null, version int8, merchandise_id int8 not null, primary key (id))
+2015-10-22 20:11:02,785 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: create table Sale (id int8 not null, cost numeric(19, 2) not null, date timestamp not null, price numeric(19, 2) not null, quantity int4 not null, version int8, merchandise_id int8 not null, primary key (id))
+2015-10-22 20:11:02,792 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: alter table Merchandise add constraint UK_jvi1mtd5osdy36ylm8pngctsg  unique (name)
+2015-10-22 20:11:02,797 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: alter table Purchase add constraint FK_i4gb5qxr5doncyqlbg4j5quc3 foreign key (merchandise_id) references Merchandise
+2015-10-22 20:11:02,802 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: alter table Sale add constraint FK_lk5x6g8odaarcwmryvchvt375 foreign key (merchandise_id) references Merchandise
+2015-10-22 20:11:02,805 INFO  [stdout] (ServerService Thread Pool -- 19) Hibernate: create sequence hibernate_sequence start 1 increment 1
+2015-10-22 20:11:02,808 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 19) HHH000230: Schema export complete
+2015-10-22 20:11:03,668 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017534: Registered web context: /test
+2015-10-22 20:11:03,743 INFO  [org.jboss.as.server] (management-handler-thread - 2) JBAS018559: Deployed "test.war" (runtime-name : "test.war")
+2015-10-22 20:11:06,259 INFO  [stdout] (default task-2) Hibernate: select sale0_.id as id1_2_, sale0_.cost as cost2_2_, sale0_.date as date3_2_, sale0_.merchandise_id as merchand7_2_, sale0_.price as price4_2_, sale0_.quantity as quantity5_2_, sale0_.version as version6_2_ from Sale sale0_ where 1=1
+2015-10-22 20:11:06,343 INFO  [stdout] (default task-2) Hibernate: select purchase0_.id as id1_1_, purchase0_.cost as cost2_1_, purchase0_.date as date3_1_, purchase0_.merchandise_id as merchand7_1_, purchase0_.price as price4_1_, purchase0_.quantity as quantity5_1_, purchase0_.version as version6_1_ from Purchase purchase0_ where 1=1
+2015-10-22 20:11:06,363 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,460 INFO  [stdout] (default task-2) Hibernate: insert into Merchandise (name, quantity, version, id) values (?, ?, ?, ?)
+2015-10-22 20:11:06,471 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,485 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,494 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,499 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,512 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,516 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,522 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,525 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,532 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,537 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,549 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,553 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,560 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,569 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,578 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,588 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,597 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,620 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,634 INFO  [stdout] (default task-2) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:06,649 INFO  [stdout] (default task-2) Hibernate: insert into Sale (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:06,696 INFO  [stdout] (default task-2) Hibernate: select sale0_.id as id1_2_, sale0_.cost as cost2_2_, sale0_.date as date3_2_, sale0_.merchandise_id as merchand7_2_, sale0_.price as price4_2_, sale0_.quantity as quantity5_2_, sale0_.version as version6_2_ from Sale sale0_ where sale0_.quantity>=2
+2015-10-22 20:11:06,717 INFO  [stdout] (default task-2) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:06,754 INFO  [stdout] (default task-2) Hibernate: select sale0_.id as id1_2_, sale0_.cost as cost2_2_, sale0_.date as date3_2_, sale0_.merchandise_id as merchand7_2_, sale0_.price as price4_2_, sale0_.quantity as quantity5_2_, sale0_.version as version6_2_ from Sale sale0_ where sale0_.quantity<=6
+2015-10-22 20:11:06,764 INFO  [stdout] (default task-2) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:06,784 INFO  [stdout] (default task-2) Hibernate: select sale0_.id as id1_2_, sale0_.cost as cost2_2_, sale0_.date as date3_2_, sale0_.merchandise_id as merchand7_2_, sale0_.price as price4_2_, sale0_.quantity as quantity5_2_, sale0_.version as version6_2_ from Sale sale0_ where sale0_.quantity>=2 and sale0_.quantity<=6
+2015-10-22 20:11:06,795 INFO  [stdout] (default task-2) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:06,828 INFO  [stdout] (default task-2) Hibernate: select sale0_.id as id1_2_, sale0_.cost as cost2_2_, sale0_.date as date3_2_, sale0_.merchandise_id as merchand7_2_, sale0_.price as price4_2_, sale0_.quantity as quantity5_2_, sale0_.version as version6_2_ from Sale sale0_ where sale0_.price>=3 and sale0_.price<=7
+2015-10-22 20:11:06,844 INFO  [stdout] (default task-2) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:06,866 INFO  [stdout] (default task-2) Hibernate: select sale0_.id as id1_2_, sale0_.cost as cost2_2_, sale0_.date as date3_2_, sale0_.merchandise_id as merchand7_2_, sale0_.price as price4_2_, sale0_.quantity as quantity5_2_, sale0_.version as version6_2_ from Sale sale0_ where sale0_.quantity>=2 and sale0_.quantity<=6 and sale0_.price>=3 and sale0_.price<=7
+2015-10-22 20:11:06,871 INFO  [stdout] (default task-2) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:06,892 INFO  [stdout] (default task-2) Hibernate: select sale0_.id as id1_2_, sale0_.cost as cost2_2_, sale0_.date as date3_2_, sale0_.merchandise_id as merchand7_2_, sale0_.price as price4_2_, sale0_.quantity as quantity5_2_, sale0_.version as version6_2_ from Sale sale0_ where sale0_.quantity>=2 and sale0_.price>=3 and sale0_.price<=7
+2015-10-22 20:11:06,898 INFO  [stdout] (default task-2) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:07,023 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_, sale0_.cost as cost2_2_, sale0_.date as date3_2_, sale0_.merchandise_id as merchand7_2_, sale0_.price as price4_2_, sale0_.quantity as quantity5_2_, sale0_.version as version6_2_ from Sale sale0_ where 1=1
+2015-10-22 20:11:07,035 INFO  [stdout] (default task-19) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:07,074 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,098 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,112 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,126 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,133 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,144 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,162 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,172 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,178 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,183 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,197 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,206 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,211 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,217 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,230 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,240 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,254 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,258 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,262 INFO  [stdout] (default task-19) Hibernate: select sale0_.id as id1_2_0_, sale0_.cost as cost2_2_0_, sale0_.date as date3_2_0_, sale0_.merchandise_id as merchand7_2_0_, sale0_.price as price4_2_0_, sale0_.quantity as quantity5_2_0_, sale0_.version as version6_2_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Sale sale0_ inner join Merchandise merchandis1_ on sale0_.merchandise_id=merchandis1_.id where sale0_.id=?
+2015-10-22 20:11:07,274 INFO  [stdout] (default task-19) Hibernate: delete from Sale where id=? and version=?
+2015-10-22 20:11:07,284 INFO  [stdout] (default task-19) Hibernate: select purchase0_.id as id1_1_, purchase0_.cost as cost2_1_, purchase0_.date as date3_1_, purchase0_.merchandise_id as merchand7_1_, purchase0_.price as price4_1_, purchase0_.quantity as quantity5_1_, purchase0_.version as version6_1_ from Purchase purchase0_ where 1=1
+2015-10-22 20:11:07,294 INFO  [stdout] (default task-19) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:07,297 INFO  [stdout] (default task-19) Hibernate: insert into Merchandise (name, quantity, version, id) values (?, ?, ?, ?)
+2015-10-22 20:11:07,302 INFO  [stdout] (default task-19) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:07,308 INFO  [stdout] (default task-19) Hibernate: insert into Purchase (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:07,322 INFO  [stdout] (default task-19) Hibernate: select purchase0_.id as id1_1_0_, purchase0_.cost as cost2_1_0_, purchase0_.date as date3_1_0_, purchase0_.merchandise_id as merchand7_1_0_, purchase0_.price as price4_1_0_, purchase0_.quantity as quantity5_1_0_, purchase0_.version as version6_1_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Purchase purchase0_ inner join Merchandise merchandis1_ on purchase0_.merchandise_id=merchandis1_.id where purchase0_.id=?
+2015-10-22 20:11:07,325 INFO  [stdout] (default task-19) Hibernate: delete from Purchase where id=? and version=?
+2015-10-22 20:11:07,329 INFO  [stdout] (default task-19) Hibernate: select purchase0_.id as id1_1_0_, purchase0_.cost as cost2_1_0_, purchase0_.date as date3_1_0_, purchase0_.merchandise_id as merchand7_1_0_, purchase0_.price as price4_1_0_, purchase0_.quantity as quantity5_1_0_, purchase0_.version as version6_1_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Purchase purchase0_ inner join Merchandise merchandis1_ on purchase0_.merchandise_id=merchandis1_.id where purchase0_.id=?
+2015-10-22 20:11:07,396 INFO  [stdout] (default task-25) Hibernate: select sale0_.id as id1_2_, sale0_.cost as cost2_2_, sale0_.date as date3_2_, sale0_.merchandise_id as merchand7_2_, sale0_.price as price4_2_, sale0_.quantity as quantity5_2_, sale0_.version as version6_2_ from Sale sale0_ where 1=1
+2015-10-22 20:11:07,401 INFO  [stdout] (default task-25) Hibernate: select purchase0_.id as id1_1_, purchase0_.cost as cost2_1_, purchase0_.date as date3_1_, purchase0_.merchandise_id as merchand7_1_, purchase0_.price as price4_1_, purchase0_.quantity as quantity5_1_, purchase0_.version as version6_1_ from Purchase purchase0_ where 1=1
+2015-10-22 20:11:07,406 INFO  [stdout] (default task-25) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:07,415 INFO  [stdout] (default task-25) Hibernate: insert into Merchandise (name, quantity, version, id) values (?, ?, ?, ?)
+2015-10-22 20:11:07,420 INFO  [stdout] (default task-25) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:07,434 INFO  [stdout] (default task-25) Hibernate: insert into Purchase (cost, date, merchandise_id, price, quantity, version, id) values (?, ?, ?, ?, ?, ?, ?)
+2015-10-22 20:11:07,446 INFO  [stdout] (default task-25) Hibernate: select purchase0_.id as id1_1_0_, purchase0_.cost as cost2_1_0_, purchase0_.date as date3_1_0_, purchase0_.merchandise_id as merchand7_1_0_, purchase0_.price as price4_1_0_, purchase0_.quantity as quantity5_1_0_, purchase0_.version as version6_1_0_, merchandis1_.id as id1_0_1_, merchandis1_.name as name2_0_1_, merchandis1_.quantity as quantity3_0_1_, merchandis1_.version as version4_0_1_ from Purchase purchase0_ inner join Merchandise merchandis1_ on purchase0_.merchandise_id=merchandis1_.id where purchase0_.id=?
+2015-10-22 20:11:07,509 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017535: Unregistered web context: /test
+2015-10-22 20:11:07,531 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 22) JBAS011410: Stopping Persistence Unit (phase 2 of 2) Service 'test.war#mercuryPersister'
+2015-10-22 20:11:07,534 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016009: Stopping weld service for deployment test.war
+2015-10-22 20:11:07,563 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 22) JBAS011410: Stopping Persistence Unit (phase 1 of 2) Service 'test.war#mercuryPersister'
+2015-10-22 20:11:07,573 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Stopped deployment test.war (runtime-name: test.war) in 69ms
+2015-10-22 20:11:07,617 INFO  [org.jboss.as.repository] (management-handler-thread - 2) JBAS014901: Content removed from location /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/data/content/1d/a44a01f1fd76018711178f49d222f25e6317f7/content
+2015-10-22 20:11:07,617 INFO  [org.jboss.as.server] (management-handler-thread - 2) JBAS018558: Undeployed "test.war" (runtime-name: "test.war")
+2015-10-22 20:11:08,407 INFO  [org.jboss.as.repository] (management-handler-thread - 3) JBAS014900: Content added at location /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/data/content/e6/3aeddcd6c337375b8044b8dd21dd61db922df9/content
+2015-10-22 20:11:08,411 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "test.war" (runtime-name: "test.war")
+2015-10-22 20:11:08,527 INFO  [org.jboss.as.jpa] (MSC service thread 1-2) JBAS011401: Read persistence.xml for mercuryPersister
+2015-10-22 20:11:08,546 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 22) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'test.war#mercuryPersister'
+2015-10-22 20:11:08,546 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 22) HHH000204: Processing PersistenceUnitInfo [
+	name: mercuryPersister
+	...]
+2015-10-22 20:11:08,607 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016002: Processing weld deployment test.war
+2015-10-22 20:11:08,612 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-3) JNDI bindings for session bean named SaleServiceImpl in deployment unit deployment "test.war" are as follows:
+
+	java:global/test/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:app/test/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:module/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:jboss/exported/test/SaleServiceImpl!pl.uz.mercury.service.SaleService
+	java:global/test/SaleServiceImpl
+	java:app/test/SaleServiceImpl
+	java:module/SaleServiceImpl
+
+2015-10-22 20:11:08,612 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-3) JNDI bindings for session bean named MercuryDao in deployment unit deployment "test.war" are as follows:
+
+	java:global/test/MercuryDao!pl.uz.mercury.dao.common.MercuryDao
+	java:app/test/MercuryDao!pl.uz.mercury.dao.common.MercuryDao
+	java:module/MercuryDao!pl.uz.mercury.dao.common.MercuryDao
+	java:global/test/MercuryDao
+	java:app/test/MercuryDao
+	java:module/MercuryDao
+
+2015-10-22 20:11:08,613 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-3) JNDI bindings for session bean named MerchandiseServiceImpl in deployment unit deployment "test.war" are as follows:
+
+	java:global/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:app/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:jboss/exported/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseService
+	java:global/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseServiceLocal
+	java:app/test/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseServiceLocal
+	java:module/MerchandiseServiceImpl!pl.uz.mercury.service.MerchandiseServiceLocal
+
+2015-10-22 20:11:08,614 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-3) JNDI bindings for session bean named PurchaseServiceImpl in deployment unit deployment "test.war" are as follows:
+
+	java:global/test/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:app/test/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:module/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:jboss/exported/test/PurchaseServiceImpl!pl.uz.mercury.service.PurchaseService
+	java:global/test/PurchaseServiceImpl
+	java:app/test/PurchaseServiceImpl
+	java:module/PurchaseServiceImpl
+
+2015-10-22 20:11:08,699 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) JBAS016005: Starting Services for CDI deployment: test.war
+2015-10-22 20:11:08,713 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016008: Starting weld service for deployment test.war
+2015-10-22 20:11:08,736 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 22) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'test.war#mercuryPersister'
+2015-10-22 20:11:08,753 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 22) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2015-10-22 20:11:08,755 INFO  [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] (ServerService Thread Pool -- 22) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2015-10-22 20:11:08,764 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 22) HHH000397: Using ASTQueryTranslatorFactory
+2015-10-22 20:11:08,820 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 22) HHH000227: Running hbm2ddl schema export
+2015-10-22 20:11:08,822 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: alter table Purchase drop constraint FK_i4gb5qxr5doncyqlbg4j5quc3
+2015-10-22 20:11:08,824 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: alter table Sale drop constraint FK_lk5x6g8odaarcwmryvchvt375
+2015-10-22 20:11:08,827 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: drop table if exists Merchandise cascade
+2015-10-22 20:11:08,829 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: drop table if exists Purchase cascade
+2015-10-22 20:11:08,832 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: drop table if exists Sale cascade
+2015-10-22 20:11:08,834 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: drop sequence hibernate_sequence
+2015-10-22 20:11:08,836 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: create table Merchandise (id int8 not null, name varchar(255) not null, quantity int4 not null, version int8, primary key (id))
+2015-10-22 20:11:08,850 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: create table Purchase (id int8 not null, cost numeric(19, 2) not null, date timestamp not null, price numeric(19, 2) not null, quantity int4 not null, version int8, merchandise_id int8 not null, primary key (id))
+2015-10-22 20:11:08,855 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: create table Sale (id int8 not null, cost numeric(19, 2) not null, date timestamp not null, price numeric(19, 2) not null, quantity int4 not null, version int8, merchandise_id int8 not null, primary key (id))
+2015-10-22 20:11:08,860 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: alter table Merchandise add constraint UK_jvi1mtd5osdy36ylm8pngctsg  unique (name)
+2015-10-22 20:11:08,864 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: alter table Purchase add constraint FK_i4gb5qxr5doncyqlbg4j5quc3 foreign key (merchandise_id) references Merchandise
+2015-10-22 20:11:08,867 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: alter table Sale add constraint FK_lk5x6g8odaarcwmryvchvt375 foreign key (merchandise_id) references Merchandise
+2015-10-22 20:11:08,870 INFO  [stdout] (ServerService Thread Pool -- 22) Hibernate: create sequence hibernate_sequence start 1 increment 1
+2015-10-22 20:11:08,872 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 22) HHH000230: Schema export complete
+2015-10-22 20:11:09,300 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017534: Registered web context: /test
+2015-10-22 20:11:09,325 INFO  [org.jboss.as.server] (management-handler-thread - 3) JBAS018559: Deployed "test.war" (runtime-name : "test.war")
+2015-10-22 20:11:09,911 INFO  [stdout] (default task-26) Hibernate: select merchandis0_.id as id1_0_, merchandis0_.name as name2_0_, merchandis0_.quantity as quantity3_0_, merchandis0_.version as version4_0_ from Merchandise merchandis0_ where 1=1
+2015-10-22 20:11:09,919 INFO  [stdout] (default task-26) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:09,941 INFO  [stdout] (default task-26) Hibernate: insert into Merchandise (name, quantity, version, id) values (?, ?, ?, ?)
+2015-10-22 20:11:09,952 INFO  [stdout] (default task-26) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:09,957 INFO  [stdout] (default task-26) Hibernate: delete from Merchandise where id=? and version=?
+2015-10-22 20:11:09,967 INFO  [stdout] (default task-26) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:10,020 INFO  [stdout] (default task-31) Hibernate: select merchandis0_.id as id1_0_, merchandis0_.name as name2_0_, merchandis0_.quantity as quantity3_0_, merchandis0_.version as version4_0_ from Merchandise merchandis0_ where 1=1
+2015-10-22 20:11:10,028 INFO  [stdout] (default task-31) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:10,037 INFO  [stdout] (default task-31) Hibernate: insert into Merchandise (name, quantity, version, id) values (?, ?, ?, ?)
+2015-10-22 20:11:10,046 INFO  [stdout] (default task-31) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:10,099 INFO  [stdout] (default task-3) Hibernate: select merchandis0_.id as id1_0_, merchandis0_.name as name2_0_, merchandis0_.quantity as quantity3_0_, merchandis0_.version as version4_0_ from Merchandise merchandis0_ where 1=1
+2015-10-22 20:11:10,111 INFO  [stdout] (default task-3) Hibernate: select merchandis0_.id as id1_0_0_, merchandis0_.name as name2_0_0_, merchandis0_.quantity as quantity3_0_0_, merchandis0_.version as version4_0_0_ from Merchandise merchandis0_ where merchandis0_.id=?
+2015-10-22 20:11:10,121 INFO  [stdout] (default task-3) Hibernate: delete from Merchandise where id=? and version=?
+2015-10-22 20:11:10,127 INFO  [stdout] (default task-3) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:10,130 INFO  [stdout] (default task-3) Hibernate: insert into Merchandise (name, quantity, version, id) values (?, ?, ?, ?)
+2015-10-22 20:11:10,135 INFO  [stdout] (default task-3) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:10,141 INFO  [stdout] (default task-3) Hibernate: insert into Merchandise (name, quantity, version, id) values (?, ?, ?, ?)
+2015-10-22 20:11:10,160 INFO  [stdout] (default task-3) Hibernate: select nextval ('hibernate_sequence')
+2015-10-22 20:11:10,164 INFO  [stdout] (default task-3) Hibernate: insert into Merchandise (name, quantity, version, id) values (?, ?, ?, ?)
+2015-10-22 20:11:10,213 INFO  [stdout] (default task-3) Hibernate: select merchandis0_.id as id1_0_, merchandis0_.name as name2_0_, merchandis0_.quantity as quantity3_0_, merchandis0_.version as version4_0_ from Merchandise merchandis0_ where merchandis0_.name like ?
+2015-10-22 20:11:10,257 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017535: Unregistered web context: /test
+2015-10-22 20:11:10,288 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 13) JBAS011410: Stopping Persistence Unit (phase 2 of 2) Service 'test.war#mercuryPersister'
+2015-10-22 20:11:10,291 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016009: Stopping weld service for deployment test.war
+2015-10-22 20:11:10,303 ERROR [io.undertow.servlet.request] (default task-3) UT015005: Error invoking method requestDestroyed on listener class org.jboss.weld.servlet.WeldInitialListener: java.lang.RuntimeException: javax.servlet.ServletException: UT010013: Could not instantiate org.jboss.weld.servlet.WeldInitialListener
+	at io.undertow.servlet.core.ManagedListener.instance(ManagedListener.java:77) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	at io.undertow.servlet.core.ApplicationListeners.get(ApplicationListeners.java:297) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	at io.undertow.servlet.core.ApplicationListeners.requestDestroyed(ApplicationListeners.java:225) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:304) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:247) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:76) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:166) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:197) [undertow-core-1.1.0.Final.jar:1.1.0.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:759) [undertow-core-1.1.0.Final.jar:1.1.0.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [rt.jar:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [rt.jar:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.8.0_60]
+Caused by: javax.servlet.ServletException: UT010013: Could not instantiate org.jboss.weld.servlet.WeldInitialListener
+	at io.undertow.servlet.core.ManagedListener.start(ManagedListener.java:50) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	at io.undertow.servlet.core.ManagedListener.instance(ManagedListener.java:75) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	... 11 more
+Caused by: java.lang.IllegalStateException
+	at org.jboss.msc.value.InjectedValue.getValue(InjectedValue.java:47)
+	at org.jboss.as.ee.component.ComponentStartService.getValue(ComponentStartService.java:97)
+	at org.jboss.as.ee.component.ComponentStartService.getValue(ComponentStartService.java:41)
+	at org.jboss.msc.service.ServiceControllerImpl.getValue(ServiceControllerImpl.java:1158)
+	at org.jboss.as.ee.component.ComponentRegistry$ComponentManagedReferenceFactory.getReference(ComponentRegistry.java:149)
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$5.createInstance(UndertowDeploymentInfoService.java:1233)
+	at io.undertow.servlet.core.ManagedListener.start(ManagedListener.java:48) [undertow-servlet-1.1.0.Final.jar:1.1.0.Final]
+	... 12 more
+
+2015-10-22 20:11:10,348 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 13) JBAS011410: Stopping Persistence Unit (phase 1 of 2) Service 'test.war#mercuryPersister'
+2015-10-22 20:11:10,367 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Stopped deployment test.war (runtime-name: test.war) in 112ms
+2015-10-22 20:11:10,402 INFO  [org.jboss.as.repository] (management-handler-thread - 1) JBAS014901: Content removed from location /home/bartek/MERCURY/WORKSPACE/MERCURY-REPOSITORY/wildfly-8.2.0.Final/standalone/data/content/e6/3aeddcd6c337375b8044b8dd21dd61db922df9/content
+2015-10-22 20:11:10,402 INFO  [org.jboss.as.server] (management-handler-thread - 1) JBAS018558: Undeployed "test.war" (runtime-name: "test.war")
+2015-10-22 20:11:10,472 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010409: Unbound data source [java:jboss/mercuryTestDataSource]
+2015-10-22 20:11:10,490 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017532: Host default-host stopping
+2015-10-22 20:11:10,521 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 13) JBAS011410: Stopping Persistence Unit (phase 2 of 2) Service 'mercury.ear/mercury-server-1.0.0-SNAPSHOT.jar#mercuryPersister'
+2015-10-22 20:11:10,522 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+2015-10-22 20:11:10,530 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010418: Stopped Driver service with driver-name = h2
+2015-10-22 20:11:10,549 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) JBAS016009: Stopping weld service for deployment mercury.ear
+2015-10-22 20:11:10,568 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 13) JBAS011410: Stopping Persistence Unit (phase 1 of 2) Service 'mercury.ear/mercury-server-1.0.0-SNAPSHOT.jar#mercuryPersister'
+2015-10-22 20:11:10,568 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010409: Unbound data source [java:jboss/mercuryDataSource]
+2015-10-22 20:11:10,611 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010418: Stopped Driver service with driver-name = postgresql-9.4-1201.jdbc4.jar
+2015-10-22 20:11:10,613 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017521: Undertow HTTP listener default suspending
+2015-10-22 20:11:10,614 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017520: Undertow HTTP listener default stopped, was bound to /127.0.0.1:8080
+2015-10-22 20:11:10,623 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015974: Stopped subdeployment (runtime-name: mercury-server-1.0.0-SNAPSHOT.jar) in 173ms
+2015-10-22 20:11:10,618 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) JBAS017506: Undertow 1.1.0.Final stopping
+2015-10-22 20:11:10,639 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Stopped deployment postgresql-9.4-1201.jdbc4.jar (runtime-name: postgresql-9.4-1201.jdbc4.jar) in 189ms
+2015-10-22 20:11:10,671 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Stopped deployment mercury.ear (runtime-name: mercury.ear) in 220ms
+2015-10-22 20:11:10,683 INFO  [org.jboss.as] (MSC service thread 1-4) JBAS015950: WildFly 8.2.0.Final "Tweek" stopped in 209ms

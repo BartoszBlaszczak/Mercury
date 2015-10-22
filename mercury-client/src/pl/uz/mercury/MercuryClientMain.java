@@ -8,11 +8,11 @@ import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JOptionPane;
 
 import pl.uz.mercury.Properties.Locale;
-import pl.uz.mercury.controler.option.MerchandiseOption;
-import pl.uz.mercury.controler.option.PurchaseOption;
-import pl.uz.mercury.controler.option.SaleOption;
-import pl.uz.mercury.controler.option.common.MercuryClientOption;
-import pl.uz.mercury.controler.option.common.PropertiesReader;
+import pl.uz.mercury.option.MerchandiseOption;
+import pl.uz.mercury.option.PurchaseOption;
+import pl.uz.mercury.option.SaleOption;
+import pl.uz.mercury.option.common.MercuryClientOption;
+import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.exception.MercuryException;
 import pl.uz.mercury.view.MainWindow;
 
