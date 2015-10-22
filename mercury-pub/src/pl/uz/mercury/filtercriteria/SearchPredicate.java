@@ -4,7 +4,7 @@ public enum SearchPredicate
 {
 	IS("="),
 	EQUAL("="),
-	SMALLER_OR_EQUAL("<="),
+	LESSER_OR_EQUAL("<="),
 	GREATER_OR_EQUAL(">="),
 	LIKE("~"),
 	AFTER_OR_EQUAL(">="),

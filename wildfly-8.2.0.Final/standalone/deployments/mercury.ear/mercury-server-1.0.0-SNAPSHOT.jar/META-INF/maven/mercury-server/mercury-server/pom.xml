@@ -98,7 +98,7 @@
 		<dependency>
 			<groupId>org.jboss.spec.javax.servlet.jstl</groupId>
 			<artifactId>jboss-jstl-api_1.2_spec</artifactId>
-			<version>1.1.2.Final</version>
+			<version>1.1.2.Final</version><!--$NO-MVN-MAN-VER$-->
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.spec.javax.transaction</groupId>
@@ -248,10 +248,6 @@
 			<artifactId>wildfly-arquillian-container-managed</artifactId>
 			<version>8.2.0.Final</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
 		</dependency>
 	</dependencies>
 

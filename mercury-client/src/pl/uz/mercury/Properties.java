@@ -13,7 +13,6 @@ public interface Properties
 		
 		public interface Element
 		{
-			String SINGULAR_NAME = "singularname";
 			String PLURAL_NAME = "pluralname";
 			String ICON = "icon";
 		}
@@ -34,15 +33,13 @@ public interface Properties
 		String DELETE = "delete";
 		String REFRESH = "refresh";
 		String OPTIONS = "options";
-		String SEARCH_CRITERIA = "SEARCH_CRITERIA";
+		String SEARCH_CRITERIA = "searchCriteria";
 		
 		String NAME = "name";
-		String USER = "user";
 		String DATE = "date";
 		String PRICE = "price";
 		String QUANTITY = "quantity";
 		String COST = "cost";
-		
 		String MERCHANDISE = "merchandise";
 		
 	}
@@ -50,7 +47,6 @@ public interface Properties
 	public interface Message
 	{
 		String COULD_NOT_READ_LOCALE_FILE = "COULD_NOT_READ_LOCALE_FILE";
-		String COULD_NOT_READ_OPTIONS_LOCALE_FILE = "COULD_NOT_READ_OPTIONS_LOCALE_FILE";
 		String SERVER_PROBLEM = "SERVER_PROBLEM";
 		String WRONG_JNDI_NAME = "WRONG_JNDI_NAME";
 		String COULD_NOT_DELETE = "COULD_NOT_DELETE";

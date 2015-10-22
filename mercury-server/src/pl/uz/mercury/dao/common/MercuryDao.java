@@ -66,16 +66,16 @@ public class MercuryDao
 						restrictions.add(criteriaBuilder.equal(root.get("merchandise"), criterium.value));
 						break;
 					case GREATER_OR_EQUAL:
-						restrictions.add(criteriaBuilder.greaterThan(root.get(criterium.fieldName), criterium.value));
+						restrictions.add(criteriaBuilder.greaterThanOrEqualTo(root.get(criterium.fieldName), criterium.value));
 						break;
-					case SMALLER_OR_EQUAL:
-						restrictions.add(criteriaBuilder.lessThan(root.get(criterium.fieldName), criterium.value));
+					case LESSER_OR_EQUAL:
+						restrictions.add(criteriaBuilder.lessThanOrEqualTo(root.get(criterium.fieldName), criterium.value));
 						break;
 					case AFTER_OR_EQUAL:
-						restrictions.add(criteriaBuilder.lessThan(root.get(criterium.fieldName), dateFormat.parse(criterium.value)));
+						restrictions.add(criteriaBuilder.greaterThanOrEqualTo(root.get(criterium.fieldName), dateFormat.parse(criterium.value)));
 						break;
 					case BEFORE_OR_EQUAL:
-						restrictions.add(criteriaBuilder.lessThan(root.get(criterium.fieldName), dateFormat.parse(criterium.value)));
+						restrictions.add(criteriaBuilder.lessThanOrEqualTo(root.get(criterium.fieldName), dateFormat.parse(criterium.value)));
 						break;
 				}
 			}

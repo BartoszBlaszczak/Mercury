@@ -116,7 +116,7 @@ public class TransactionInternalFrame
 			searchCriteria.add(new SearchCriteria(TransactionDto.COST, SearchPredicate.GREATER_OR_EQUAL, minCostTextField.getText()));
 		
 		if (!maxCostTextField.getText().isEmpty())
-			searchCriteria.add(new SearchCriteria(TransactionDto.COST, SearchPredicate.SMALLER_OR_EQUAL, maxCostTextField.getText()));
+			searchCriteria.add(new SearchCriteria(TransactionDto.COST, SearchPredicate.LESSER_OR_EQUAL, maxCostTextField.getText()));
 
 		return searchCriteria;
 	}

@@ -10,8 +10,6 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 import javax.ejb.EJB;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -19,7 +17,6 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -49,7 +46,7 @@ public class MercuryDaoForMerchandiseTest
 				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
 	}
 	
-	@After
+	@Before
 	public void cleanUp() throws ValidationException
 	{
 		for (Merchandise merchandise : dao.getList(Merchandise.class, emptyCriteriaList) )
@@ -80,11 +77,6 @@ public class MercuryDaoForMerchandiseTest
 		// when
 		dao.save(merchandise);
 		Long id = merchandise.getId();
-		
-		// then
-		assertEquals(dao.retrive(Merchandise.class, id).getId(), id);
-		
-		// when
 		dao.delete(Merchandise.class, id);
 		
 		// then
