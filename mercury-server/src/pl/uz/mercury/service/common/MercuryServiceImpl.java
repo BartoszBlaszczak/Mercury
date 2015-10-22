@@ -3,9 +3,13 @@ package pl.uz.mercury.service.common;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.EJBTransactionRolledbackException;
 import javax.interceptor.Interceptors;
+
+import org.jboss.ejb3.annotation.SecurityDomain;
+
 import pl.uz.mercury.dao.common.MercuryDao;
 import pl.uz.mercury.dto.common.MercuryOptionDto;
 import pl.uz.mercury.entity.common.MercuryOptionEntity;
@@ -19,6 +23,7 @@ import pl.uz.mercury.service.common.MercuryService;
 import pl.uz.mercury.util.EntityDtoAssigner;
 
 @Interceptors(LoggingInterceptor.class)
+@SecurityDomain("other")
 public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dto extends MercuryOptionDto>
 	implements MercuryService <Dto>
 {
@@ -37,7 +42,8 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 	}
 
 	@Override
-	public final Long save (Dto dto)
+	@RolesAllowed(MercuryService.USER_ROLE)
+	public Long save (Dto dto)
 			throws SavingException, ValidationException
 	{
 		try
@@ -73,6 +79,7 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 	}
 
 	@Override
+	@RolesAllowed({MercuryService.USER_ROLE, MercuryService.OBSERVER_ROLE})
 	public Dto retrieve (Long id)
 			throws RetrievingException
 	{
@@ -90,6 +97,7 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 	}
 
 	@Override
+	@RolesAllowed(MercuryService.USER_ROLE)
 	public void delete (Long id)
 			throws DeletingException
 	{
@@ -104,6 +112,7 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 	}
 
 	@Override
+	@RolesAllowed({MercuryService.USER_ROLE, MercuryService.OBSERVER_ROLE})
 	public List <Dto> getList (List <SearchCriteria> criteria)
 			throws RetrievingException, ValidationException
 	{

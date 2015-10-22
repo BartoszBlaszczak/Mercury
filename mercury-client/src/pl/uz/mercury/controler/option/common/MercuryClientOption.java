@@ -14,6 +14,7 @@ import pl.uz.mercury.exception.ValidationException;
 import pl.uz.mercury.service.common.MercuryService;
 import pl.uz.mercury.view.optioninternalframe.common.InternalFrame;
 
+import javax.ejb.EJBAccessException;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.swing.*;
@@ -109,9 +110,15 @@ public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service
 		{
 			action.run();
 		}
+		
+		catch (EJBAccessException e)
+		{
+			showMessageFromProperity(Properties.Message.LACK_OF_PERMISSION);
+		}
+		
 		catch (RuntimeException e)
 		{
-			showMessageFromProperity(Properties.Message.SERVER_PROBLEM);
+			showMessageFromProperity(Properties.Message.SERVER_PROBLEM_OR_WRONG_CREDENTIALS);
 		}
 	}
 	

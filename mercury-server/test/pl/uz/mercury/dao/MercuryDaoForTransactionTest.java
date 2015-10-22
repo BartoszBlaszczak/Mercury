@@ -2,26 +2,18 @@ package pl.uz.mercury.dao;
 
 import static org.junit.Assert.*;
 
-import java.io.File;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
-import javax.ejb.EJB;
 import javax.transaction.Transactional;
 
-import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import pl.uz.mercury.dao.common.MercuryDao;
 import pl.uz.mercury.dto.TransactionDto;
 import pl.uz.mercury.entity.Merchandise;
 import pl.uz.mercury.entity.Purchase;
@@ -33,23 +25,8 @@ import pl.uz.mercury.filtercriteria.SearchPredicate;
 
 @RunWith(Arquillian.class)
 @Transactional
-public class MercuryDaoForTransactionTest
+public class MercuryDaoForTransactionTest extends MercuryDaoTest
 {
-	@EJB
-	MercuryDao						dao;
-
-	private List <SearchCriteria>	emptyCriteriaList	= new ArrayList <>();
-	private Random					randomizer			= new Random();
-
-	@Deployment
-	public static JavaArchive createArchiveAndDeploy ()
-	{
-		return ShrinkWrap.create(JavaArchive.class)
-				.addPackages(true, "pl.uz.mercury", "pl.uz.mercury.entity", "pl.uz.mercury.entity.common", "pl.uz.mercury.exception")
-				.addAsResource(new File("src/META-INF/testPersistence.xml"), "META-INF/persistence.xml")
-				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-	}
-
 	@Before
 	public void cleanUp ()
 			throws ValidationException
@@ -59,13 +36,6 @@ public class MercuryDaoForTransactionTest
 
 		for (Purchase purchase : dao.getList(Purchase.class, emptyCriteriaList))
 			dao.delete(Purchase.class, purchase.getId());
-	}
-
-	private Merchandise getRandomMerchandise ()
-	{
-		Merchandise merchandise = new Merchandise();
-		merchandise.setName(String.valueOf(new Random().nextInt()));
-		return merchandise;
 	}
 
 	private List<Transaction> getRandomTransactions (int quantity)

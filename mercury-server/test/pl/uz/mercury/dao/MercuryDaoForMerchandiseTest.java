@@ -2,26 +2,17 @@ package pl.uz.mercury.dao;
 
 import static org.junit.Assert.*;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 import java.util.stream.Collectors;
 
-import javax.ejb.EJB;
 import javax.transaction.Transactional;
 
-import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import pl.uz.mercury.dao.common.MercuryDao;
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.entity.Merchandise;
 import pl.uz.mercury.exception.ValidationException;
@@ -30,22 +21,8 @@ import pl.uz.mercury.filtercriteria.SearchPredicate;
 
 @RunWith(Arquillian.class)
 @Transactional
-public class MercuryDaoForMerchandiseTest
-{
-	@EJB
-	MercuryDao	dao;
-	
-	private List <SearchCriteria> emptyCriteriaList = new ArrayList<>();
-
-	@Deployment
-	public static JavaArchive createArchiveAndDeploy ()
-	{
-		return ShrinkWrap.create(JavaArchive.class)
-				.addPackages(true, "pl.uz.mercury", "pl.uz.mercury.entity", "pl.uz.mercury.entity.common", "pl.uz.mercury.exception")
-				.addAsResource(new File("src/META-INF/testPersistence.xml"), "META-INF/persistence.xml")
-				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-	}
-	
+public class MercuryDaoForMerchandiseTest extends MercuryDaoTest
+{	
 	@Before
 	public void cleanUp() throws ValidationException
 	{
@@ -57,7 +34,7 @@ public class MercuryDaoForMerchandiseTest
 	public void shoudtSave () throws ValidationException
 	{
 		// given
-		Merchandise merchandise = getRandonMerchandise();
+		Merchandise merchandise = getRandomMerchandise();
 		
 		// when
 		dao.save(merchandise);
@@ -66,13 +43,14 @@ public class MercuryDaoForMerchandiseTest
 		// then
 		assertEquals(merchandise.getId(), retrivedEntity.getId());
 		assertEquals(merchandise.getName(), retrivedEntity.getName());
+		assertEquals(merchandise.getQuantity(), retrivedEntity.getQuantity());
 	}
 
 	@Test
 	public void shouldDelete () throws ValidationException
 	{
 		// given
-		Merchandise merchandise = getRandonMerchandise();
+		Merchandise merchandise = getRandomMerchandise();
 		
 		// when
 		dao.save(merchandise);
@@ -84,15 +62,15 @@ public class MercuryDaoForMerchandiseTest
 	}
 
 	@Test
-	public void shouldgetList () throws ValidationException
+	public void shouldGetList () throws ValidationException
 	{
 		// given
 		String prefix = "AAA";
-		Merchandise merchandise1 = new Merchandise();
+		Merchandise merchandise1 = getRandomMerchandise();
 		merchandise1.setName(prefix+"A");
-		Merchandise merchandise2 = new Merchandise();
+		Merchandise merchandise2 = getRandomMerchandise();
 		merchandise2.setName(prefix+"B");
-		Merchandise merchandise3 = new Merchandise();
+		Merchandise merchandise3 = getRandomMerchandise();
 		merchandise3.setName("ZZZ");
 		SearchCriteria searchCriteria = new SearchCriteria(MerchandiseDto.NAME, SearchPredicate.LIKE, prefix);
 		
@@ -108,12 +86,4 @@ public class MercuryDaoForMerchandiseTest
 		assertTrue(ids.containsAll(Arrays.asList(merchandise1.getId(), merchandise2.getId())));
 		assertFalse(results.contains(merchandise3));
 	}
-	
-	private Merchandise getRandonMerchandise()
-	{
-		Merchandise merchandise = new Merchandise();
-		merchandise.setName(String.valueOf(new Random().nextInt()));
-		return merchandise;
-	}
-	
 }

@@ -13,4 +13,10 @@ public class SaleServiceImpl extends TransactionServiceImpl <Sale> implements Sa
 	{
 		super(Sale.class);
 	}
+
+	@Override
+	protected int getNewMerchandiseQuantity (int oldValue, int newValue)
+	{
+		return oldValue - newValue;
+	}
 }

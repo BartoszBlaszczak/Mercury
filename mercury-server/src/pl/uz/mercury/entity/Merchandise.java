@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Version;
+import javax.validation.constraints.NotNull;
 
 import pl.uz.mercury.entity.common.MercuryOptionEntity;
 
@@ -15,8 +16,14 @@ public class Merchandise implements MercuryOptionEntity
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long	id;
+	
 	@Column(unique=true)
+	@NotNull
 	private String	name;
+	
+	@NotNull
+	private Integer quantity;
+	
 	@Version
 	private Long	version;
 
@@ -39,6 +46,15 @@ public class Merchandise implements MercuryOptionEntity
 	public void setName(String name)
 	{
 		this.name = name;
+	}
+	public Integer getQuantity ()
+	{
+		return quantity;
+	}
+
+	public void setQuantity (Integer quantity)
+	{
+		this.quantity = quantity;
 	}
 
 	public Long getVersion()

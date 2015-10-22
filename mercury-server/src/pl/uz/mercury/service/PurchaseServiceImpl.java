@@ -13,4 +13,10 @@ public class PurchaseServiceImpl extends TransactionServiceImpl <Purchase> imple
 	{
 		super(Purchase.class);
 	}
+
+	@Override
+	protected int getNewMerchandiseQuantity (int oldValue, int newValue)
+	{
+		return newValue - oldValue;
+	}
 }

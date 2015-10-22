@@ -8,9 +8,11 @@ public class MerchandiseDto implements MercuryOptionDto
 
 	public static final String ID = "id";
 	public static final String NAME = "name";
+	public static final String QUANTITY = "quantity";
 	
 	public Long id;
 	public String name;
+	public Integer quantity;
 
 	@Override
 	public Long getId ()

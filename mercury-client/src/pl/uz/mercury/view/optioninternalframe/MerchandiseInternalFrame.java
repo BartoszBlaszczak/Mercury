@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.table.TableColumn;
 
 import pl.uz.mercury.Properties.Locale;
 import pl.uz.mercury.controler.option.common.PropertiesReader;
@@ -31,8 +32,12 @@ public class MerchandiseInternalFrame
 	{
 		setColumns(
 				ID,
-				localizationReader.getProperty(Locale.NAME)
+				localizationReader.getProperty(Locale.NAME),
+				localizationReader.getProperty(Locale.QUANTITY)
 				);
+		TableColumn column = columnModel.getColumn(1);
+		column.setMaxWidth(100000);
+		column.setPreferredWidth(100);
 	}
 
 	@Override

@@ -29,24 +29,25 @@ import pl.uz.mercury.filtercriteria.SearchCriteria;
 public abstract class InternalFrame
 	extends JInternalFrame
 {
-	private static final long	serialVersionUID	= 1L;
+	private static final long			serialVersionUID	= 1L;
 
-	private final JToolBar				toolBar					= new JToolBar();
+	private final JToolBar				toolBar				= new JToolBar();
 
-	private final JButton				addButton				= new JButton();
-	private final JButton				updateButton			= new JButton();
-	private final JButton				deleteButton			= new JButton();
-	private final JButton				refreshButton			= new JButton();
+	private final JButton				addButton			= new JButton();
+	private final JButton				updateButton		= new JButton();
+	private final JButton				deleteButton		= new JButton();
+	private final JButton				refreshButton		= new JButton();
 
-	private final Container				contentPane				= super.getContentPane();
-	private final JScrollPane			scrollPane				= new JScrollPane();
-	private final JTable				table					= new JTable();
-	private final ListSelectionModel	selectionModel			= table.getSelectionModel();
+	private final Container				contentPane			= super.getContentPane();
+	private final JScrollPane			scrollPane			= new JScrollPane();
+	private final JTable				table				= new JTable();
+	protected final TableColumnModel	columnModel			= table.getColumnModel();
+	private final ListSelectionModel	selectionModel		= table.getSelectionModel();
 	private final DefaultTableModel		dataModel;
-	private final JPanel				searchPanel				= new JPanel();
+	private final JPanel				searchPanel			= new JPanel();
 
 	protected PropertiesReader			localizationReader;
-	protected final String 				ID 						= "id";
+	protected final String				ID					= "id";
 
 	{
 		updateButton.setEnabled(false);
@@ -74,10 +75,12 @@ public abstract class InternalFrame
 	}
 
 	protected abstract void setUpColumns ();
+
 	protected abstract void setUpSearchPanel ();
-	public abstract List<SearchCriteria> getSearchCriteria ();
-	
-	protected DefaultTableModel getTableModel()
+
+	public abstract List <SearchCriteria> getSearchCriteria ();
+
+	protected DefaultTableModel getTableModel ()
 	{
 		return new DefaultTableModel();
 	}
@@ -86,16 +89,16 @@ public abstract class InternalFrame
 	{
 		addButton.setText(localizationReader.getProperty(Locale.ADD));
 		addButton.setIcon(new ImageIcon(getClass().getResource(localizationReader.getProperty(IconPath.ADD))));
-		
+
 		updateButton.setText(localizationReader.getProperty(Locale.UPDATE));
 		updateButton.setIcon(new ImageIcon(getClass().getResource(localizationReader.getProperty(IconPath.UPDATE))));
-		
+
 		deleteButton.setText(localizationReader.getProperty(Locale.DELETE));
 		deleteButton.setIcon(new ImageIcon(getClass().getResource(localizationReader.getProperty(IconPath.DELETE))));
-		
+
 		refreshButton.setText(localizationReader.getProperty(Locale.REFRESH));
 		refreshButton.setIcon(new ImageIcon(getClass().getResource(localizationReader.getProperty(IconPath.REFRESH))));
-		
+
 		addComponentToSearchPanel(new JLabel(localizationReader.getProperty(Locale.SEARCH_CRITERIA)), "span 2, wrap");
 	}
 
@@ -105,7 +108,7 @@ public abstract class InternalFrame
 		updateButton.addActionListener(e -> listener.onUpdate());
 		deleteButton.addActionListener(e -> listener.onDelete());
 		refreshButton.addActionListener(e -> listener.onRefresh());
-		
+
 		dataModel.addTableModelListener(listener::onChange);
 	}
 
@@ -115,37 +118,36 @@ public abstract class InternalFrame
 		{
 			dataModel.addColumn(columnName);
 		}
-		TableColumnModel columnModel = table.getColumnModel();
 		columnModel.removeColumn(columnModel.getColumn(columnModel.getColumnIndex(ID)));
 	}
-	
+
 	protected void setCellEditorComboBox (int column, JComboBox <?> comboBox)
 	{
 		table.getColumnModel().getColumn(column).setCellEditor(new DefaultCellEditor(comboBox));
 	}
-	
-	public void add() 
+
+	public void add ()
 	{
-		dataModel.addRow(new Object[]{});
+		dataModel.addRow(new Object[] {});
 	}
-	
-	public int getSelectedRowIndex()
+
+	public int getSelectedRowIndex ()
 	{
 		return selectionModel.getMinSelectionIndex();
 	}
-	
-	public Long getRowId(int index)
+
+	public Long getRowId (int index)
 	{
 		Object id = dataModel.getValueAt(index, dataModel.findColumn(ID));
 		return (Long) id;
 	}
-	
-	public Object getValue(int row, String columnName)
+
+	public Object getValue (int row, String columnName)
 	{
 		return dataModel.getValueAt(row, dataModel.findColumn(columnName));
 	}
-	
-	public void delete(int index)
+
+	public void delete (int index)
 	{
 		dataModel.removeRow(index);
 	}
@@ -163,13 +165,13 @@ public abstract class InternalFrame
 		dataModel.setRowCount(0);
 		addRows(rowsData);
 	}
-	
-	public void setUpdateButtonState(boolean enabled)
+
+	public void setUpdateButtonState (boolean enabled)
 	{
 		updateButton.setEnabled(enabled);
 	}
-	
-	public Object[] getRowData(int rowIndex)
+
+	public Object[] getRowData (int rowIndex)
 	{
 		Object[] rowData = new Object[dataModel.getColumnCount()];
 		for (int i = 0; i < dataModel.getColumnCount(); i++)

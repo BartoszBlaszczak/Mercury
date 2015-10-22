@@ -9,7 +9,6 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JToolBar;
 import javax.swing.JButton;
-
 import javax.swing.BoxLayout;
 
 @SuppressWarnings("serial")

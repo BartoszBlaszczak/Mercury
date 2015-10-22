@@ -11,6 +11,9 @@ import pl.uz.mercury.filtercriteria.SearchCriteria;
 
 public interface MercuryService <Dto extends MercuryOptionDto>
 {
+	String USER_ROLE = "users";
+	String OBSERVER_ROLE = "observers";
+	
 	Long save (Dto dto) throws SavingException, ValidationException;
 	Dto retrieve (Long id) throws RetrievingException;
 	void delete (Long id) throws DeletingException;
