@@ -41,7 +41,6 @@ public interface Properties
 		String QUANTITY = "quantity";
 		String COST = "cost";
 		String MERCHANDISE = "merchandise";
-		
 	}
 	
 	public interface Message
