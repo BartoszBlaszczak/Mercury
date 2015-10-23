@@ -23,18 +23,18 @@ import javax.swing.event.TableModelEvent;
 
 public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service extends MercuryService <Dto>, OptionInternalFrame extends InternalFrame>
 {
-	protected final Service				service;
-	protected final OptionInternalFrame	optionInternalFrame;
-	private final JButton				optionButton	= new JButton();
-	private final JCheckBoxMenuItem		menuCheckItem	= new JCheckBoxMenuItem();
-	protected PropertiesReader			optionLocaleReader;
-	protected PropertiesReader			messageReader;
-	protected PropertiesReader			localizatioReader;
-	private Set <Integer>				changedRows		= new HashSet <>();
-	private Set <Long>					idsToDelete		= new HashSet <>();
-	private boolean						listenModel		= true;
-	private boolean						firstUse		= true;
-	private MercuryCrudActionPerformer	actionPerformer	= new MercuryCrudActionPerformer();
+	protected final Service						service;
+	protected final OptionInternalFrame			optionInternalFrame;
+	private final JButton						optionButton	= new JButton();
+	private final JCheckBoxMenuItem				menuCheckItem	= new JCheckBoxMenuItem();
+	protected final PropertiesReader			optionLocaleReader;
+	protected final PropertiesReader			messageReader;
+	protected final PropertiesReader			localizatioReader;
+	private final Set <Integer>					changedRows		= new HashSet <>();
+	private final Set <Long>					idsToDelete		= new HashSet <>();
+	private boolean								listenModel		= true;
+	private boolean								firstUse		= true;
+	private final MercuryCrudActionPerformer	actionPerformer	= new MercuryCrudActionPerformer();
 
 	public MercuryClientOption(String jndiName, OptionInternalFrame optionInternalFrame, String optionPrefix, PropertiesReader messageReader)
 			throws NamingException, IOException
@@ -49,7 +49,8 @@ public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service
 
 	protected abstract Object[] getData (Dto dto);
 
-	protected abstract Dto getDto (Object[] data) throws ValidationException;
+	protected abstract Dto getDto (Object[] data)
+			throws ValidationException;
 
 	protected abstract String getNameForRow (int row);
 
@@ -111,19 +112,20 @@ public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service
 		{
 			action.run();
 		}
-		
+
 		catch (EJBAccessException e)
 		{
 			showMessageFromProperity(Properties.Message.LACK_OF_PERMISSION);
 		}
-		
+
 		catch (RuntimeException e)
 		{
 			showMessageFromProperity(Properties.Message.SERVER_PROBLEM_OR_WRONG_CREDENTIALS);
 		}
 	}
-	
-	protected void actualize(){}
+
+	protected void actualize ()
+	{}
 
 	class MercuryCrudActionPerformer
 		implements OptionListener
@@ -141,7 +143,7 @@ public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service
 		{
 			tryConnect( () ->
 			{
-				Set<Long> deleted = new HashSet<>();
+				Set <Long> deleted = new HashSet <>();
 				idsToDelete.forEach(id ->
 				{
 					try
@@ -155,8 +157,8 @@ public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service
 					}
 				});
 				idsToDelete.removeAll(deleted);
-				
-				Set<Integer> saved = new HashSet<>();
+
+				Set <Integer> saved = new HashSet <>();
 				changedRows.forEach(row ->
 				{
 					try
@@ -174,7 +176,7 @@ public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service
 					}
 				});
 				changedRows.removeAll(saved);
-				
+
 				onRefresh();
 			});
 		}

@@ -1,6 +1,7 @@
 package pl.uz.mercury.view.optioninternalframe;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.swing.DefaultComboBoxModel;
@@ -10,6 +11,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import pl.uz.mercury.Properties.Locale;
+import pl.uz.mercury.util.MercuryDateFormat;
 import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.dto.TransactionDto;
@@ -33,6 +35,7 @@ public class TransactionInternalFrame
 	private JLabel costLabel;
 	private JTextField minCostTextField;
 	private JTextField maxCostTextField;
+	private MercuryDateFormat dateFormat = new MercuryDateFormat();
 
 	public TransactionInternalFrame(PropertiesReader localizationReader)
 	{
@@ -74,6 +77,14 @@ public class TransactionInternalFrame
 		tableMerchandiseComboBox = new JComboBox <MerchandiseDto>();
 		setCellEditorComboBox(1, tableMerchandiseComboBox);
 	}
+	
+	@Override
+	protected Object[] getDefaultNewRow ()
+	{
+		Object[] defaultNewRow = new Object[2];
+		defaultNewRow[1] = dateFormat.format(new Date());
+		return defaultNewRow;
+	}
 
 	@Override
 	protected void setUpSearchPanel ()
@@ -110,7 +121,7 @@ public class TransactionInternalFrame
 
 		MerchandiseDto merchadiseDto = (MerchandiseDto)searchMerchandiseComboBox.getSelectedItem();
 		if (merchadiseDto != null)
-			searchCriteria.add(new SearchCriteria(TransactionDto.MERCHANDISE, MerchandiseDto.ID, merchadiseDto.getId().toString()));
+			searchCriteria.add(new SearchCriteria(TransactionDto.MERCHANDISE, MerchandiseDto.ID, merchadiseDto.id.toString()));
 		
 		if (!minCostTextField.getText().isEmpty())
 			searchCriteria.add(new SearchCriteria(TransactionDto.COST, SearchPredicate.GREATER_OR_EQUAL, minCostTextField.getText()));

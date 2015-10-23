@@ -46,7 +46,7 @@ public abstract class InternalFrame
 	private final DefaultTableModel		dataModel;
 	private final JPanel				searchPanel			= new JPanel();
 
-	protected PropertiesReader			localizationReader;
+	protected final PropertiesReader	localizationReader;
 	protected final String				ID					= "id";
 
 	{
@@ -128,7 +128,12 @@ public abstract class InternalFrame
 
 	public void add ()
 	{
-		dataModel.addRow(new Object[] {});
+		dataModel.addRow(getDefaultNewRow());
+	}
+	
+	protected Object[] getDefaultNewRow()
+	{
+		return new Object[] {};
 	}
 
 	public int getSelectedRowIndex ()

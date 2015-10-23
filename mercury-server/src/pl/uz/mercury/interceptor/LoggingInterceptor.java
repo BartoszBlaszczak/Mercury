@@ -1,6 +1,5 @@
 package pl.uz.mercury.interceptor;
 
-import java.time.LocalDateTime;
 import java.util.StringJoiner;
 
 import javax.annotation.Resource;
@@ -29,7 +28,7 @@ public class LoggingInterceptor
 			parametersNames.add(parameter.toString());
 		}
 		
-		String info = String.format("%s %s -> %s.%s(%s)", LocalDateTime.now().toString(), operatorName, className, methodName, parametersNames);
+		String info = String.format("%s -> %s.%s(%s)", operatorName, className, methodName, parametersNames);
 
 		Logger.info(info);
 		return context.proceed();

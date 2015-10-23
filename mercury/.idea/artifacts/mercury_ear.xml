@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="ear" name="mercury:ear">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="mercury-0.0.1-SNAPSHOT.ear">
-      <element id="artifact" artifact-name="mercury:ear exploded" />
-    </root>
-  </artifact>
-</component>
