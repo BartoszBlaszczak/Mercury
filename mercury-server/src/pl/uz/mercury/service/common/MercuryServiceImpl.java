@@ -17,7 +17,7 @@ import pl.uz.mercury.exception.EntityDtoCopyException;
 import pl.uz.mercury.exception.RetrievingException;
 import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.exception.ValidationException;
-import pl.uz.mercury.filtercriteria.SearchCriteria;
+import pl.uz.mercury.searchcriteria.SearchCriteria;
 import pl.uz.mercury.interceptor.LoggingInterceptor;
 import pl.uz.mercury.service.common.MercuryService;
 import pl.uz.mercury.util.EntityDtoCopier;

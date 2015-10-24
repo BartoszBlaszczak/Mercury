@@ -7,7 +7,7 @@ import pl.uz.mercury.exception.DeletingException;
 import pl.uz.mercury.exception.RetrievingException;
 import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.exception.ValidationException;
-import pl.uz.mercury.filtercriteria.SearchCriteria;
+import pl.uz.mercury.searchcriteria.SearchCriteria;
 
 public interface MercuryService <Dto extends MercuryOptionDto>
 {

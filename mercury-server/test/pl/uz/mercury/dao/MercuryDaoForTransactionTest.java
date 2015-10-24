@@ -20,8 +20,8 @@ import pl.uz.mercury.entity.Purchase;
 import pl.uz.mercury.entity.Sale;
 import pl.uz.mercury.entity.Transaction;
 import pl.uz.mercury.exception.ValidationException;
-import pl.uz.mercury.filtercriteria.SearchCriteria;
-import pl.uz.mercury.filtercriteria.SearchPredicate;
+import pl.uz.mercury.searchcriteria.SearchCriteria;
+import pl.uz.mercury.searchcriteria.SearchPredicate;
 
 @RunWith(Arquillian.class)
 @Transactional

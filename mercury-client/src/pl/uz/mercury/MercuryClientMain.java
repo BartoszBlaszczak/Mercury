@@ -27,7 +27,6 @@ public class MercuryClientMain
 	private PropertiesReader 			localizationPropertiesReader;
 
 	public static void main (String[] args)
-			throws IOException
 	{
 		new MercuryClientMain();
 	}

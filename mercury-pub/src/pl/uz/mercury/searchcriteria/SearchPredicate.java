@@ -1,4 +1,4 @@
-package pl.uz.mercury.filtercriteria;
+package pl.uz.mercury.searchcriteria;
 
 public enum SearchPredicate
 {

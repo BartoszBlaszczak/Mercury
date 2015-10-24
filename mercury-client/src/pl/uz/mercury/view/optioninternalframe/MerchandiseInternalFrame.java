@@ -1,6 +1,7 @@
 package pl.uz.mercury.view.optioninternalframe;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import javax.swing.JLabel;
@@ -10,8 +11,8 @@ import javax.swing.table.TableColumn;
 import pl.uz.mercury.Properties.Locale;
 import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.dto.MerchandiseDto;
-import pl.uz.mercury.filtercriteria.SearchCriteria;
-import pl.uz.mercury.filtercriteria.SearchPredicate;
+import pl.uz.mercury.searchcriteria.SearchCriteria;
+import pl.uz.mercury.searchcriteria.SearchPredicate;
 import pl.uz.mercury.view.optioninternalframe.common.InternalFrame;
 
 public class MerchandiseInternalFrame
@@ -53,6 +54,8 @@ public class MerchandiseInternalFrame
 	@Override
 	public List<SearchCriteria> getSearchCriteria ()
 	{
-		return Arrays.asList(new SearchCriteria(MerchandiseDto.NAME, SearchPredicate.LIKE, merchandiseTextField.getText()));
+		return merchandiseTextField.getText().isEmpty() ? 
+				Collections.emptyList() :
+				Arrays.asList(new SearchCriteria(MerchandiseDto.NAME, SearchPredicate.LIKE, merchandiseTextField.getText()));
 	}
 }

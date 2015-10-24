@@ -24,7 +24,7 @@ import pl.uz.mercury.Properties.Locale;
 import pl.uz.mercury.Properties.IconPath;
 import pl.uz.mercury.option.common.OptionListener;
 import pl.uz.mercury.util.PropertiesReader;
-import pl.uz.mercury.filtercriteria.SearchCriteria;
+import pl.uz.mercury.searchcriteria.SearchCriteria;
 
 public abstract class InternalFrame
 	extends JInternalFrame

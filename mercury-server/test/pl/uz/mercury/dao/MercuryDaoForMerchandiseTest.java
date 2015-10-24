@@ -16,8 +16,8 @@ import org.junit.runner.RunWith;
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.entity.Merchandise;
 import pl.uz.mercury.exception.ValidationException;
-import pl.uz.mercury.filtercriteria.SearchCriteria;
-import pl.uz.mercury.filtercriteria.SearchPredicate;
+import pl.uz.mercury.searchcriteria.SearchCriteria;
+import pl.uz.mercury.searchcriteria.SearchPredicate;
 
 @RunWith(Arquillian.class)
 @Transactional

@@ -15,8 +15,8 @@ import pl.uz.mercury.util.MercuryDateFormat;
 import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.dto.TransactionDto;
-import pl.uz.mercury.filtercriteria.SearchCriteria;
-import pl.uz.mercury.filtercriteria.SearchPredicate;
+import pl.uz.mercury.searchcriteria.SearchCriteria;
+import pl.uz.mercury.searchcriteria.SearchPredicate;
 import pl.uz.mercury.view.optioninternalframe.common.InternalFrame;
 
 public class TransactionInternalFrame
