@@ -49,7 +49,7 @@ public class MercuryClientMain
 		}
 	}
 
-	public void showMessage (String message)
+	private void showMessage (String message)
 	{
 		JOptionPane.showMessageDialog(null, message);
 	}

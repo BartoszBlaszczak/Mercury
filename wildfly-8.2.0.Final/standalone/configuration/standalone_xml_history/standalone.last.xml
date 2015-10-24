@@ -42,7 +42,8 @@
             </security-realm>
             <security-realm name="ApplicationRealm">
                 <authentication>
-                    <local default-user="$local" skip-group-loading="true"/>
+                    <!--<local default-user="$local" allowed-users="*" skip-group-loading="true"/> -->
+		    <local default-user="$local" skip-group-loading="true"/>
                     <properties path="application-users.properties" relative-to="jboss.server.config.dir"/>
                 </authentication>
                 <authorization>
@@ -410,10 +411,12 @@
 
     <interfaces>
         <interface name="management">
-            <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
+            <!-- <inet-address value="${jboss.bind.address.management:127.0.0.1}"/> -->
+	    <any-ipv4-address/>
         </interface>
         <interface name="public">
-            <inet-address value="${jboss.bind.address:127.0.0.1}"/>
+	    <any-ipv4-address/>
+            <!-- <inet-address value="${jboss.bind.address:127.0.0.1}"/> -->
         </interface>
         <interface name="unsecure">
             <inet-address value="${jboss.bind.address.unsecure:127.0.0.1}"/>

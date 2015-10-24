@@ -224,6 +224,9 @@
         <dependent-module archiveName="tinylog-1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/tinylog/tinylog/1.0/tinylog-1.0.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="mockito-all-1.10.19.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/mockito/mockito-all/1.10.19/mockito-all-1.10.19.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="mercury-pub-1.0.0-SNAPSHOT.jar" deploy-path="/lib" handle="module:/resource/mercury-pub/mercury-pub">
             <dependency-type>uses</dependency-type>
         </dependent-module>

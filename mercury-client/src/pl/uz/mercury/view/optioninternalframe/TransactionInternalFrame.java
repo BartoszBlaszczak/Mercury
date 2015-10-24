@@ -99,12 +99,12 @@ public class TransactionInternalFrame
 		maxCostTextField = new JTextField();
 		
 		addComponentToSearchPanel(dateLabel, "");
-		addComponentToSearchPanel(dateFromTextField, "w :100:, span 2");
+		addComponentToSearchPanel(dateFromTextField, "w :100:");
 		addComponentToSearchPanel(dateToTextField, "w :100:, span 2, wrap");
 		addComponentToSearchPanel(merchandiseLabel, "");
-		addComponentToSearchPanel(searchMerchandiseComboBox, "wrap");
+		addComponentToSearchPanel(searchMerchandiseComboBox, "span 2, wrap");
 		addComponentToSearchPanel(costLabel, "");
-		addComponentToSearchPanel(minCostTextField, "w :100:, span 2");
+		addComponentToSearchPanel(minCostTextField, "w :100:");
 		addComponentToSearchPanel(maxCostTextField, "w :100:, span 2");
 	}
 

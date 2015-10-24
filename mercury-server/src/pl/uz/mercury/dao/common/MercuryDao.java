@@ -13,7 +13,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
-import pl.uz.mercury.entity.common.MercuryOptionEntity;
+import pl.uz.mercury.entity.common.MercuryEntity;
 import pl.uz.mercury.exception.ValidationException;
 import pl.uz.mercury.filtercriteria.SearchCriteria;
 import pl.uz.mercury.util.MercuryDateFormat;
@@ -27,23 +27,23 @@ public class MercuryDao
 	protected EntityManager			entityManager;
 	MercuryDateFormat				dateFormat		= new MercuryDateFormat();
 
-	public void save (MercuryOptionEntity entity)
+	public void save (MercuryEntity entity)
 	{
 		entityManager.persist(entity);
 		entityManager.flush();
 	}
 
-	public <Entity extends MercuryOptionEntity> Entity retrive (Class <Entity> clazz, Long id)
+	public <Entity extends MercuryEntity> Entity retrive (Class <Entity> clazz, Long id)
 	{
 		return entityManager.find(clazz, id);
 	}
 
-	public void delete (Class <? extends MercuryOptionEntity> clazz, Long id)
+	public void delete (Class <? extends MercuryEntity> clazz, Long id)
 	{
 		entityManager.remove(retrive(clazz, id));
 	}
 
-	public <Entity extends MercuryOptionEntity> List <Entity> getList (Class <Entity> entityClass, List <SearchCriteria> criteria)
+	public <Entity extends MercuryEntity> List <Entity> getList (Class <Entity> entityClass, List <SearchCriteria> criteria)
 			throws ValidationException
 	{
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

@@ -8,10 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 
-import pl.uz.mercury.entity.common.MercuryOptionEntity;
+import pl.uz.mercury.entity.common.MercuryEntity;
 
 @Entity
-public class Merchandise implements MercuryOptionEntity
+public class Merchandise implements MercuryEntity
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,6 +1,5 @@
 package pl.uz.mercury.service.common;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import javax.annotation.security.RolesAllowed;
@@ -12,19 +11,20 @@ import org.jboss.ejb3.annotation.SecurityDomain;
 
 import pl.uz.mercury.dao.common.MercuryDao;
 import pl.uz.mercury.dto.common.MercuryOptionDto;
-import pl.uz.mercury.entity.common.MercuryOptionEntity;
+import pl.uz.mercury.entity.common.MercuryEntity;
 import pl.uz.mercury.exception.DeletingException;
+import pl.uz.mercury.exception.EntityDtoCopyException;
 import pl.uz.mercury.exception.RetrievingException;
 import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.exception.ValidationException;
 import pl.uz.mercury.filtercriteria.SearchCriteria;
 import pl.uz.mercury.interceptor.LoggingInterceptor;
 import pl.uz.mercury.service.common.MercuryService;
-import pl.uz.mercury.util.EntityDtoAssigner;
+import pl.uz.mercury.util.EntityDtoCopier;
 
 @Interceptors(LoggingInterceptor.class)
 @SecurityDomain("other")
-public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dto extends MercuryOptionDto>
+public abstract class MercuryServiceImpl <Entity extends MercuryEntity, Dto extends MercuryOptionDto>
 	implements MercuryService <Dto>
 {
 	@EJB
@@ -32,13 +32,13 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 
 	private final Class <Entity>					entityClass;
 	private final Class <Dto>						dtoClass;
-	private final EntityDtoAssigner <Entity, Dto>	entityDtoAssigner;
+	private final EntityDtoCopier <Entity, Dto>	entityDtoAssigner;
 
 	public MercuryServiceImpl(Class <Entity> entityClass, Class <Dto> dtoClass)
 	{
 		this.entityClass = entityClass;
 		this.dtoClass = dtoClass;
-		entityDtoAssigner = new EntityDtoAssigner <>(entityClass);
+		entityDtoAssigner = new EntityDtoCopier <>(entityClass);
 	}
 
 	@Override
@@ -69,10 +69,10 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 				entity = entityClass.newInstance();
 			else entity = dao.retrive(entityClass, dto.getId());
 
-			entityDtoAssigner.assignEntityByDto(entity, dto);
+			entityDtoAssigner.fillEntityByDto(entity, dto);
 			return entity;
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
+		catch (EntityDtoCopyException | InstantiationException | IllegalAccessException e)
 		{
 			throw new SavingException();
 		}
@@ -89,7 +89,7 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 			if (retrived == null) throw new RetrievingException();
 			return entityDtoAssigner.getDtoForEntity(retrived, dtoClass);
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
+		catch (EntityDtoCopyException e)
 		{
 			e.printStackTrace();
 			throw new RetrievingException();
@@ -121,14 +121,13 @@ public abstract class MercuryServiceImpl <Entity extends MercuryOptionEntity, Dt
 			List <Entity> entityList = dao.getList(entityClass, criteria);
 			return assignDtosByEntities(entityList);
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
+		catch (EntityDtoCopyException e)
 		{
 			throw new RetrievingException();
 		}
 	}
 
-	protected List <Dto> assignDtosByEntities (List <Entity> entityList)
-			throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException
+	protected List <Dto> assignDtosByEntities (List <Entity> entityList) throws EntityDtoCopyException 
 	{
 		return entityDtoAssigner.getDtosForEntities(entityList, dtoClass);
 	}

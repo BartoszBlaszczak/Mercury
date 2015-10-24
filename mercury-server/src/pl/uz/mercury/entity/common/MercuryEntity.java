@@ -1,6 +1,6 @@
 package pl.uz.mercury.entity.common;
 
-public interface MercuryOptionEntity
+public interface MercuryEntity
 {
 	Long getId();
 }

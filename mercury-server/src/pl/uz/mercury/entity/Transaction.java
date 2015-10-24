@@ -12,10 +12,10 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 
-import pl.uz.mercury.entity.common.MercuryOptionEntity;
+import pl.uz.mercury.entity.common.MercuryEntity;
 
 @MappedSuperclass
-public abstract class Transaction implements MercuryOptionEntity
+public abstract class Transaction implements MercuryEntity
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

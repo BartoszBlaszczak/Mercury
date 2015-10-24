@@ -1,6 +1,5 @@
 package pl.uz.mercury.service;
 
-import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
@@ -16,12 +15,13 @@ import pl.uz.mercury.dto.TransactionDto;
 import pl.uz.mercury.entity.Merchandise;
 import pl.uz.mercury.entity.Transaction;
 import pl.uz.mercury.exception.DeletingException;
+import pl.uz.mercury.exception.EntityDtoCopyException;
 import pl.uz.mercury.exception.RetrievingException;
 import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.exception.ValidationException;
 import pl.uz.mercury.service.common.MercuryService;
 import pl.uz.mercury.service.common.MercuryServiceImpl;
-import pl.uz.mercury.util.EntityDtoAssigner;
+import pl.uz.mercury.util.EntityDtoCopier;
 
 @SecurityDomain("other")
 public abstract class TransactionServiceImpl <Entity extends Transaction>
@@ -32,7 +32,7 @@ public abstract class TransactionServiceImpl <Entity extends Transaction>
 	
 	@EJB
 	protected MerchandiseServiceLocal merchandiseService;
-	private EntityDtoAssigner <Merchandise, MerchandiseDto> merchandiseAssigner = new EntityDtoAssigner <>(Merchandise.class);
+	private EntityDtoCopier <Merchandise, MerchandiseDto> merchandiseAssigner = new EntityDtoCopier <>(Merchandise.class);
 	
 	public TransactionServiceImpl(Class <Entity> entityClass)
 	{
@@ -91,7 +91,7 @@ public abstract class TransactionServiceImpl <Entity extends Transaction>
 		StringBuilder info = new StringBuilder();
 		
 		if (dto.date == null) info.append(dto.date).append("\n");
-		if (dto.quantity <= 0) info.append(dto.quantity).append("\n"); 
+		if (dto.quantity == null || dto.quantity <= 0) info.append(dto.quantity).append("\n"); 
 		if (dto.price == null || dto.price.compareTo(BigDecimal.ZERO) < 0) info.append(dto.price).append("\n");
 		String validation = info.toString();
 		if (!validation.isEmpty()) throw new ValidationException(validation);
@@ -112,8 +112,7 @@ public abstract class TransactionServiceImpl <Entity extends Transaction>
 	}
 	
 	@Override
-	protected List <TransactionDto> assignDtosByEntities (List <Entity> entityList)
-			throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException
+	protected List <TransactionDto> assignDtosByEntities (List <Entity> entityList) throws EntityDtoCopyException 
 	{
 		List <TransactionDto> dtos = super.assignDtosByEntities(entityList);
 		for (int i = 0; i < dtos.size(); i++)

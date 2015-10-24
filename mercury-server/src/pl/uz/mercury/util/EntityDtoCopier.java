@@ -12,9 +12,10 @@ import javax.persistence.Transient;
 import javax.persistence.Version;
 
 import pl.uz.mercury.dto.common.MercuryOptionDto;
-import pl.uz.mercury.entity.common.MercuryOptionEntity;
+import pl.uz.mercury.entity.common.MercuryEntity;
+import pl.uz.mercury.exception.EntityDtoCopyException;
 
-public class EntityDtoAssigner <Entity extends MercuryOptionEntity, Dto extends MercuryOptionDto>
+public class EntityDtoCopier <Entity extends MercuryEntity, Dto extends MercuryOptionDto>
 {
 	private final Class <Entity>			entityClass;
 	private final AccessorRetriever			accessorRetriever	= new AccessorRetriever();
@@ -25,43 +26,59 @@ public class EntityDtoAssigner <Entity extends MercuryOptionEntity, Dto extends 
 	private final Assigner <Entity, Dto>	entityByDtoAssigner	= (entityL, entityField, dtoL, dtoField) -> accessorRetriever.getEntitySetter(
 																		entityField).invoke(entityL, dtoField.get(dtoL));
 
-	public EntityDtoAssigner(Class <Entity> entityClass)
+	public EntityDtoCopier(Class <Entity> entityClass)
 	{
 		this.entityClass = entityClass;
 	}
 
-	public void assignDtoByEntity (Dto dto, Entity entity)
-			throws IllegalArgumentException, IllegalAccessException, InvocationTargetException, NoSuchMethodException
+	public Dto getDtoForEntity (Entity entity, Class <Dto> dtoClass)
+			throws EntityDtoCopyException
 	{
-		assign(Arrays.asList(entity), Arrays.asList(dto), dtoByEntityAssigner);
-	}
-	
-	public Dto getDtoForEntity(Entity entity, Class<Dto> dtoClass) 
-			throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException
-	{
-		Dto dto = dtoClass.newInstance();
-		assign(Arrays.asList(entity), Arrays.asList(dto), dtoByEntityAssigner);
-		return dto;
+		try
+		{
+			Dto dto = dtoClass.newInstance();
+			assign(Arrays.asList(entity), Arrays.asList(dto), dtoByEntityAssigner);
+			return dto;
+		}
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
+		{
+			throw new EntityDtoCopyException();
+		}
 	}
 
-	public void assignEntityByDto (Entity entity, Dto dto) 
-			throws IllegalArgumentException, IllegalAccessException, InvocationTargetException, NoSuchMethodException
+	public void fillEntityByDto (Entity entity, Dto dto)
+			throws EntityDtoCopyException
 	{
-		assign(Arrays.asList(entity), Arrays.asList(dto), entityByDtoAssigner);
+		try
+		{
+			assign(Arrays.asList(entity), Arrays.asList(dto), entityByDtoAssigner);
+		}
+		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
+		{
+			throw new EntityDtoCopyException();
+		}
 	}
 
 	public List <Dto> getDtosForEntities (List <Entity> entityList, Class <Dto> dtoClass)
-			throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException
+			throws EntityDtoCopyException
 	{
-		if (entityList.isEmpty()) return new ArrayList<Dto>(0);
-		List <Dto> dtoList = new ArrayList <Dto>(entityList.size());
+		try
+		{
+			if (entityList.isEmpty()) return new ArrayList <Dto>(0);
+			List <Dto> dtoList = new ArrayList <Dto>(entityList.size());
 
-		for (@SuppressWarnings("unused") Entity entity : entityList) 
-			dtoList.add(dtoClass.newInstance());
+			for (@SuppressWarnings("unused")
+			Entity entity : entityList)
+				dtoList.add(dtoClass.newInstance());
 
-		assign(entityList, dtoList, dtoByEntityAssigner);
+			assign(entityList, dtoList, dtoByEntityAssigner);
 
-		return dtoList;
+			return dtoList;
+		}
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e)
+		{
+			throw new EntityDtoCopyException();
+		}
 	}
 
 	private void assign (List <Entity> entityList, List <Dto> dtoList, Assigner <Entity, Dto> assigner)
@@ -90,26 +107,29 @@ public class EntityDtoAssigner <Entity extends MercuryOptionEntity, Dto extends 
 			}
 		}
 	}
-	
-	private Field[] getEntityFieldsAccesible(Class <? > entityClass, Field... fields)
+
+	private Field[] getEntityFieldsAccesible (Class <?> entityClass, Field... fields)
 	{
 		Field[] declaredFields = entityClass.getDeclaredFields();
-		for (Field field : declaredFields) field.setAccessible(true);
+		for (Field field : declaredFields)
+			field.setAccessible(true);
 		Class <?> superclass = entityClass.getSuperclass();
 		if (superclass.equals(Object.class))
-				return Stream.concat(Arrays.stream(fields), Arrays.stream(declaredFields)).toArray(Field[]::new);
+			return Stream.concat(Arrays.stream(fields), Arrays.stream(declaredFields)).toArray(Field[]::new);
 		else return getEntityFieldsAccesible(superclass, declaredFields);
 	}
 
 	private class AccessorRetriever
 	{
-		Method getEntitySetter (Field field) throws NoSuchMethodException, SecurityException
+		Method getEntitySetter (Field field)
+				throws NoSuchMethodException, SecurityException
 		{
 			String methodName = getAccessorName(field, AccessorPrefix.setter);
 			return getAccessor(methodName);
 		}
 
-		Method getEntityGetter (Field field) throws NoSuchMethodException, SecurityException
+		Method getEntityGetter (Field field)
+				throws NoSuchMethodException, SecurityException
 		{
 			String methodName = getAccessorName(field, AccessorPrefix.getter);
 			return entityClass.getMethod(methodName);
@@ -121,7 +141,8 @@ public class EntityDtoAssigner <Entity extends MercuryOptionEntity, Dto extends 
 			return accessorPrefix.prefix + capitalizedFieldName;
 		}
 
-		private Method getAccessor (String methodName) throws NoSuchMethodException
+		private Method getAccessor (String methodName)
+				throws NoSuchMethodException
 		{
 			for (Method method : entityClass.getMethods())
 			{
@@ -135,7 +156,8 @@ public class EntityDtoAssigner <Entity extends MercuryOptionEntity, Dto extends 
 
 enum AccessorPrefix
 {
-	getter("get"), setter("set");
+	getter("get"),
+	setter("set");
 
 	AccessorPrefix(String prefix)
 	{
@@ -146,7 +168,7 @@ enum AccessorPrefix
 }
 
 @FunctionalInterface
-interface Assigner <Entity extends MercuryOptionEntity, Dto extends MercuryOptionDto>
+interface Assigner <Entity extends MercuryEntity, Dto extends MercuryOptionDto>
 {
 	void assign (Entity entity, Field entityField, Dto dto, Field dtoField)
 			throws IllegalArgumentException, IllegalAccessException, InvocationTargetException, NoSuchMethodException;
