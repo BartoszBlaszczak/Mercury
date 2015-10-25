@@ -5,13 +5,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import pl.uz.mercury.Properties;
 import pl.uz.mercury.dto.common.MercuryOptionDto;
 import pl.uz.mercury.exception.DeletingException;
 import pl.uz.mercury.exception.RetrievingException;
 import pl.uz.mercury.exception.SavingException;
 import pl.uz.mercury.exception.ValidationException;
 import pl.uz.mercury.service.common.MercuryService;
+import pl.uz.mercury.util.Properties;
 import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.view.optioninternalframe.common.InternalFrame;
 
@@ -52,7 +52,10 @@ public abstract class MercuryClientOption <Dto extends MercuryOptionDto, Service
 	protected abstract Dto getDto (Object[] data)
 			throws ValidationException;
 
-	protected abstract String getNameForRow (int row);
+	private String getNameForRow (int row)
+	{
+		return String.valueOf(row+1);
+	};
 
 	private void setUp ()
 	{

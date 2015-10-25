@@ -1,4 +1,4 @@
-package pl.uz.mercury;
+package pl.uz.mercury.util;
 
 public interface Properties
 {

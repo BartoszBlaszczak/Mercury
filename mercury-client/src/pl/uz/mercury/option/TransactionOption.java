@@ -60,10 +60,4 @@ public abstract class TransactionOption <Service extends TransactionService>
 		try { dto.price = new BigDecimal((String)data[4]);} catch (Exception e){throw new ValidationException((String)data[4]);}
 		return dto;
 	}
-	
-	@Override
-	protected String getNameForRow (int row)
-	{
-		return String.valueOf(row+1);
-	}
 }

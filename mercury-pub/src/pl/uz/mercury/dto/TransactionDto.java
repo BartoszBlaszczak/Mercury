@@ -4,10 +4,12 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 import pl.uz.mercury.dto.common.MercuryOptionDto;
+import pl.uz.mercury.util.MercuryDateFormat;
 
 public class TransactionDto implements MercuryOptionDto
 {
 	private static final long	serialVersionUID	= 1L;
+	private static MercuryDateFormat dateFormat = new MercuryDateFormat();
 
 	public static final String DATE = "date";
 	public static final String MERCHANDISE = "merchandise";
@@ -31,6 +33,6 @@ public class TransactionDto implements MercuryOptionDto
 	@Override
 	public String toString()
 	{
-		return String.format("%s %s(%s) %s x %s", date, merchandiseDto.name, merchandiseDto.id, quantity, price);
+		return String.format("%s: %s %s(%s) %s x %s", id, dateFormat.format(date), merchandiseDto.name, merchandiseDto.id, quantity, price);
 	}
 }

@@ -4,10 +4,9 @@ import java.io.IOException;
 
 import javax.naming.NamingException;
 
-import pl.uz.mercury.Properties;
-import pl.uz.mercury.Properties.Locale;
 import pl.uz.mercury.constants.MercuryServiceJndiNames;
 import pl.uz.mercury.option.common.MercuryClientOption;
+import pl.uz.mercury.util.Properties;
 import pl.uz.mercury.util.PropertiesReader;
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.exception.ValidationException;
@@ -45,11 +44,5 @@ public class MerchandiseOption
 		if (data[2] == null) dto.quantity = 0;
 		else try { dto.quantity = Integer.parseInt((String)data[2]);} catch (Exception e){throw new ValidationException((String)data[2]);}
 		return dto;
-	}
-
-	@Override
-	protected String getNameForRow (int row)
-	{
-		return (String) optionInternalFrame.getValue(row, localizatioReader.getProperty(Locale.NAME));
 	}
 }

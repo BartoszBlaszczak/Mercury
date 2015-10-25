@@ -20,10 +20,10 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
 import net.miginfocom.swing.MigLayout;
-import pl.uz.mercury.Properties.Locale;
-import pl.uz.mercury.Properties.IconPath;
 import pl.uz.mercury.option.common.OptionListener;
 import pl.uz.mercury.util.PropertiesReader;
+import pl.uz.mercury.util.Properties.IconPath;
+import pl.uz.mercury.util.Properties.Locale;
 import pl.uz.mercury.searchcriteria.SearchCriteria;
 
 public abstract class InternalFrame

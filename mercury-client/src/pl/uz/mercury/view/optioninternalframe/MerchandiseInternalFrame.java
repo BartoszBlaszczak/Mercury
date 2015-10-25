@@ -8,8 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.table.TableColumn;
 
-import pl.uz.mercury.Properties.Locale;
 import pl.uz.mercury.util.PropertiesReader;
+import pl.uz.mercury.util.Properties.Locale;
 import pl.uz.mercury.dto.MerchandiseDto;
 import pl.uz.mercury.searchcriteria.SearchCriteria;
 import pl.uz.mercury.searchcriteria.SearchPredicate;

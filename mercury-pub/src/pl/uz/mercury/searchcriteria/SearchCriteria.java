@@ -31,7 +31,7 @@ public class SearchCriteria
 	@Override
 	public String toString ()
 	{
-		return subValue != null ? 
+		return subValue == null ? 
 				String.format("%s %s %s", fieldName, searchPredicate.toString(), value): 
 				String.format("%s %s %s", fieldName, searchPredicate.toString(), subValue);
 	}

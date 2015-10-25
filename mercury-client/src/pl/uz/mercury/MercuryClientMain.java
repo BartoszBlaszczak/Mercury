@@ -7,12 +7,13 @@ import javax.swing.JButton;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JOptionPane;
 
-import pl.uz.mercury.Properties.Locale;
 import pl.uz.mercury.option.MerchandiseOption;
 import pl.uz.mercury.option.PurchaseOption;
 import pl.uz.mercury.option.SaleOption;
 import pl.uz.mercury.option.common.MercuryClientOption;
+import pl.uz.mercury.util.Properties;
 import pl.uz.mercury.util.PropertiesReader;
+import pl.uz.mercury.util.Properties.Locale;
 import pl.uz.mercury.exception.MercuryException;
 import pl.uz.mercury.view.MainWindow;
 
@@ -60,7 +61,7 @@ public class MercuryClientMain
 		{
 			messageReader = new PropertiesReader(Properties.MESSAGES_FILENAME);
 		}
-		catch (IOException e)
+		catch (Exception e)
 		{
 			throw new MercuryException("Couldn't read " + Properties.MESSAGES_FILENAME);
 		}
@@ -73,7 +74,7 @@ public class MercuryClientMain
 		{
 			localizationPropertiesReader = new PropertiesReader(Properties.LOCALE_FILENAME);
 		}
-		catch (IOException e)
+		catch (Exception e)
 		{
 			throw new MercuryException(messageReader.getProperty(Properties.Message.COULD_NOT_READ_LOCALE_FILE));
 		}
