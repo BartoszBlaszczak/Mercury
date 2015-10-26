@@ -15,7 +15,6 @@ public interface MercuryService <Dto extends MercuryOptionDto>
 	String OBSERVER_ROLE = "observers";
 	
 	Long save (Dto dto) throws SavingException, ValidationException;
-	Dto retrieve (Long id) throws RetrievingException;
 	void delete (Long id) throws DeletingException;
 	List <Dto> getList (List <SearchCriteria> criteria) throws RetrievingException, ValidationException;
 }

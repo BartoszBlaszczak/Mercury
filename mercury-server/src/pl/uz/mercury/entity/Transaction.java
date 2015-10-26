@@ -71,7 +71,7 @@ public abstract class Transaction implements MercuryEntity
 		this.merchandise = merchandise;
 	}
 
-	public int getQuantity ()
+	public Integer getQuantity ()
 	{
 		return quantity;
 	}

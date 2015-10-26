@@ -28,10 +28,10 @@ public abstract class MercuryServiceImpl <Entity extends MercuryEntity, Dto exte
 	implements MercuryService <Dto>
 {
 	@EJB
-	protected MercuryDao							dao;
+	protected MercuryDao						dao;
 
-	private final Class <Entity>					entityClass;
-	private final Class <Dto>						dtoClass;
+	private final Class <Entity>				entityClass;
+	private final Class <Dto>					dtoClass;
 	private final EntityDtoCopier <Entity, Dto>	entityDtoAssigner;
 
 	public MercuryServiceImpl(Class <Entity> entityClass, Class <Dto> dtoClass)
@@ -50,7 +50,7 @@ public abstract class MercuryServiceImpl <Entity extends MercuryEntity, Dto exte
 		{
 			validate(dto);
 			Entity entity = getEntity(dto);
-			if (entity.getId() == null) dao.save(entity); 
+			if (entity.getId() == null) dao.save(entity);
 			return entity.getId();
 		}
 		catch (EJBTransactionRolledbackException e)
@@ -79,24 +79,6 @@ public abstract class MercuryServiceImpl <Entity extends MercuryEntity, Dto exte
 	}
 
 	@Override
-	@RolesAllowed({MercuryService.USER_ROLE, MercuryService.OBSERVER_ROLE})
-	public Dto retrieve (Long id)
-			throws RetrievingException
-	{
-		try
-		{
-			Entity retrived = dao.retrive(entityClass, id);
-			if (retrived == null) throw new RetrievingException();
-			return entityDtoAssigner.getDtoForEntity(retrived, dtoClass);
-		}
-		catch (EntityDtoCopyException e)
-		{
-			e.printStackTrace();
-			throw new RetrievingException();
-		}
-	}
-
-	@Override
 	@RolesAllowed(MercuryService.USER_ROLE)
 	public void delete (Long id)
 			throws DeletingException
@@ -112,7 +94,7 @@ public abstract class MercuryServiceImpl <Entity extends MercuryEntity, Dto exte
 	}
 
 	@Override
-	@RolesAllowed({MercuryService.USER_ROLE, MercuryService.OBSERVER_ROLE})
+	@RolesAllowed({ MercuryService.USER_ROLE, MercuryService.OBSERVER_ROLE })
 	public List <Dto> getList (List <SearchCriteria> criteria)
 			throws RetrievingException, ValidationException
 	{
@@ -127,7 +109,8 @@ public abstract class MercuryServiceImpl <Entity extends MercuryEntity, Dto exte
 		}
 	}
 
-	protected List <Dto> assignDtosByEntities (List <Entity> entityList) throws EntityDtoCopyException 
+	protected List <Dto> assignDtosByEntities (List <Entity> entityList)
+			throws EntityDtoCopyException
 	{
 		return entityDtoAssigner.getDtosForEntities(entityList, dtoClass);
 	}

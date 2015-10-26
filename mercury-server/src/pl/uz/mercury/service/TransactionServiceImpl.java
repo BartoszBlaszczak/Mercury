@@ -46,14 +46,10 @@ public abstract class TransactionServiceImpl <Entity extends Transaction>
 	public Long save (TransactionDto dto)
 			throws SavingException, ValidationException
 	{
-		int change;
-		if (dto.id != null)
-		{
-			int oldQuantity = dao.retrive(entityClass, dto.id).getQuantity();
-			change = getNewMerchandiseQuantity(oldQuantity, dto.quantity);
-		}
-		else change = getNewMerchandiseQuantity(0, dto.quantity);
+		int oldQuantity = 0;
+		if (dto.id != null) oldQuantity = dao.retrive(entityClass, dto.id).getQuantity();
 		Long id = super.save(dto);
+		int change = getNewMerchandiseQuantity(oldQuantity, dto.quantity);
 		merchandiseService.changeQuantity(dto.merchandiseDto.id, change);
 		return id;
 	}
@@ -93,6 +89,7 @@ public abstract class TransactionServiceImpl <Entity extends Transaction>
 		if (dto.date == null) info.append(dto.date).append("\n");
 		if (dto.quantity == null || dto.quantity <= 0) info.append(dto.quantity).append("\n"); 
 		if (dto.price == null || dto.price.compareTo(BigDecimal.ZERO) < 0) info.append(dto.price).append("\n");
+		if (dto.merchandiseDto == null) info.append(dto.merchandiseDto).append("\n");
 		String validation = info.toString();
 		if (!validation.isEmpty()) throw new ValidationException(validation);
 	}
